@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "../../../public/css/style.css"; // Use an absolute path
 
 export const Label = () => {
   return (
