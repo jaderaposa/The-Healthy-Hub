@@ -1,18 +1,17 @@
 .label {
-    height: 50px;
-    width: 284px;
-  }
-  
-  .label .text-wrapper {
-    -webkit-text-stroke: 1px #000000;
-    color: #ffffff;
-    font-family: "IM FELL Double Pica-Regular", Helvetica;
-    font-size: 40px;
-    font-weight: 400;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: fixed;
-    top: 0;
-  }
-  
+  height: 50px;
+  width: 284px;
+}
+
+.label .text-wrapper {
+  -webkit-text-stroke: 1px #000000;
+  color: #ffffff;
+  font-family: "IM FELL Double Pica-Regular", Helvetica;
+  font-size: 40px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: fixed;
+  top: 0;
+}
