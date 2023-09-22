@@ -3022,6 +3022,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 /* harmony import */ var _components_Example__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Example */ "./resources/js/components/Example.jsx");
 /* harmony import */ var _components_healthyhub__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/healthyhub */ "./resources/js/components/healthyhub.jsx");
+/* harmony import */ var _components_HelloReact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/HelloReact */ "./resources/js/components/HelloReact.jsx");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes React and other helpers. It's a great starting point while
@@ -3035,6 +3036,7 @@ __webpack_require__.r(__webpack_exports__);
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+
 
 
 
@@ -3099,7 +3101,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 // import ReactDOM from 'react-dom';
@@ -3129,10 +3131,40 @@ function Example() {
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Example);
 if (document.getElementById('example')) {
-  var Index = react_dom__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("example"));
+  var Index = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("example"));
   Index.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Example, {})
   }));
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/HelloReact.jsx":
+/*!************************************************!*\
+  !*** ./resources/js/components/HelloReact.jsx ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _public_css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../public/css/style.css */ "./public/css/style.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+ // Import ReactDOM without '.client'
+ // Use an absolute path
+
+function Thehealthyhub() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+    children: "Hello React!"
+  });
+}
+if (document.getElementById('thh')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Thehealthyhub, {})
+  }), document.getElementById('thh'));
 }
 
 /***/ }),
@@ -3145,28 +3177,49 @@ if (document.getElementById('example')) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   logoName: () => (/* binding */ logoName)
-/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _public_css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../public/css/style.css */ "./public/css/style.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _public_css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../public/css/style.css */ "./public/css/style.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
+ // Import ReactDOM without '.client'
  // Use an absolute path
 
-var logoName = function logoName() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+function Thehealthyhub() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "label",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "text-wrapper",
       children: "The Healthy Hub"
     })
   });
-};
-if (document.getElementById('thh')) {
-  ReactDOM.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("logoName", {}), document.getElementById('thh'));
 }
+if (document.getElementById('thh')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Thehealthyhub, {})
+  }), document.getElementById('thh'));
+}
+
+// if(document.getElementById('thh')){
+//   ReactDOM.render(<logoName />, document.getElementById('thh'));
+// }
+
+// function Example() {
+//   return (
+//       <div className="container">
+//           <div className="row justify-content-center">
+//               <div className="col-md-8">
+//                   <div className="card">
+//                       <div className="card-header">Example Component</div>
+
+//                       <div className="card-body">I'm an example component!</div>
+//                   </div>
+//               </div>
+//           </div>
+//       </div>
+//   );
+// }
 
 /***/ }),
 
@@ -9623,7 +9676,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".label {\r\n    height: 50px;\r\n    width: 284px;\r\n  }\r\n  \r\n  .label .text-wrapper {\r\n    -webkit-text-stroke: 1px #000000;\r\n    color: #ffffff;\r\n    font-family: \"IM FELL Double Pica-Regular\", Helvetica;\r\n    font-size: 40px;\r\n    font-weight: 400;\r\n    left: 0;\r\n    letter-spacing: 0;\r\n    line-height: normal;\r\n    position: fixed;\r\n    top: 0;\r\n  }\r\n  ", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".label {\r\n  height: 50px;\r\n  width: 284px;\r\n}\r\n\r\n.label .text-wrapper {\r\n  -webkit-text-stroke: 1px #000000;\r\n  color: #ffffff;\r\n  font-family: \"IM FELL Double Pica-Regular\", Helvetica;\r\n  font-size: 40px;\r\n  font-weight: 400;\r\n  left: 0;\r\n  letter-spacing: 0;\r\n  line-height: normal;\r\n  position: fixed;\r\n  top: 0;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39703,6 +39756,39 @@ if (
 
 /***/ }),
 
+/***/ "./node_modules/react-dom/client.js":
+/*!******************************************!*\
+  !*** ./node_modules/react-dom/client.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var m = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+if (false) {} else {
+  var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+  exports.createRoot = function(c, o) {
+    i.usingClientEntryPoint = true;
+    try {
+      return m.createRoot(c, o);
+    } finally {
+      i.usingClientEntryPoint = false;
+    }
+  };
+  exports.hydrateRoot = function(c, h, o) {
+    i.usingClientEntryPoint = true;
+    try {
+      return m.hydrateRoot(c, h, o);
+    } finally {
+      i.usingClientEntryPoint = false;
+    }
+  };
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/react-dom/index.js":
 /*!*****************************************!*\
   !*** ./node_modules/react-dom/index.js ***!
@@ -49100,7 +49186,6 @@ const isThenable = (thing) =>
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/bootstrap.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

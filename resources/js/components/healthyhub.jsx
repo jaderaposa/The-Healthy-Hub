@@ -1,7 +1,6 @@
 import React from "react";
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom'; // Import ReactDOM without '.client'
 import "../../../public/css/style.css"; // Use an absolute path
-
 
 function Thehealthyhub() {
   return (
@@ -11,17 +10,15 @@ function Thehealthyhub() {
   );
 }
 
-export default Thehealthyhub;
-
 if (document.getElementById('thh')) {
-  const Index = ReactDOM.createRoot(document.getElementById("thh"));
-
-  Index.render(
+  ReactDOM.render(
       <React.StrictMode>
           <Thehealthyhub/>
-      </React.StrictMode>
-  )
+      </React.StrictMode>,
+      document.getElementById('thh')
+  );
 }
+
 
 
 // if(document.getElementById('thh')){

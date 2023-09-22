@@ -24,5 +24,10 @@
         </form>
     </div>
     </nav>
+
+    <div class="" id="example">
+    </div>
+
+    <div id="hello-react"></div>
 </body>
 </html>

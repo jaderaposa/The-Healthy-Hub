@@ -1,8 +1,17 @@
 const mix = require('laravel-mix');
 
-mix.js('resources/js/**/*.js', 'public/js')
+mix.js('resources/js/app.js', 'public/js')
    .react() // This is for React compilation
    .sass('resources/sass/app.scss', 'public/css');
+
+
+
+
+
+
+
+
+
 //    .setResourceRoot('/public/') // Adjust this path according to your project setup
 //    .webpackConfig({
 //        resolve: {
