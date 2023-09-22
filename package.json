@@ -27,6 +27,12 @@
         "webpack": "^5.88.2"
     },
     "dependencies": {
-        "npm": "^10.1.0"
+        "connect": "^3.7.0",
+        "create-react-app": "^1.5.2",
+        "jaded": "^0.1.2",
+        "mkdirp": "^3.0.1",
+        "myapp": "^0.0.0-1",
+        "npm": "^10.1.0",
+        "tar": "^6.2.0"
     }
 }

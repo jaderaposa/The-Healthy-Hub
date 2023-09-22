@@ -1,6 +1,40 @@
+.box {
+  height: 84px;
+  width: 1920px;
+}
+
+.box .rectangle {
+  background-color: #00317c;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  height: 84px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 1920px;
+}
+
+.image {
+  width: 82px;
+  height: 77px;
+}
+
+.image .healthy-eating-app {
+  position: fixed;
+  width: 82px;
+  height: 77px;
+  top: 4px;
+  left: 48px;
+}
+
+
 .label {
   height: 50px;
   width: 284px;
+  position: relative;
 }
 
 .label .text-wrapper {
@@ -14,4 +48,6 @@
   line-height: normal;
   position: fixed;
   top: 0;
+  margin-left: 134px;
+  margin-top: 16px;
 }

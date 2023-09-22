@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom'; // Import ReactDOM without '.client'
-import "../../../public/css/style.css"; // Use an absolute path
+// import "../../../public/css/style.css"; // Use an absolute path
 
 function Thehealthyhub() {
   return (

@@ -3161,10 +3161,10 @@ function Thehealthyhub() {
     children: "Hello React!"
   });
 }
-if (document.getElementById('thh')) {
+if (document.getElementById('hello-react')) {
   react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Thehealthyhub, {})
-  }), document.getElementById('thh'));
+  }), document.getElementById('hello-react'));
 }
 
 /***/ }),
@@ -3180,24 +3180,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _public_css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../public/css/style.css */ "./public/css/style.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
  // Import ReactDOM without '.client'
- // Use an absolute path
+// import "../../../public/css/style.css"; // Use an absolute path
 
 function Thehealthyhub() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "label",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       className: "text-wrapper",
       children: "The Healthy Hub"
     })
   });
 }
 if (document.getElementById('thh')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(Thehealthyhub, {})
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Thehealthyhub, {})
   }), document.getElementById('thh'));
 }
 
@@ -9676,7 +9675,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".label {\r\n  height: 50px;\r\n  width: 284px;\r\n}\r\n\r\n.label .text-wrapper {\r\n  -webkit-text-stroke: 1px #000000;\r\n  color: #ffffff;\r\n  font-family: \"IM FELL Double Pica-Regular\", Helvetica;\r\n  font-size: 40px;\r\n  font-weight: 400;\r\n  left: 0;\r\n  letter-spacing: 0;\r\n  line-height: normal;\r\n  position: fixed;\r\n  top: 0;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".box {\r\n  height: 84px;\r\n  width: 1920px;\r\n}\r\n\r\n.box .rectangle {\r\n  background-color: #00317c;\r\n  border-bottom-style: solid;\r\n  border-bottom-width: 1px;\r\n  border-color: #000000;\r\n  border-top-style: solid;\r\n  border-top-width: 1px;\r\n  height: 84px;\r\n  left: 0;\r\n  position: fixed;\r\n  top: 0;\r\n  width: 1920px;\r\n}\r\n\r\n.image {\r\n  width: 82px;\r\n  height: 77px;\r\n}\r\n\r\n.image .healthy-eating-app {\r\n  position: fixed;\r\n  width: 82px;\r\n  height: 77px;\r\n  top: 4px;\r\n  left: 48px;\r\n}\r\n\r\n\r\n.label {\r\n  height: 50px;\r\n  width: 284px;\r\n  position: relative;\r\n}\r\n\r\n.label .text-wrapper {\r\n  -webkit-text-stroke: 1px #000000;\r\n  color: #ffffff;\r\n  font-family: \"IM FELL Double Pica-Regular\", Helvetica;\r\n  font-size: 40px;\r\n  font-weight: 400;\r\n  left: 0;\r\n  letter-spacing: 0;\r\n  line-height: normal;\r\n  position: fixed;\r\n  top: 0;\r\n  margin-left: 134px;\r\n  margin-top: 16px;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

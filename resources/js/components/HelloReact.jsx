@@ -8,11 +8,11 @@ function Thehealthyhub() {
   );
 }
 
-if (document.getElementById('thh')) {
+if (document.getElementById('hello-react')) {
   ReactDOM.render(
       <React.StrictMode>
           <Thehealthyhub/>
       </React.StrictMode>,
-      document.getElementById('thh')
+      document.getElementById('hello-react')
   );
 }
