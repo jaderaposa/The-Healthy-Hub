@@ -29,7 +29,9 @@
     "dependencies": {
         "connect": "^3.7.0",
         "create-react-app": "^1.5.2",
+        "font-awesome": "^4.7.0",
         "jaded": "^0.1.2",
+        "jquery": "^3.7.1",
         "mkdirp": "^3.0.1",
         "myapp": "^0.0.0-1",
         "npm": "^10.1.0",
