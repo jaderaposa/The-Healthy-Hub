@@ -1,3 +1,14 @@
+body {
+  background: linear-gradient(180deg, rgb(7.62, 108.67, 130.69) 0%, rgb(3, 12, 90) 100%);
+  background-position: center center;
+  background-color: rgba(255, 255, 255, 1);
+  height: 100vh;
+  overflow-x: hidden;
+  width: 1920px;
+  background-attachment: fixed;
+}
+
+
 .box {
   height: 84px;
   width: 1920px;
@@ -107,11 +118,15 @@
   position: absolute;
 }
 
+#lisu {
+  position: absolute;
+  left: 1547px;
+}
+
 .box2 {
   height: 50px;
     position: relative;
     width: 334px;
-    left: 14rem;
   }
   .box2 .group {
     position: relative;
@@ -148,7 +163,7 @@
     line-height: normal;
     position: absolute;
     text-align: center;
-    top: 8px;
+    top: 5px;
     white-space: nowrap;
     width: 126px;
   }
@@ -159,8 +174,9 @@
     top: 0;
     width: 159px;
   }
+  
 i.fa{
-
+  color: #00317c;
   }
   i.fa.fa-microphone {
     font-size: 1.6rem;
@@ -168,5 +184,431 @@ i.fa{
   i.fa.fa-search {
     font-size: 1.5rem;
     top: 0.9rem;
+    color: #00317c;
   }
-  
+
+.box3 {
+      height: 60px;
+      position: relative;
+      width: 103px;
+    }
+  .box3 .group {
+      height: 60px;
+      left: 0;
+      top: 0;
+      width: 103px;
+  }
+  .box3 .ellipse {
+      border: 1px solid;
+      border-color: #000000;
+      border-radius: 30px;
+      height: 60px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 60px;
+  }
+  .box3 .sort-down {
+      height: 30px;
+      left: 73px;
+      position: absolute;
+      top: 16px;
+      width: 30px;
+  }
+
+div#udd {
+    position: absolute;
+    left: 1757px;
+}
+
+.ellipse {
+  width: 60px; /* Set the width of the ellipse */
+  height: 60px; /* Set the height of the ellipse */
+  background-image: url('/img/jaded.jpg'); /* Use a relative path to the image */
+  background-size: cover; /* This property ensures the image covers the entire div */
+  background-position: center center;
+}
+
+#side-bar {
+  height: 835px;
+  width: 339px;
+  position: fixed;
+  left: 2%;
+  top: 11%;
+  text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+  }
+  .box4 {
+    height: 108px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .box4 .group {
+      height: 108px;
+      left: 0;
+      top: 0;
+      position: relative;
+      width: 128px;
+  }
+
+  .box4 .div {
+      height: 32px;
+      left: 0;
+      position: absolute;
+      top: 76px;
+      width: 130px;
+  }
+
+  .box4 .fire-flame-curved {
+      height: 40px;
+      left: 0;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      width: 33px;
+  }
+
+  .box4 .text-wrapper {
+      color: #ffffff;
+      font-family: "IM FELL Double Pica-Regular", Helvetica;
+      font-size: 25px;
+      font-weight: 400;
+      left: 49px;
+      letter-spacing: 0;
+      line-height: normal;
+      position: absolute;
+      top: 0;
+  }
+
+  .box4 .group-2 {
+      height: 34px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 116px;
+  }
+
+  .box4 .house-chimney {
+      height: 37px;
+      left: 0;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      width: 36px;
+  }
+
+  .box4 .text-wrapper-2 {
+      color: #ffffff;
+      font-family: "IM FELL Double Pica-Regular", Helvetica;
+      font-size: 25px;
+      font-weight: 400;
+      left: 51px;
+      letter-spacing: 0;
+      line-height: normal;
+      position: absolute;
+      top: 2px;
+  }
+
+.line4 {
+  height: 835px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  }
+  .line4 .line-stroke {
+    height: 835px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 1px;
+    float: right;
+  }
+
+.line-horizontal4 {
+  height: 1px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+  }
+  .line-horizontal4 .line {
+    height: 1px;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    top: 0;
+    position: relative;
+    width: 310px;
+    }
+
+.box4-1 {
+  height: 377px;
+  position: relative;
+  width: 100%;
+  }
+  .box4-1 .group {
+    height: 377px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 278px;
+  }
+
+.box4-1 .text-wrapper {
+    color: #9f9f9f;
+    font-family: "IM FELL Double Pica-Regular", Helvetica;
+    font-size: 15px;
+    font-weight: 400;
+    left: 58px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 358px;
+}
+
+.box4-1 .div {
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 278px;
+}
+
+.box4-1 .arrow-down-sign-to {
+    height: 19px;
+    left: 256px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 20px;
+}
+
+.box4-1 .text-wrapper-2 {
+    color: #9f9f9f;
+    font-family: "IM FELL Double Pica-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+}
+
+.box4-1 .group-2 {
+    height: 30px;
+    left: 16px;
+    position: absolute;
+    top: 96px;
+    width: 262px;
+}
+
+.box4-1 .img {
+    height: 21px;
+    left: 240px;
+    object-fit: cover;
+    position: absolute;
+    top: 3px;
+    width: 20px;
+}
+
+.box4-1 .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "IBM Plex Sans KR-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 41px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+}
+
+.box4-1 .group-3 {
+    /* background-image: url(./img/vegetables-2-1.png); */
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: 3px;
+    width: 23px;
+}
+
+.box4-1 .group-4 {
+    height: 30px;
+    left: 16px;
+    position: absolute;
+    top: 53px;
+    width: 262px;
+}
+
+.box4-1 .arrow-down-sign-to-2 {
+    height: 19px;
+    left: 240px;
+    object-fit: cover;
+    position: absolute;
+    top: 3px;
+    width: 20px;
+}
+
+.box4-1 .vegetable {
+    height: 23px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 3px;
+    width: 23px;
+}
+
+.box4-1 .group-5 {
+    height: 30px;
+    left: 16px;
+    position: absolute;
+    top: 139px;
+    width: 262px;
+}
+
+.box4-1 .group-6 {
+    /* background-image: url(./img/bread-1.png); */
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 25px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 28px;
+}
+
+.box4-1 .group-7 {
+    height: 30px;
+    left: 16px;
+    position: absolute;
+    top: 182px;
+    width: 262px;
+}
+
+.box4-1 .group-8 {
+    /* background-image: url(./img/protein-1.png); */
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 22px;
+    left: 0;
+    position: absolute;
+    top: 4px;
+    width: 28px;
+}
+
+.box4-1 .group-9 {
+    height: 30px;
+    left: 16px;
+    position: absolute;
+    top: 311px;
+    width: 262px;
+}
+
+.box4-1 .group-10 {
+    /* background-image: url(./img/dairy-products-1.png); */
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: 5px;
+    width: 23px;
+}
+
+.box4-1 .group-11 {
+    height: 30px;
+    left: 15px;
+    position: absolute;
+    top: 225px;
+    width: 263px;
+}
+
+.box4-1 .arrow-down-sign-to-3 {
+    height: 21px;
+    left: 241px;
+    object-fit: cover;
+    position: absolute;
+    top: 3px;
+    width: 20px;
+}
+
+.box4-1 .text-wrapper-4 {
+    color: #ffffff;
+    font-family: "IBM Plex Sans KR-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 42px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+}
+
+.box4-1 .group-12 {
+    /* background-image: url(./img/dairy-products-2.png); */
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 25px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 25px;
+}
+
+.box4-1 .group-13 {
+    height: 31px;
+    left: 14px;
+    position: absolute;
+    top: 268px;
+    width: 264px;
+}
+
+.box4-1 .arrow-down-sign-to-4 {
+    height: 21px;
+    left: 242px;
+    object-fit: cover;
+    position: absolute;
+    top: 3px;
+    width: 20px;
+}
+
+.box4-1 .text-wrapper-5 {
+    color: #ffffff;
+    font-family: "IBM Plex Sans KR-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+}
+
+.box4-1 .group-14 {
+    /* background-image: url(./nutrition-1.png); */
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 28px;
+    left: 0;
+    position: absolute;
+    top: 3px;
+    width: 27px;
+}
+
+
+
+
+
+
+

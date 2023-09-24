@@ -1,8 +1,7 @@
 import React from "react";
-import ReactDOM from 'react-dom'; // Import ReactDOM without '.client'
-// import "../../../public/css/style.css"; // Use an absolute path
+import ReactDOM from 'react-dom/client'; 
 
-function Thehealthyhub() {
+export const Thehealthyhub = () => {
   return (
       <div className="label">
         <div className="text-wrapper">The Healthy Hub</div>
@@ -10,13 +9,16 @@ function Thehealthyhub() {
   );
 }
 
+export default Thehealthyhub;
+
 if (document.getElementById('thh')) {
-  ReactDOM.render(
+  const Index = ReactDOM.createRoot(document.getElementById("thh"));
+
+  Index.render(
       <React.StrictMode>
           <Thehealthyhub/>
-      </React.StrictMode>,
-      document.getElementById('thh')
-  );
+      </React.StrictMode>
+  )
 }
 
 

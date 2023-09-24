@@ -19,17 +19,11 @@
 
         <div id="search-bar" class=""></div>
 
-        <div id="lisu"></div>
+        <div id="udd"></div>
 
         </div>
     </nav>
 
-    <!-- Sidebar -->
-
-    <div id="side-bar">
-       
-    </div>
-
-
+    <div class="" id="example"></div>
 </body>
 </html>

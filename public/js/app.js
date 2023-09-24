@@ -3027,8 +3027,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_healthyhub__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/healthyhub */ "./resources/js/components/healthyhub.jsx");
 /* harmony import */ var _components_HelloReact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/HelloReact */ "./resources/js/components/HelloReact.jsx");
 /* harmony import */ var _components_SearchBar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/SearchBar */ "./resources/js/components/SearchBar.jsx");
-/* harmony import */ var _components_LogIn_SignUp__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/LogIn-SignUp */ "./resources/js/components/LogIn-SignUp.jsx");
-/* harmony import */ var font_awesome_css_font_awesome_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! font-awesome/css/font-awesome.css */ "./node_modules/font-awesome/css/font-awesome.css");
+/* harmony import */ var _components_User__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/User */ "./resources/js/components/User.jsx");
+/* harmony import */ var _components_sidebar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/sidebar */ "./resources/js/components/sidebar.jsx");
+/* harmony import */ var _components_LogIn_SignUp__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/LogIn-SignUp */ "./resources/js/components/LogIn-SignUp.jsx");
+/* harmony import */ var font_awesome_css_font_awesome_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! font-awesome/css/font-awesome.css */ "./node_modules/font-awesome/css/font-awesome.css");
 
 
 
@@ -3048,6 +3050,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+ // Correct casing
 
 
 
@@ -3216,21 +3220,27 @@ var LogInSignUp = function LogInSignUp() {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "group",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-        className: "overlap-group-wrapper",
+        href: "",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "overlap-group",
+          className: "overlap-group-wrapper",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            className: "text-wrapper",
-            children: "Sign Up"
+            className: "overlap-group",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "text-wrapper",
+              children: "Sign Up"
+            })
           })
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
-        className: "overlap-wrapper",
+        href: "",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "overlap-group",
+          className: "overlap-wrapper",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            className: "text-wrapper",
-            children: "Log In"
+            className: "overlap-group",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "text-wrapper",
+              children: "Log In"
+            })
           })
         })
       })]
@@ -3255,21 +3265,28 @@ if (document.getElementById('lisu')) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   SearchBar: () => (/* binding */ SearchBar),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
-function SearchBar() {
+var SearchBar = function SearchBar() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "col-md-6 box1",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "form rectangle1",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-        className: "fa fa-search"
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+        href: "",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+          className: "fa fa-search"
+        })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
         type: "text",
         className: "form-control form-input",
@@ -3285,11 +3302,58 @@ function SearchBar() {
       })]
     })
   });
-}
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchBar);
 if (document.getElementById('search-bar')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), {
+  var Index = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("search-bar"));
+  Index.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(SearchBar, {})
-  }), document.getElementById('search-bar'));
+  }));
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/User.jsx":
+/*!******************************************!*\
+  !*** ./resources/js/components/User.jsx ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   UserDropdown: () => (/* binding */ UserDropdown),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var UserDropdown = function UserDropdown() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    className: "box3",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "group",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "ellipse"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+        className: "sort-down",
+        alt: "Sort down",
+        src: "img/sort-down.png"
+      })]
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UserDropdown);
+if (document.getElementById('udd')) {
+  var Index = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("udd"));
+  Index.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(UserDropdown, {})
+  }));
 }
 
 /***/ }),
@@ -3302,15 +3366,18 @@ if (document.getElementById('search-bar')) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Thehealthyhub: () => (/* binding */ Thehealthyhub),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
- // Import ReactDOM without '.client'
-// import "../../../public/css/style.css"; // Use an absolute path
 
-function Thehealthyhub() {
+
+var Thehealthyhub = function Thehealthyhub() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "label",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
@@ -3318,11 +3385,13 @@ function Thehealthyhub() {
       children: "The Healthy Hub"
     })
   });
-}
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Thehealthyhub);
 if (document.getElementById('thh')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), {
+  var Index = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("thh"));
+  Index.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Thehealthyhub, {})
-  }), document.getElementById('thh'));
+  }));
 }
 
 // if(document.getElementById('thh')){
@@ -3344,6 +3413,187 @@ if (document.getElementById('thh')) {
 //       </div>
 //   );
 // }
+
+/***/ }),
+
+/***/ "./resources/js/components/sidebar.jsx":
+/*!*********************************************!*\
+  !*** ./resources/js/components/sidebar.jsx ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   SideBar: () => (/* binding */ SideBar),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+;
+var SideBar = function SideBar() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "box4",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "group",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "div",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            className: "fire-flame-curved",
+            alt: "Fire flame curved",
+            src: "img/fire-flame-curved-1-1.png"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "text-wrapper",
+            children: "Popular"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "group-2",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            className: "house-chimney",
+            alt: "House chimney",
+            src: "img/house-chimney-1.png"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "text-wrapper-2",
+            children: "Home"
+          })]
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "line4",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+        className: "line-stroke",
+        alt: "Line stroke",
+        src: "img/line-2-stroke.svg"
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "line-horizontal4",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+        className: "line",
+        alt: "Line",
+        src: "img/line-6.svg"
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "box4-1",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "group",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "text-wrapper",
+          children: "See More...."
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "div",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            className: "arrow-down-sign-to",
+            alt: "Arrow down sign to",
+            src: "img/arrow-down-sign-to-navigate.png"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "text-wrapper-2",
+            children: "CATEGORIES"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "group-2",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            className: "img",
+            alt: "Arrow down sign to",
+            src: "img/arrow-down-sign-to-navigate.png"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "text-wrapper-3",
+            children: "Vegetables"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "group-3"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "group-4",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            className: "arrow-down-sign-to-2",
+            alt: "Arrow down sign to",
+            src: "img/arrow-down-sign-to-navigate.png"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "text-wrapper-3",
+            children: "Fruits"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            className: "vegetable",
+            alt: "Vegetable",
+            src: "vegetable-1.png"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "group-5",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            className: "img",
+            alt: "Arrow down sign to",
+            src: "img/arrow-down-sign-to-navigate.png"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "text-wrapper-3",
+            children: "Whole Grains"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "group-6"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "group-7",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            className: "img",
+            alt: "Arrow down sign to",
+            src: "img/arrow-down-sign-to-navigate.png"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "text-wrapper-3",
+            children: "Lean Protein"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "group-8"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "group-9",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            className: "img",
+            alt: "Arrow down sign to",
+            src: "img/arrow-down-sign-to-navigate.png"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "text-wrapper-3",
+            children: "Water"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "group-10"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "group-11",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            className: "arrow-down-sign-to-3",
+            alt: "Arrow down sign to",
+            src: "img/arrow-down-sign-to-navigate.png"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "text-wrapper-4",
+            children: "Low-Fat Dairy"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "group-12"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "group-13",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            className: "arrow-down-sign-to-4",
+            alt: "Arrow down sign to",
+            src: "img/arrow-down-sign-to-navigate.png"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "text-wrapper-5",
+            children: "Healthy Fats"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "group-14"
+          })]
+        })]
+      })
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SideBar);
+if (document.getElementById('side-bar')) {
+  var Index = react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot(document.getElementById("side-bar"));
+  Index.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)((react__WEBPACK_IMPORTED_MODULE_0___default().StrictMode), {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(SideBar, {})
+  }));
+}
 
 /***/ }),
 
@@ -9845,7 +10095,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".box {\r\n  height: 84px;\r\n  width: 1920px;\r\n  }\r\n  .box .rectangle {\r\n    background-color: #00317c;\r\n    border-bottom-style: solid;\r\n    border-bottom-width: 1px;\r\n    border-color: #000000;\r\n    border-top-style: solid;\r\n    border-top-width: 1px;\r\n    height: 84px;\r\n    left: 0;\r\n    position: fixed;\r\n    top: 0;\r\n    width: 1920px;\r\n    justify-content: space-evenly;\r\n  }\r\n\r\n.image {\r\n  width: 82px;\r\n  height: 77px;\r\n  }\r\n  .image .healthy-eating-app {\r\n    position: fixed;\r\n    width: 82px;\r\n    height: 77px;\r\n    top: 4px;\r\n    left: 48px;\r\n  }\r\n\r\n\r\n.label {\r\n  height: 50px;\r\n  width: 284px;\r\n  position: relative;\r\n  }\r\n  .label .text-wrapper {\r\n    text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;\r\n    color: #ffffff;\r\n    font-family: IM FELL Double Pica-Regular;\r\n    font-size: 40px;\r\n    font-weight: 400;\r\n    left: 0;\r\n    letter-spacing: 0;\r\n    line-height: normal;\r\n    position: fixed;\r\n    top: 0;\r\n    margin-left: 134px;\r\n    margin-top: 16px;\r\n  }\r\n\r\n\r\n.form{\r\n\r\n  position: relative;\r\n  }\r\n  .form .fa-search{\r\n\r\n    position: absolute;\r\n    top:20px;\r\n    left: 20px;\r\n    color: #9ca3af;\r\n\r\n  }\r\n  .form span{\r\n\r\n    position: absolute;\r\n    right: 17px;\r\n    top: 13px;\r\n    padding: 2px;\r\n    border-left: 1px solid #d1d5db;\r\n  }\r\n\r\n.left-pan{\r\n  padding-left: 7px;\r\n  }\r\n  .left-pan i{\r\n  \r\n  padding-left: 10px;\r\n  }\r\n\r\n.form-input{\r\n\r\n  height: 55px;\r\n  text-indent: 50px;\r\n  border-radius: 10px;\r\n  }\r\n  .form-input:focus{\r\n\r\n    box-shadow: none;\r\n    border:none;\r\n  }\r\n\r\n.box1 {\r\n\r\n  }\r\n  .rectangle1 {\r\n    background-color: #d9d9d9;\r\n    border-radius: 15px;\r\n    left: 0;\r\n    top: 0;\r\n    width: 890px;\r\n  }\r\n\r\n#search-bar {\r\n  position: absolute;\r\n}\r\n\r\n.box2 {\r\n  height: 50px;\r\n    position: relative;\r\n    width: 334px;\r\n    left: 14rem;\r\n  }\r\n  .box2 .group {\r\n    position: relative;\r\n    height: 50px;\r\n    left: 0;\r\n    top: 0;\r\n    width: 334px;\r\n  }\r\n  .box2 .overlap-group-wrapper {\r\n    height: 50px;\r\n    left: 177px;\r\n    position: absolute;\r\n    top: 0;\r\n    width: 159px;\r\n  }\r\n  .box2 .overlap-group {\r\n    background-color: #05149a;\r\n    border: 1px solid;\r\n    border-color: #000000;\r\n    box-shadow: 4px 4px 4px #00000080;\r\n    height: 50px;\r\n    position: relative;\r\n    width: 157px;\r\n  }\r\n  .box2 .text-wrapper {\r\n    text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;\r\n    color: #ffffff;\r\n    font-family: \"Inter-Regular\", Helvetica;\r\n    font-size: 34px;\r\n    font-weight: 400;\r\n    height: 30px;\r\n    left: 14px;\r\n    letter-spacing: 0;\r\n    line-height: normal;\r\n    position: absolute;\r\n    text-align: center;\r\n    top: 8px;\r\n    white-space: nowrap;\r\n    width: 126px;\r\n  }\r\n  .box2 .overlap-wrapper {\r\n    height: 50px;\r\n    left: 0;\r\n    position: absolute;\r\n    top: 0;\r\n    width: 159px;\r\n  }\r\ni.fa{\r\n\r\n  }\r\n  i.fa.fa-microphone {\r\n    font-size: 1.6rem;\r\n  }\r\n  i.fa.fa-search {\r\n    font-size: 1.5rem;\r\n    top: 0.9rem;\r\n  }\r\n  ", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  background: linear-gradient(180deg, rgb(7.62, 108.67, 130.69) 0%, rgb(3, 12, 90) 100%);\r\n  background-position: center center;\r\n  background-color: rgba(255, 255, 255, 1);\r\n  height: 100vh;\r\n  overflow-x: hidden;\r\n  width: 1920px;\r\n  background-attachment: fixed;\r\n}\r\n\r\n\r\n.box {\r\n  height: 84px;\r\n  width: 1920px;\r\n  }\r\n  .box .rectangle {\r\n    background-color: #00317c;\r\n    border-bottom-style: solid;\r\n    border-bottom-width: 1px;\r\n    border-color: #000000;\r\n    border-top-style: solid;\r\n    border-top-width: 1px;\r\n    height: 84px;\r\n    left: 0;\r\n    position: fixed;\r\n    top: 0;\r\n    width: 1920px;\r\n    justify-content: space-evenly;\r\n  }\r\n\r\n.image {\r\n  width: 82px;\r\n  height: 77px;\r\n  }\r\n  .image .healthy-eating-app {\r\n    position: fixed;\r\n    width: 82px;\r\n    height: 77px;\r\n    top: 4px;\r\n    left: 48px;\r\n  }\r\n\r\n\r\n.label {\r\n  height: 50px;\r\n  width: 284px;\r\n  position: relative;\r\n  }\r\n  .label .text-wrapper {\r\n    text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;\r\n    color: #ffffff;\r\n    font-family: IM FELL Double Pica-Regular;\r\n    font-size: 40px;\r\n    font-weight: 400;\r\n    left: 0;\r\n    letter-spacing: 0;\r\n    line-height: normal;\r\n    position: fixed;\r\n    top: 0;\r\n    margin-left: 134px;\r\n    margin-top: 16px;\r\n  }\r\n\r\n\r\n.form{\r\n\r\n  position: relative;\r\n  }\r\n  .form .fa-search{\r\n\r\n    position: absolute;\r\n    top:20px;\r\n    left: 20px;\r\n    color: #9ca3af;\r\n\r\n  }\r\n  .form span{\r\n\r\n    position: absolute;\r\n    right: 17px;\r\n    top: 13px;\r\n    padding: 2px;\r\n    border-left: 1px solid #d1d5db;\r\n  }\r\n\r\n.left-pan{\r\n  padding-left: 7px;\r\n  }\r\n  .left-pan i{\r\n  \r\n  padding-left: 10px;\r\n  }\r\n\r\n.form-input{\r\n\r\n  height: 55px;\r\n  text-indent: 50px;\r\n  border-radius: 10px;\r\n  }\r\n  .form-input:focus{\r\n\r\n    box-shadow: none;\r\n    border:none;\r\n  }\r\n\r\n.box1 {\r\n\r\n  }\r\n  .rectangle1 {\r\n    background-color: #d9d9d9;\r\n    border-radius: 15px;\r\n    left: 0;\r\n    top: 0;\r\n    width: 890px;\r\n  }\r\n\r\n#search-bar {\r\n  position: absolute;\r\n}\r\n\r\n#lisu {\r\n  position: absolute;\r\n  left: 1547px;\r\n}\r\n\r\n.box2 {\r\n  height: 50px;\r\n    position: relative;\r\n    width: 334px;\r\n  }\r\n  .box2 .group {\r\n    position: relative;\r\n    height: 50px;\r\n    left: 0;\r\n    top: 0;\r\n    width: 334px;\r\n  }\r\n  .box2 .overlap-group-wrapper {\r\n    height: 50px;\r\n    left: 177px;\r\n    position: absolute;\r\n    top: 0;\r\n    width: 159px;\r\n  }\r\n  .box2 .overlap-group {\r\n    background-color: #05149a;\r\n    border: 1px solid;\r\n    border-color: #000000;\r\n    box-shadow: 4px 4px 4px #00000080;\r\n    height: 50px;\r\n    position: relative;\r\n    width: 157px;\r\n  }\r\n  .box2 .text-wrapper {\r\n    text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;\r\n    color: #ffffff;\r\n    font-family: \"Inter-Regular\", Helvetica;\r\n    font-size: 34px;\r\n    font-weight: 400;\r\n    height: 30px;\r\n    left: 14px;\r\n    letter-spacing: 0;\r\n    line-height: normal;\r\n    position: absolute;\r\n    text-align: center;\r\n    top: 5px;\r\n    white-space: nowrap;\r\n    width: 126px;\r\n  }\r\n  .box2 .overlap-wrapper {\r\n    height: 50px;\r\n    left: 0;\r\n    position: absolute;\r\n    top: 0;\r\n    width: 159px;\r\n  }\r\n  \r\ni.fa{\r\n  color: #00317c;\r\n  }\r\n  i.fa.fa-microphone {\r\n    font-size: 1.6rem;\r\n  }\r\n  i.fa.fa-search {\r\n    font-size: 1.5rem;\r\n    top: 0.9rem;\r\n    color: #00317c;\r\n  }\r\n\r\n.box3 {\r\n      height: 60px;\r\n      position: relative;\r\n      width: 103px;\r\n    }\r\n  .box3 .group {\r\n      height: 60px;\r\n      left: 0;\r\n      top: 0;\r\n      width: 103px;\r\n  }\r\n  .box3 .ellipse {\r\n      border: 1px solid;\r\n      border-color: #000000;\r\n      border-radius: 30px;\r\n      height: 60px;\r\n      left: 0;\r\n      position: absolute;\r\n      top: 0;\r\n      width: 60px;\r\n  }\r\n  .box3 .sort-down {\r\n      height: 30px;\r\n      left: 73px;\r\n      position: absolute;\r\n      top: 16px;\r\n      width: 30px;\r\n  }\r\n\r\ndiv#udd {\r\n    position: absolute;\r\n    left: 1757px;\r\n}\r\n\r\n.ellipse {\r\n  width: 60px; /* Set the width of the ellipse */\r\n  height: 60px; /* Set the height of the ellipse */\r\n  background-image: url('/img/jaded.jpg'); /* Use a relative path to the image */\r\n  background-size: cover; /* This property ensures the image covers the entire div */\r\n  background-position: center center;\r\n}\r\n\r\n#side-bar {\r\n  height: 835px;\r\n  width: 339px;\r\n  position: fixed;\r\n  left: 2%;\r\n  top: 11%;\r\n  text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;\r\n  }\r\n  .box4 {\r\n    height: 108px;\r\n    position: relative;\r\n    width: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    margin-top: 1rem;\r\n  }\r\n\r\n  .box4 .group {\r\n      height: 108px;\r\n      left: 0;\r\n      top: 0;\r\n      position: relative;\r\n      width: 128px;\r\n  }\r\n\r\n  .box4 .div {\r\n      height: 32px;\r\n      left: 0;\r\n      position: absolute;\r\n      top: 76px;\r\n      width: 130px;\r\n  }\r\n\r\n  .box4 .fire-flame-curved {\r\n      height: 40px;\r\n      left: 0;\r\n      -o-object-fit: cover;\r\n         object-fit: cover;\r\n      position: absolute;\r\n      top: 0;\r\n      width: 33px;\r\n  }\r\n\r\n  .box4 .text-wrapper {\r\n      color: #ffffff;\r\n      font-family: \"IM FELL Double Pica-Regular\", Helvetica;\r\n      font-size: 25px;\r\n      font-weight: 400;\r\n      left: 49px;\r\n      letter-spacing: 0;\r\n      line-height: normal;\r\n      position: absolute;\r\n      top: 0;\r\n  }\r\n\r\n  .box4 .group-2 {\r\n      height: 34px;\r\n      left: 0;\r\n      position: absolute;\r\n      top: 0;\r\n      width: 116px;\r\n  }\r\n\r\n  .box4 .house-chimney {\r\n      height: 37px;\r\n      left: 0;\r\n      -o-object-fit: cover;\r\n         object-fit: cover;\r\n      position: absolute;\r\n      top: 0;\r\n      width: 36px;\r\n  }\r\n\r\n  .box4 .text-wrapper-2 {\r\n      color: #ffffff;\r\n      font-family: \"IM FELL Double Pica-Regular\", Helvetica;\r\n      font-size: 25px;\r\n      font-weight: 400;\r\n      left: 51px;\r\n      letter-spacing: 0;\r\n      line-height: normal;\r\n      position: absolute;\r\n      top: 2px;\r\n  }\r\n\r\n.line4 {\r\n  height: 835px;\r\n  width: 100%;\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  }\r\n  .line4 .line-stroke {\r\n    height: 835px;\r\n    left: 0;\r\n    position: relative;\r\n    top: 0;\r\n    width: 1px;\r\n    float: right;\r\n  }\r\n\r\n.line-horizontal4 {\r\n  height: 1px;\r\n  width: 100%;\r\n  position: relative;\r\n  top: 0;\r\n  left: 0;\r\n  margin: 25px 0;\r\n  display: flex;\r\n  align-items: center;\r\n  }\r\n  .line-horizontal4 .line {\r\n    height: 1px;\r\n    left: 0;\r\n    -o-object-fit: cover;\r\n    object-fit: cover;\r\n    top: 0;\r\n    position: relative;\r\n    width: 310px;\r\n    }\r\n\r\n.box4-1 {\r\n  height: 377px;\r\n  position: relative;\r\n  width: 100%;\r\n  }\r\n  .box4-1 .group {\r\n    height: 377px;\r\n    left: 0;\r\n    position: relative;\r\n    top: 0;\r\n    width: 278px;\r\n  }\r\n\r\n.box4-1 .text-wrapper {\r\n    color: #9f9f9f;\r\n    font-family: \"IM FELL Double Pica-Regular\", Helvetica;\r\n    font-size: 15px;\r\n    font-weight: 400;\r\n    left: 58px;\r\n    letter-spacing: 0;\r\n    line-height: normal;\r\n    position: absolute;\r\n    top: 358px;\r\n}\r\n\r\n.box4-1 .div {\r\n    height: 20px;\r\n    left: 0;\r\n    position: absolute;\r\n    top: 0;\r\n    width: 278px;\r\n}\r\n\r\n.box4-1 .arrow-down-sign-to {\r\n    height: 19px;\r\n    left: 256px;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    position: absolute;\r\n    top: 0;\r\n    width: 20px;\r\n}\r\n\r\n.box4-1 .text-wrapper-2 {\r\n    color: #9f9f9f;\r\n    font-family: \"IM FELL Double Pica-Regular\", Helvetica;\r\n    font-size: 16px;\r\n    font-weight: 400;\r\n    left: 0;\r\n    letter-spacing: 0;\r\n    line-height: normal;\r\n    position: absolute;\r\n    top: 0;\r\n}\r\n\r\n.box4-1 .group-2 {\r\n    height: 30px;\r\n    left: 16px;\r\n    position: absolute;\r\n    top: 96px;\r\n    width: 262px;\r\n}\r\n\r\n.box4-1 .img {\r\n    height: 21px;\r\n    left: 240px;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    position: absolute;\r\n    top: 3px;\r\n    width: 20px;\r\n}\r\n\r\n.box4-1 .text-wrapper-3 {\r\n    color: #ffffff;\r\n    font-family: \"IBM Plex Sans KR-Regular\", Helvetica;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    left: 41px;\r\n    letter-spacing: 0;\r\n    line-height: normal;\r\n    position: absolute;\r\n    top: -1px;\r\n}\r\n\r\n.box4-1 .group-3 {\r\n    /* background-image: url(./img/vegetables-2-1.png); */\r\n    background-position: 50% 50%;\r\n    background-size: cover;\r\n    height: 24px;\r\n    left: 0;\r\n    position: absolute;\r\n    top: 3px;\r\n    width: 23px;\r\n}\r\n\r\n.box4-1 .group-4 {\r\n    height: 30px;\r\n    left: 16px;\r\n    position: absolute;\r\n    top: 53px;\r\n    width: 262px;\r\n}\r\n\r\n.box4-1 .arrow-down-sign-to-2 {\r\n    height: 19px;\r\n    left: 240px;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    position: absolute;\r\n    top: 3px;\r\n    width: 20px;\r\n}\r\n\r\n.box4-1 .vegetable {\r\n    height: 23px;\r\n    left: 0;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    position: absolute;\r\n    top: 3px;\r\n    width: 23px;\r\n}\r\n\r\n.box4-1 .group-5 {\r\n    height: 30px;\r\n    left: 16px;\r\n    position: absolute;\r\n    top: 139px;\r\n    width: 262px;\r\n}\r\n\r\n.box4-1 .group-6 {\r\n    /* background-image: url(./img/bread-1.png); */\r\n    background-position: 50% 50%;\r\n    background-size: cover;\r\n    height: 25px;\r\n    left: 0;\r\n    position: absolute;\r\n    top: 1px;\r\n    width: 28px;\r\n}\r\n\r\n.box4-1 .group-7 {\r\n    height: 30px;\r\n    left: 16px;\r\n    position: absolute;\r\n    top: 182px;\r\n    width: 262px;\r\n}\r\n\r\n.box4-1 .group-8 {\r\n    /* background-image: url(./img/protein-1.png); */\r\n    background-position: 50% 50%;\r\n    background-size: cover;\r\n    height: 22px;\r\n    left: 0;\r\n    position: absolute;\r\n    top: 4px;\r\n    width: 28px;\r\n}\r\n\r\n.box4-1 .group-9 {\r\n    height: 30px;\r\n    left: 16px;\r\n    position: absolute;\r\n    top: 311px;\r\n    width: 262px;\r\n}\r\n\r\n.box4-1 .group-10 {\r\n    /* background-image: url(./img/dairy-products-1.png); */\r\n    background-position: 50% 50%;\r\n    background-size: cover;\r\n    height: 24px;\r\n    left: 0;\r\n    position: absolute;\r\n    top: 5px;\r\n    width: 23px;\r\n}\r\n\r\n.box4-1 .group-11 {\r\n    height: 30px;\r\n    left: 15px;\r\n    position: absolute;\r\n    top: 225px;\r\n    width: 263px;\r\n}\r\n\r\n.box4-1 .arrow-down-sign-to-3 {\r\n    height: 21px;\r\n    left: 241px;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    position: absolute;\r\n    top: 3px;\r\n    width: 20px;\r\n}\r\n\r\n.box4-1 .text-wrapper-4 {\r\n    color: #ffffff;\r\n    font-family: \"IBM Plex Sans KR-Regular\", Helvetica;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    left: 42px;\r\n    letter-spacing: 0;\r\n    line-height: normal;\r\n    position: absolute;\r\n    top: -1px;\r\n}\r\n\r\n.box4-1 .group-12 {\r\n    /* background-image: url(./img/dairy-products-2.png); */\r\n    background-position: 50% 50%;\r\n    background-size: cover;\r\n    height: 25px;\r\n    left: 0;\r\n    position: absolute;\r\n    top: 2px;\r\n    width: 25px;\r\n}\r\n\r\n.box4-1 .group-13 {\r\n    height: 31px;\r\n    left: 14px;\r\n    position: absolute;\r\n    top: 268px;\r\n    width: 264px;\r\n}\r\n\r\n.box4-1 .arrow-down-sign-to-4 {\r\n    height: 21px;\r\n    left: 242px;\r\n    -o-object-fit: cover;\r\n       object-fit: cover;\r\n    position: absolute;\r\n    top: 3px;\r\n    width: 20px;\r\n}\r\n\r\n.box4-1 .text-wrapper-5 {\r\n    color: #ffffff;\r\n    font-family: \"IBM Plex Sans KR-Regular\", Helvetica;\r\n    font-size: 20px;\r\n    font-weight: 400;\r\n    left: 43px;\r\n    letter-spacing: 0;\r\n    line-height: normal;\r\n    position: absolute;\r\n    top: -1px;\r\n}\r\n\r\n.box4-1 .group-14 {\r\n    /* background-image: url(./nutrition-1.png); */\r\n    background-position: 50% 50%;\r\n    background-size: cover;\r\n    height: 28px;\r\n    left: 0;\r\n    position: absolute;\r\n    top: 3px;\r\n    width: 27px;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

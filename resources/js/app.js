@@ -18,7 +18,9 @@ import './bootstrap';
 import './components/Example';
 import './components/healthyhub';
 import './components/HelloReact';
-import './components/SearchBar';
+import SearchBar from './components/SearchBar'; // Correct casing
+import UserDropdown from './components/User';
+import SideBar from './components/sidebar';
 import './components/LogIn-SignUp';
 
 // resources/js/app.js

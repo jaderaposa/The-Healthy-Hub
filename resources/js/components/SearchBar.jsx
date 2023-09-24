@@ -1,12 +1,12 @@
 import React from "react";
-import ReactDOM from 'react-dom'; 
+import ReactDOM from 'react-dom/client'; 
 
-function SearchBar() {
+export const SearchBar = () => {
   return (
   
         <div className="col-md-6 box1">
           <div className="form rectangle1">
-            <i className="fa fa-search"></i>
+            <a href=""><i className="fa fa-search"></i></a>
             <input
               type="text"
               className="form-control form-input"
@@ -23,11 +23,14 @@ function SearchBar() {
   );
 }
 
+export default SearchBar;
+
 if (document.getElementById('search-bar')) {
-  ReactDOM.render(
+  const Index = ReactDOM.createRoot(document.getElementById("search-bar"));
+
+  Index.render(
       <React.StrictMode>
           <SearchBar/>
-      </React.StrictMode>,
-      document.getElementById('search-bar')
-  );
+      </React.StrictMode>
+  )
 }
