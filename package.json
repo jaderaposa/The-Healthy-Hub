@@ -27,6 +27,7 @@
         "webpack": "^5.88.2"
     },
     "dependencies": {
+        "@fontsource/im-fell-double-pica-sc": "^5.0.8",
         "connect": "^3.7.0",
         "create-react-app": "^1.5.2",
         "font-awesome": "^4.7.0",
@@ -37,4 +38,4 @@
         "npm": "^10.1.0",
         "tar": "^6.2.0"
     }
-    }
+}

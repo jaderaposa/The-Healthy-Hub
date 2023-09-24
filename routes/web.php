@@ -11,6 +11,10 @@ Route::get('/home', function () {
     return view('layouts/navuser');
 });
 
+Route::get('/login', function () {
+    return view('layouts/login');
+});
+
 // Authentication routes (Auth::routes() already includes these)
 // Auth::routes();
 

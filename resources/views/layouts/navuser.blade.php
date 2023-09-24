@@ -28,6 +28,5 @@
 
     <div id="side-bar"></div>
 
-    <div id="example"></div>
 </body>
 </html>
