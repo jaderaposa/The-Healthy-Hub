@@ -244,7 +244,7 @@ div#udd {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    right: 2rem;
   }
 
   .box4 .group {
@@ -372,6 +372,7 @@ div#udd {
     line-height: normal;
     position: absolute;
     top: 358px;
+    text-shadow: none;
 }
 
 .box4-1 .div {
@@ -383,7 +384,6 @@ div#udd {
 }
 
 .box4-1 .arrow-down-sign-to {
-    height: 19px;
     left: 256px;
     object-fit: cover;
     position: absolute;
@@ -401,14 +401,18 @@ div#udd {
     line-height: normal;
     position: absolute;
     top: 0;
+    text-shadow: none;
 }
 
 .box4-1 .group-2 {
-    height: 30px;
-    left: 16px;
-    position: absolute;
-    top: 96px;
-    width: 262px;
+  height: 30px;
+  left: 16px;
+  position: absolute;
+  top: 96px;
+  width: 262px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box4-1 .img {
@@ -416,39 +420,42 @@ div#udd {
     left: 240px;
     object-fit: cover;
     position: absolute;
-    top: 3px;
     width: 20px;
 }
 
 .box4-1 .text-wrapper-3 {
-    color: #ffffff;
-    font-family: "IBM Plex Sans KR-Regular", Helvetica;
-    font-size: 20px;
-    font-weight: 400;
-    left: 41px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: -1px;
+  color: #ffffff;
+  font-family: "IBM Plex Sans KR-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 41px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
 }
 
 .box4-1 .group-3 {
-    /* background-image: url(./img/vegetables-2-1.png); */
+    /* background-image: url(/img/vegetables-2.png); */
     background-position: 50% 50%;
     background-size: cover;
     height: 24px;
     left: 0;
     position: absolute;
-    top: 3px;
     width: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box4-1 .group-4 {
-    height: 30px;
-    left: 16px;
-    position: absolute;
-    top: 53px;
-    width: 262px;
+  height: 30px;
+  left: 16px;
+  position: absolute;
+  top: 53px;
+  width: 262px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box4-1 .arrow-down-sign-to-2 {
@@ -456,7 +463,6 @@ div#udd {
     left: 240px;
     object-fit: cover;
     position: absolute;
-    top: 3px;
     width: 20px;
 }
 
@@ -475,6 +481,9 @@ div#udd {
     position: absolute;
     top: 139px;
     width: 262px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box4-1 .group-6 {
@@ -484,8 +493,10 @@ div#udd {
     height: 25px;
     left: 0;
     position: absolute;
-    top: 1px;
     width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box4-1 .group-7 {
@@ -494,17 +505,21 @@ div#udd {
     position: absolute;
     top: 182px;
     width: 262px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box4-1 .group-8 {
-    /* background-image: url(./img/protein-1.png); */
     background-position: 50% 50%;
     background-size: cover;
     height: 22px;
     left: 0;
     position: absolute;
-    top: 4px;
     width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box4-1 .group-9 {
@@ -513,6 +528,9 @@ div#udd {
     position: absolute;
     top: 311px;
     width: 262px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box4-1 .group-10 {
@@ -522,8 +540,11 @@ div#udd {
     height: 24px;
     left: 0;
     position: absolute;
-    top: 5px;
+    /* top: 5px; */
     width: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box4-1 .group-11 {
@@ -532,15 +553,18 @@ div#udd {
     position: absolute;
     top: 225px;
     width: 263px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box4-1 .arrow-down-sign-to-3 {
-    height: 21px;
-    left: 241px;
-    object-fit: cover;
-    position: absolute;
-    top: 3px;
-    width: 20px;
+  height: 21px;
+  left: 241px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  width: 20px;
 }
 
 .box4-1 .text-wrapper-4 {
@@ -552,7 +576,6 @@ div#udd {
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: -1px;
 }
 
 .box4-1 .group-12 {
@@ -562,8 +585,11 @@ div#udd {
     height: 25px;
     left: 0;
     position: absolute;
-    top: 2px;
+    /* top: 2px; */
     width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box4-1 .group-13 {
@@ -572,6 +598,9 @@ div#udd {
     position: absolute;
     top: 268px;
     width: 264px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box4-1 .arrow-down-sign-to-4 {
@@ -579,7 +608,6 @@ div#udd {
     left: 242px;
     object-fit: cover;
     position: absolute;
-    top: 3px;
     width: 20px;
 }
 
@@ -592,9 +620,8 @@ div#udd {
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: -1px;
+    text-shadow: none;
 }
-
 .box4-1 .group-14 {
     /* background-image: url(./nutrition-1.png); */
     background-position: 50% 50%;
@@ -602,9 +629,156 @@ div#udd {
     height: 28px;
     left: 0;
     position: absolute;
-    top: 3px;
+    /* top: 3px; */
     width: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.box4-2 {
+  height: 195px;
+  position: relative;
+  width: 100%;
+}
+
+.box4-2 .group {
+  height: 195px;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 274px;
+}
+
+.box4-2 .text-wrapper {
+  color: #9f9f9f;
+  font-family: "IM FELL Double Pica-Regular", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  left: 57px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 176px;
+  text-shadow: none;
+}
+
+.box4-2 .div {
+  height: 24px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 274px;
+}
+
+.box4-2 .text-wrapper-2 {
+  color: #9f9f9f;
+  font-family: "IM FELL Double Pica-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 4px;
+  text-shadow: none;
+}
+
+.box4-2 .arrow-down-sign-to {
+  /* height: 19px; */
+  left: 252px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.box4-2 .group-2 {
+  height: 28px;
+  left: 10px;
+  position: absolute;
+  top: 86px;
+  width: 108px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box4-2 .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "IBM Plex Sans KR-Regular", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  left: 42px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+}
+
+.box4-2 .group-3 {
+  /* background-image: url(/img/laptop-1.png); */
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
+}
+
+.box4-2 .group-4 {
+  height: 28px;
+  left: 10px;
+  position: absolute;
+  top: 125px;
+  width: 75px;
+  display: flex;
+  align-items: center;
+}
+
+.box4-2 .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "IBM Plex Sans KR-Regular", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  left: 41px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+}
+
+.box4-2 .help {
+  height: 28px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 28px;
+}
+
+.box4-2 .group-5 {
+  height: 28px;
+  left: 10px;
+  position: absolute;
+  top: 46px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box4-2 .about {
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
+}
+
+.gray {
+  /* color: gray !important; */
+}
+
 
 
 

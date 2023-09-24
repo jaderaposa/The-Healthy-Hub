@@ -15,7 +15,7 @@ import './bootstrap';
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import './components/Example';
+import Example from './components/Example';
 import './components/healthyhub';
 import './components/HelloReact';
 import SearchBar from './components/SearchBar'; // Correct casing

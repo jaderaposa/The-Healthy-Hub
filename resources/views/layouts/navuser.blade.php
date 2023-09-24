@@ -24,6 +24,10 @@
         </div>
     </nav>
 
-    <div class="" id="example"></div>
+    <!-- Sidebar -->
+
+    <div id="side-bar"></div>
+
+    <div id="example"></div>
 </body>
 </html>
