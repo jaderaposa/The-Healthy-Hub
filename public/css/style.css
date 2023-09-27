@@ -862,6 +862,151 @@ div#udd {
     text-align: center;
   }
 
+  .social-media {
+    position: relative;
+    width: 100%;
+    height: 67px;
+}
+
+.social-media .group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-media .text-wrapper {
+  position: relative;
+    text-shadow: 4px 4px 4px #00000080;
+    -webkit-text-stroke: 1px #000000;
+    font-family: "IM FELL Double Pica-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin: 0;
+}
+
+.social-media .facebook-app-symbol {
+  position: relative;
+  width: 59px;
+  height: 59px;
+  /* top: 9px; */
+  /* left: 585px; */
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.social-media .instagram {
+  position: relative;
+  width: 73px;
+  height: 74px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.social-media .reddit {
+  position: relative;
+  width: 69px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.social-media .twitter {
+    position: relative;
+    width: 58px;
+    height: 66px;
+    object-fit: cover;
+}
+
+.social-media .div {
+  position: relative;
+  width: 647px;
+  height: 63px;
+  box-shadow: 4px 4px 4px #00000080;
+}
+
+.social-media .line {
+    top: 3px;
+    left: 120px;
+    position: absolute;
+    width: 6px;
+    height: 60px;
+}
+
+.social-media .img {
+    top: 0;
+    left: 527px;
+    position: absolute;
+    width: 6px;
+    height: 60px;
+}
+
+.social-media .line-2 {
+    top: 3px;
+    left: 307px;
+    position: absolute;
+    width: 6px;
+    height: 60px;
+}
+
+.social-media .text-wrapper-2 {
+    position: absolute;
+    width: 105px;
+    top: 3px;
+    left: 0;
+    font-family: "IM FELL Double Pica-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.social-media .text-wrapper-3 {
+    position: absolute;
+    width: 148px;
+    top: 5px;
+    left: 145px;
+    font-family: "IM FELL Double Pica-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.social-media .text-wrapper-4 {
+    position: absolute;
+    width: 161px;
+    top: 3px;
+    left: 339px;
+    font-family: "IM FELL Double Pica-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.social-media .text-wrapper-5 {
+    position: absolute;
+    width: 80px;
+    top: 5px;
+    left: 559px;
+    font-family: "IM FELL Double Pica-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.icons{
+  gap: 2rem;
+  display: flex;
+}
 
 
 
