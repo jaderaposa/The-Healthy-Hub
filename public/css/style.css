@@ -72,7 +72,6 @@ nav {
   }
   .form .fa-search{
 
-    position: absolute;
     top:20px;
     left: 20px;
     color: #9ca3af;
@@ -98,7 +97,7 @@ nav {
 .form-input{
 
   height: 55px;
-  text-indent: 50px;
+  text-indent: 10px;
   border-radius: 10px;
   }
   .form-input:focus{
@@ -111,7 +110,7 @@ nav {
   }
 
 .box1 {
-
+  width: 100%;
   }
   .rectangle1 {
     background-color: #d9d9d9;
@@ -189,9 +188,9 @@ i.fa{
     font-size: 1.6rem;
   }
   i.fa.fa-search {
-    font-size: 1.5rem;
-    top: 0.9rem;
+    font-size: 1.6rem;
     color: #00317c;
+    padding-right: 10px;
   }
 
 .box3 {
@@ -787,6 +786,7 @@ div#udd {
 }
 
 .desc {
+    position: absolute;
     width: 100%;
     height: 48px;
     display: flex;
@@ -795,7 +795,6 @@ div#udd {
     text-transform: uppercase;
   }
   .desc .text-wrapper {
-    position: relative;
     top: 0;
     left: 0;
     text-shadow: 4px 4px 4px #00000080;
@@ -807,10 +806,10 @@ div#udd {
   }
 
 .login {
-  position: relative;
+  position: absolute;
   width: 40%;
   height: 520px;
-  top: 207px;
+  top: 19%;
   left: 1059px;
   display: flex;
   justify-content: center;
@@ -863,60 +862,56 @@ div#udd {
   }
 
   .social-media {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 67px;
+    top: 852px;
 }
 
 .social-media .group {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-shadow: 4px 4px 4px #00000080, -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
 }
 
 .social-media .text-wrapper {
   position: relative;
-    text-shadow: 4px 4px 4px #00000080;
-    -webkit-text-stroke: 1px #000000;
-    font-family: "IM FELL Double Pica-Regular", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 40px;
-    letter-spacing: 0;
-    line-height: normal;
-    margin: 0;
+  font-family: "IM FELL Double Pica-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin: 0;
 }
 
 .social-media .facebook-app-symbol {
   position: relative;
-  width: 59px;
-  height: 59px;
-  /* top: 9px; */
-  /* left: 585px; */
+  /* width: 59px; */
+  height: 40px;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
 .social-media .instagram {
   position: relative;
-  width: 73px;
-  height: 74px;
+  height: 40px;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
 .social-media .reddit {
   position: relative;
-  width: 69px;
-  height: 70px;
+  height: 40px;
   object-fit: cover;
 }
 
 .social-media .twitter {
     position: relative;
-    width: 58px;
-    height: 66px;
+    /* width: 58px; */
+    height: 40px;
     object-fit: cover;
 }
 
@@ -924,13 +919,16 @@ div#udd {
   position: relative;
   width: 647px;
   height: 63px;
-  box-shadow: 4px 4px 4px #00000080;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 10rem;
 }
 
 .social-media .line {
-    top: 3px;
-    left: 120px;
-    position: absolute;
+    /* top: 3px;
+    left: 120px; */
+    position: relative;
     width: 6px;
     height: 60px;
 }
@@ -952,61 +950,371 @@ div#udd {
 }
 
 .social-media .text-wrapper-2 {
-    position: absolute;
-    width: 105px;
-    top: 3px;
-    left: 0;
-    font-family: "IM FELL Double Pica-Regular", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 40px;
-    letter-spacing: 0;
-    line-height: normal;
+  position: relative;
+  font-family: "IM FELL Double Pica-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
 .social-media .text-wrapper-3 {
-    position: absolute;
-    width: 148px;
-    top: 5px;
-    left: 145px;
-    font-family: "IM FELL Double Pica-Regular", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 40px;
-    letter-spacing: 0;
-    line-height: normal;
+  position: relative;
+  font-family: "IM FELL Double Pica-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
 .social-media .text-wrapper-4 {
-    position: absolute;
-    width: 161px;
-    top: 3px;
-    left: 339px;
-    font-family: "IM FELL Double Pica-Regular", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 40px;
-    letter-spacing: 0;
-    line-height: normal;
+  position: relative;
+  font-family: "IM FELL Double Pica-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
 .social-media .text-wrapper-5 {
-    position: absolute;
-    width: 80px;
-    top: 5px;
-    left: 559px;
-    font-family: "IM FELL Double Pica-Regular", Helvetica;
-    font-weight: 400;
-    color: #ffffff;
-    font-size: 40px;
-    letter-spacing: 0;
-    line-height: normal;
+  position: relative;
+  font-family: "IM FELL Double Pica-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
 .icons{
-  gap: 2rem;
+  gap: 1rem;
   display: flex;
+  align-items: center;
+  margin-left: 1rem;
 }
+
+.main-container {
+  position: absolute;
+  height: 515px;
+  width: 749px;
+  top: 214px;
+  left: 149px;
+  text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+}
+
+.login-card {
+  /* position: absolute;
+  height: 515px;
+  width: 749px;
+  top: 214px;
+  left: 149px;
+  text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black; */
+}
+
+.login-card .group {
+  height: 515px;
+  width: 749px;
+}
+
+.login-card .overlap {
+  height: 515px;
+  position: relative;
+}
+
+.login-card .overlap-group-wrapper {
+  height: 515px;
+}
+
+.login-card .overlap-group {
+  background-color: #005180;
+  border: 3px solid;
+  border-color: #000000;
+  border-radius: 35px;
+  box-shadow: 4px 4px 4px #00000080;
+  height: 515px;
+  position: relative;
+  width: 749px;
+}
+
+.login-card .text-wrapper {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 70px;
+  font-weight: 400;
+  height: 70px;
+  left: 371px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 58px;
+  white-space: nowrap;
+  width: 297px;
+}
+
+.login-card .div-wrapper {
+  background-color: #d9d9d9;
+  border: 2px solid;
+  border-color: #000000;
+  height: 43px;
+  left: 362px;
+  position: absolute;
+  top: 176px;
+  width: 323px;
+  text-indent: 10px;
+  }
+  .login-card .div-wrapper::placeholder {
+    font-family: "Inter-Regular", Helvetica;
+  }
+
+.login-card .div {
+  color: #0000004c;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 5px;
+}
+
+.login-card .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 494px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 448px;
+}
+
+.login-card .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 58px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 448px;
+}
+
+.login-card .overlap-2 {
+  background-color: #d9d9d9;
+  border: 2px solid;
+  border-color: #000000;
+  height: 43px;
+  left: 362px;
+  position: absolute;
+  top: 256px;
+  width: 323px;
+  text-indent: 10px;
+  }
+  .login-card .overlap-2::placeholder{
+    font-family: "Inter-Regular", Helvetica;
+    text-indent: 10px;
+  }
+
+.login-card .user {
+  height: 349px;
+  left: 8px;
+  object-fit: cover;
+  position: absolute;
+  top: 58px;
+  width: 351px;
+}
+
+.login-card .overlap-wrapper {
+  height: 48px;
+  left: 447px;
+  position: absolute;
+  top: 330px;
+  width: 156px;
+}
+
+.login-card .overlap-3 {
+  background-color: #05149a;
+  border: 1px solid;
+  border-color: #000000;
+  box-shadow: 4px 4px 0px #00000080;
+  height: 48px;
+  position: relative;
+  width: 154px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.signup-card {
+  /* height: 515px;
+  width: 749px; */
+}
+
+.signup-card .group {
+  height: 515px;
+  left: 0;
+  top: 0;
+  width: 759px;
+}
+
+.signup-card .overlap {
+  background-color: #005180;
+  border: 3px solid;
+  border-color: #000000;
+  border-radius: 35px;
+  box-shadow: 10px 4px 4px #00000080;
+  height: 515px;
+  position: relative;
+  width: 749px;
+}
+
+.signup-card .overlap-group {
+  background-color: #d9d9d9;
+  border: 2px solid;
+  border-color: #000000;
+  height: 43px;
+  left: 362px;
+  position: absolute;
+  top: 296px;
+  width: 323px;
+}
+
+.signup-card .text-wrapper {
+  color: #0000004c;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 5px;
+}
+
+.signup-card .div {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 70px;
+  font-weight: 400;
+  height: 70px;
+  left: 371px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 58px;
+  white-space: nowrap;
+  width: 297px;
+}
+
+.signup-card .div-wrapper {
+  background-color: #d9d9d9;
+  border: 2px solid;
+  border-color: #000000;
+  height: 43px;
+  left: 362px;
+  position: absolute;
+  top: 176px;
+  width: 323px;
+  text-indent: 10px;
+  }
+  .signup-card .div-wrapper::placeholder{
+    text-indent: 10px;
+  }
+
+.signup-card .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 35px;
+  font-weight: 400;
+  left: 632px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 444px;
+  white-space: nowrap;
+}
+
+.signup-card .overlap-2 {
+  background-color: #d9d9d9;
+  border: 2px solid;
+  border-color: #000000;
+  height: 43px;
+  left: 362px;
+  position: absolute;
+  top: 236px;
+  width: 323px;
+  text-indent: 10px;
+  }
+  .signup-card .overlap-2::placeholder{
+    text-indent: 10px;
+  }
+
+.signup-card .user {
+  height: 349px;
+  left: 8px;
+  object-fit: cover;
+  position: absolute;
+  top: 58px;
+  width: 351px;
+}
+
+.signup-card .overlap-group-wrapper {
+  height: 48px;
+  left: 447px;
+  position: absolute;
+  top: 362px;
+  width: 156px;
+  text-indent: 10px;
+  }
+  .signup-card .overlap-group::placeholder{
+    text-indent: 10px;
+  }
+
+.signup-card .overlap-group-2 {
+  background-color: #05149a;
+  border: 1px solid;
+  border-color: #000000;
+  box-shadow: 4px 4px 0px #00000080;
+  height: 48px;
+  position: relative;
+  width: 154px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-card .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+::placeholder {
+  font-family: "Inter-Regular", Helvetica;
+  text-indent: 10px;
+}
+
+
 
 
 

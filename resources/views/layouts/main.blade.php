@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="desc">
-        <p class="text-wrapper">A supportive community for people who want to improve their health through nutrition</p>
+        <p class="text-wrapper">A community for people who want to improve their health through nutrition</p>
     </div>
     <div class="login">
         <div>
@@ -42,15 +42,22 @@
             </div>
 
             <div class="div">
+                <!-- <img class="line" src="img/line-5.svg" />
                 <img class="line" src="img/line-5.svg" />
-                <img class="img" src="img/line-6.svg" />
-                <img class="line-2" src="img/line-7.svg" />
+                <img class="line" src="img/line-5.svg" /> -->
                 <div class="text-wrapper-2">Home</div>
+                <img class="line" src="img/line-5.svg" />
                 <div class="text-wrapper-3">Products</div>
+                <img class="line" src="img/line-5.svg" />
                 <div class="text-wrapper-4">Company</div>
+                <img class="line" src="img/line-5.svg" />
                 <div class="text-wrapper-5">Blog</div>
             </div>
+
         </div>
+    </div>
+    <div class="main-container">
+        @yield('login/signup')
     </div>
 </body>
 </html>

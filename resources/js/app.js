@@ -22,6 +22,8 @@ import SearchBar from './components/SearchBar'; // Correct casing
 import UserDropdown from './components/User';
 import SideBar from './components/sidebar';
 import './components/LogIn-SignUp';
+import LogInCard from './components/login_card';
+import SignUpCard from './components/signup_card';
 
 // resources/js/app.js
 import 'font-awesome/css/font-awesome.css';

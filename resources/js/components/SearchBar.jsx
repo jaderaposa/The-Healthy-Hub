@@ -6,16 +6,14 @@ export const SearchBar = () => {
   
         <div className="col-md-6 box1">
           <div className="form rectangle1">
-            <a href=""><i className="fa fa-search"></i></a>
             <input
               type="text"
               className="form-control form-input"
               placeholder="Search anything..."
             />
               <span className="left-pan">
-                <a href="">
-                <i className="fa fa-microphone"></i>
-                </a>
+                <a href=""><i className="fa fa-search"></i></a>
+                <a href=""><i className="fa fa-microphone"></i></a>
               </span>
           </div>
         </div>
