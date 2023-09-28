@@ -1281,8 +1281,8 @@ div#udd {
   position: absolute;
   top: 362px;
   width: 156px;
-  text-indent: 10px;
-  }
+}
+
   .signup-card .overlap-group::placeholder{
     text-indent: 10px;
   }
