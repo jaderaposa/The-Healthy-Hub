@@ -19,6 +19,10 @@ Route::get('/sign-up', function () {
     return view('signup');
 });
 
+Route::get('/log-in/admin', function () {
+    return view('admin-login');
+});
+
 // Authentication routes (Auth::routes() already includes these)
 // Auth::routes();
 
