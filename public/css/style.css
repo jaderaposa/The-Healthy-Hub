@@ -1,5 +1,5 @@
 body {
-  font-family: 'IM Fell Double Pica SC', serif;  
+  font-family: 'IM Fell Double Pica SC', serif !important;  
   background: linear-gradient(199deg, rgb(7.62, 108.67, 130.69) 28%, rgb(3, 12, 90) 83%);
   /* background-color: rgba(255, 255, 255, 1); */
   height: 100vh;
@@ -53,7 +53,7 @@ nav {
   .label .text-wrapper {
     text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
     color: #ffffff;
-    font-family: IM FELL Double Pica-Regular;
+    /* font-family: IM FELL Double Pica-Regular; */
     font-size: 40px;
     font-weight: 400;
     left: 0;
@@ -78,12 +78,10 @@ nav {
 
   }
   .form span{
-
     position: absolute;
     right: 17px;
     top: 13px;
     padding: 2px;
-    border-left: 1px solid #d1d5db;
   }
 
 .left-pan{
@@ -95,10 +93,12 @@ nav {
   }
 
 .form-input{
-
   height: 55px;
+  width: 90%;
   text-indent: 10px;
   border-radius: 10px;
+  border: none;
+  background-color: #ffffff;
   }
   .form-input:focus{
 
@@ -113,7 +113,7 @@ nav {
   width: 100%;
   }
   .rectangle1 {
-    background-color: #d9d9d9;
+    background-color: #ffffff;
     border-radius: 15px;
     left: 0;
     top: 0;
@@ -231,7 +231,7 @@ div#udd {
   width: 60px; /* Set the width of the ellipse */
   height: 60px; /* Set the height of the ellipse */
   background-image: url('/img/jaded.jpg'); /* Use a relative path to the image */
-  background-size: cover; /* This property ensures the image covers the entire div */
+  background-size: cover;   /* This property ensures the image covers the entire div */
   background-position: center center;
 }
 
@@ -239,9 +239,8 @@ div#udd {
   height: 835px;
   width: 339px;
   position: fixed;
-  left: 2%;
-  top: 11%;
   text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+  margin: 1.5% 0 2% 2%;
   }
   .box4 {
     height: 108px;
@@ -280,7 +279,7 @@ div#udd {
 
   .box4 .text-wrapper {
       color: #ffffff;
-      font-family: "IM FELL Double Pica-Regular", Helvetica;
+    
       font-size: 25px;
       font-weight: 400;
       left: 49px;
@@ -309,7 +308,7 @@ div#udd {
 
   .box4 .text-wrapper-2 {
       color: #ffffff;
-      font-family: "IM FELL Double Pica-Regular", Helvetica;
+    
       font-size: 25px;
       font-weight: 400;
       left: 51px;
@@ -370,7 +369,7 @@ div#udd {
 
 .box4-1 .text-wrapper {
     color: #9f9f9f;
-    font-family: "IM FELL Double Pica-Regular", Helvetica;
+  
     font-size: 15px;
     font-weight: 400;
     left: 58px;
@@ -399,7 +398,7 @@ div#udd {
 
 .box4-1 .text-wrapper-2 {
     color: #9f9f9f;
-    font-family: "IM FELL Double Pica-Regular", Helvetica;
+  
     font-size: 16px;
     font-weight: 400;
     left: 0;
@@ -658,7 +657,7 @@ div#udd {
 
 .box4-2 .text-wrapper {
   color: #9f9f9f;
-  font-family: "IM FELL Double Pica-Regular", Helvetica;
+
   font-size: 15px;
   font-weight: 400;
   left: 57px;
@@ -679,7 +678,7 @@ div#udd {
 
 .box4-2 .text-wrapper-2 {
   color: #9f9f9f;
-  font-family: "IM FELL Double Pica-Regular", Helvetica;
+
   font-size: 16px;
   font-weight: 400;
   left: 0;
@@ -798,7 +797,7 @@ div#udd {
     top: 0;
     left: 0;
     text-shadow: 4px 4px 4px #00000080;
-    font-family: IM FELL Double Pica SC-Regular;
+    /* font-family: IM FELL Double Pica SC-Regular; */
     font-weight: 400;
     color: #ffffff;
     font-size: 30px;
@@ -831,7 +830,7 @@ div#udd {
     top: 344px;
     left: 0;
     text-shadow: 8px 4px 4px #00000080;
-    font-family: "IM FELL Double Pica-Regular", Helvetica;
+  
     font-weight: 400;
     color: #ffffff;
     font-size: 96px;
@@ -878,7 +877,7 @@ div#udd {
 
 .social-media .text-wrapper {
   position: relative;
-  font-family: "IM FELL Double Pica-Regular", Helvetica;
+
   font-weight: 400;
   color: #ffffff;
   font-size: 40px;
@@ -951,7 +950,7 @@ div#udd {
 
 .social-media .text-wrapper-2 {
   position: relative;
-  font-family: "IM FELL Double Pica-Regular", Helvetica;
+
   font-weight: 400;
   color: #ffffff;
   font-size: 40px;
@@ -961,7 +960,7 @@ div#udd {
 
 .social-media .text-wrapper-3 {
   position: relative;
-  font-family: "IM FELL Double Pica-Regular", Helvetica;
+
   font-weight: 400;
   color: #ffffff;
   font-size: 40px;
@@ -971,7 +970,7 @@ div#udd {
 
 .social-media .text-wrapper-4 {
   position: relative;
-  font-family: "IM FELL Double Pica-Regular", Helvetica;
+
   font-weight: 400;
   color: #ffffff;
   font-size: 40px;
@@ -981,7 +980,7 @@ div#udd {
 
 .social-media .text-wrapper-5 {
   position: relative;
-  font-family: "IM FELL Double Pica-Regular", Helvetica;
+
   font-weight: 400;
   color: #ffffff;
   font-size: 40px;
@@ -1326,7 +1325,7 @@ div#udd {
 
 .admin-title .text-wrapper {
   color: #ffffff;
-  font-family: "IM FELL Double Pica-Regular", Helvetica;
+
   font-size: 96px;
   font-weight: 400;
   text-shadow: 8px 4px 4px #00000080;
@@ -1483,15 +1482,17 @@ input {
 
 .pic-nav {
   height: 246px;
-  width: 246px;
+  width: 78%;
+  position: relative;
+  float: right;
+  margin-top: 1%;
+  display: flex;
+  gap: 5.3rem;
 }
 
 .pic-nav .group {
   height: 246px;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 248px;
+  /* width: 248px; */
 }
 
 .pic-nav .overlap-group {
@@ -1507,8 +1508,6 @@ input {
 
 .pic-nav .text-wrapper {
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 6;
-  -webkit-text-stroke: 0.5px #000000;
   color: #fffbfb;
   display: -webkit-box;
   font-family: "Inter-Regular", Helvetica;
@@ -1517,11 +1516,257 @@ input {
   height: 82px;
   left: 8px;
   letter-spacing: 0;
-  line-height: 13px;
+  line-height: normal;
   overflow: hidden;
   position: absolute;
   text-align: justify;
   text-overflow: ellipsis;
   top: 154px;
   width: 226px;
+  text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+  padding: 6px;
+  background: transparent;
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+}
+
+.arrowbox {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.arrowbox .icon-arrow-circle {
+  height: 70px;
+  width: 70px;
+}
+
+#pop-box {
+  width: 385px;
+  height: max-content;
+  float: right;
+  position: relative;
+  margin-right: 4.5%;
+  margin-top: 4%;
+}
+
+.pop-box {
+  width: 100%;
+}
+
+.pop-box .group {
+  width: 385px;
+}
+
+.pop-box .overlap-group {
+  background-color: #072f45;
+  border: 2px solid;
+  border-color: #000000;
+  border-radius: 22px;
+  box-shadow: 8px 8px 4px #00000099;
+  position: relative;
+  padding: 1rem;
+  padding-bottom: 3rem;
+}
+
+.pop-box .text-wrapper {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.pop-box .thh-intermittent {
+  color: #bcbcbc;
+  font-size: 20.5px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 3rem;
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.pop-box .div {
+  color: #9f9f9f;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  text-decoration: none;
+  padding-left: 2rem;
+}
+
+.pop-box .line {
+  width: 100%;
+}
+
+#post-create
+{
+  position: absolute;
+  top: 375px;
+  left: 463px;
+}
+.post-create {
+}
+
+.post-create .group {
+  height: 39px;
+  width: 882px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  .post-create .group div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+
+.post-create .add {
+  height: 39px;
+  left: 0;
+  object-fit: cover;
+  top: 0;
+  width: 40px;
+}
+
+.post-create .text-wrapper {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 56px;
+  letter-spacing: 0;
+  line-height: normal;
+  top: 10px;
+  white-space: nowrap;
+}
+
+.post-create .fullscreen {
+  height: 30px;
+  left: 776px;
+  object-fit: cover;
+  top: 0;
+  width: 30px;
+}
+
+.post-create .play {
+  height: 19px;
+  left: 710px;
+  object-fit: cover;
+  top: 6px;
+  width: 20px;
+}
+
+.post-create .img {
+  height: 19px;
+  left: 552px;
+  object-fit: cover;
+  top: 6px;
+  width: 20px;
+}
+
+.post-create .div {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 600px;
+  letter-spacing: 0;
+  line-height: normal;
+  top: 6px;
+  white-space: nowrap;
+}
+
+.post-create .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 479px;
+  letter-spacing: 0;
+  line-height: normal;
+  top: 6px;
+  white-space: nowrap;
+}
+
+.divider {
+  gap: 2rem !important;
+}
+
+.post-display {
+  position: relative;
+  width: 922px;
+  height: 516px;
+  top: 22rem;
+  left: 26.5rem;
+}
+
+
+.post-display .group {
+  width: 922px;
+  height: 516px;
+  background-color: #005180;
+  border-radius: 15px;
+  border: 2px solid;
+  border-color: #000000;
+  box-shadow: 8px 8px 4px #00000099;
+}
+
+.post-display .image {
+  position: absolute;
+  width: 878px;
+  height: 416px;
+  top: 75px;
+  left: 18px;
+  object-fit: cover;
+}
+
+.post-display .div {
+  position: absolute;
+  width: 885px;
+  height: 49px;
+  top: 13px;
+  left: 23px;
+}
+
+.post-display .text-wrapper {
+  position: absolute;
+  top: 13px;
+  left: 55px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+}
+
+.post-display .ellipse {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  background-image: none;
+}
+
+.post-display .ellipsis {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  top: 11px;
+  left: 786px;
+}
+
+.post-display .close {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  top: 0;
+  left: 845px;
 }

@@ -45,7 +45,7 @@ export const SideBar = () => {
                         <img className="group-6" src='img/bread-1.png' />
                     </div>
                     <div className="group-7">
-                        <img className="img" alt="Arrow down sign to" src="img/arrow-down-sign-to-navigate.png" />
+                        <img className="img" alt="Arrow down sign to" src="img/arrow-down-sign-to-navigate.png" />   
                         <div className="text-wrapper-3">Lean Protein</div>
                         <img className="group-8" src='img/protein-1.png'/>
                     </div>

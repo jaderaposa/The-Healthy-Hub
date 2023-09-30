@@ -25,6 +25,8 @@ import './components/LogIn-SignUp';
 import LogInCard from './components/login_card';
 import SignUpCard from './components/signup_card';
 import PictureNav from './components/picture-nav';
+import PopularBox from './components/popular-box';
+import PostCreate from './components/Post-Create';
 
 // resources/js/app.js
 import 'font-awesome/css/font-awesome.css';
