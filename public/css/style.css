@@ -1480,3 +1480,48 @@ input {
   width: 100%;
   padding: 0 2rem 0;
 }
+
+.pic-nav {
+  height: 246px;
+  width: 246px;
+}
+
+.pic-nav .group {
+  height: 246px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 248px;
+}
+
+.pic-nav .overlap-group {
+  background-color: #008080;
+  background-image: url(/img/image-2.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 10px;
+  height: 246px;
+  position: relative;
+  width: 246px;
+}
+
+.pic-nav .text-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  -webkit-text-stroke: 0.5px #000000;
+  color: #fffbfb;
+  display: -webkit-box;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 82px;
+  left: 8px;
+  letter-spacing: 0;
+  line-height: 13px;
+  overflow: hidden;
+  position: absolute;
+  text-align: justify;
+  text-overflow: ellipsis;
+  top: 154px;
+  width: 226px;
+}

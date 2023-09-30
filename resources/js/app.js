@@ -24,6 +24,7 @@ import SideBar from './components/sidebar';
 import './components/LogIn-SignUp';
 import LogInCard from './components/login_card';
 import SignUpCard from './components/signup_card';
+import PictureNav from './components/picture-nav';
 
 // resources/js/app.js
 import 'font-awesome/css/font-awesome.css';
