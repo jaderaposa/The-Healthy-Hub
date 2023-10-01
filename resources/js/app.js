@@ -18,7 +18,7 @@ import './bootstrap';
 import Example from './components/Example';
 import './components/healthyhub';
 import './components/HelloReact';
-import SearchBar from './components/SearchBar'; // Correct casing
+import SearchBar from './components/searchbar';
 import UserDropdown from './components/User';
 import SideBar from './components/sidebar';
 import './components/LogIn-SignUp';
@@ -27,6 +27,8 @@ import SignUpCard from './components/signup_card';
 import PictureNav from './components/picture-nav';
 import PopularBox from './components/popular-box';
 import PostCreate from './components/Post-Create';
+import PostDisplay from './components/Post-Display';
+import SideBarAdmin from './components/sidebar-admin';
 
 // resources/js/app.js
 import 'font-awesome/css/font-awesome.css';

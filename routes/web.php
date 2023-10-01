@@ -4,11 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
-    return view('layouts/nav');
+    return view('guest');
 });
 
 Route::get('/home', function () {
-    return view('layouts/navuser');
+    return view('user-home');
 });
 
 Route::get('/log-in', function () {
@@ -19,8 +19,12 @@ Route::get('/sign-up', function () {
     return view('signup');
 });
 
-Route::get('/log-in/admin', function () {
+Route::get('/log-in-admin', function () {
     return view('admin-login');
+});
+
+Route::get('/home-admin', function () {
+    return view('admin-home');
 });
 
 // Authentication routes (Auth::routes() already includes these)

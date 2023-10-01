@@ -1,18 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';;
 
-export const SideBar = () => {
+export const SideBarAdmin = () => {
     return (
         <div>
             <div className="box4">
-                <div className="group">               
-                    <div className="group-2">
+                <div className="group">
+                    <div className="div">
                         <img className="house-chimney" alt="House chimney" src="img/house-chimney-1.png" />
                         <div className="text-wrapper">Home</div>
                     </div>
                     <div className="div">
                         <img className="fire-flame-curved" alt="Fire flame curved" src="img/fire-flame-curved-1-1.png" />
                         <div className="text-wrapper">Popular</div>
+                    </div>
+                    <div className="div">
+                        <img className="fire-flame-curved" alt="Fire flame curved" src="img/control-panel.png" />
+                        <div className="text-wrapper">Dashboard</div>
                     </div>
                 </div>
             </div>
@@ -95,16 +99,14 @@ export const SideBar = () => {
 };
 
 
+export default SideBarAdmin;
 
-
-export default SideBar;
-
-if (document.getElementById('side-bar')) {
-    const Index = ReactDOM.createRoot(document.getElementById("side-bar"));
+if (document.getElementById('side-bar-admin')) {
+    const Index = ReactDOM.createRoot(document.getElementById("side-bar-admin"));
 
     Index.render(
         <React.StrictMode>
-            <SideBar/>
+            <SideBarAdmin/>
         </React.StrictMode>
     )
 }

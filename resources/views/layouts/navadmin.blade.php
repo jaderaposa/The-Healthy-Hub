@@ -19,6 +19,12 @@
 
         <div id="search-bar" class=""></div>
 
+        <div style="position: relative;width: max-content;left: 204px;">
+            <div class="line-md-switch-off">
+                <a href=""><img class="mask-group" src="img/line-md_switch-off-filled.svg" /></a>
+            </div>
+        </div>
+
         <div id="udd"></div>
 
         </div>
@@ -26,9 +32,13 @@
 
     <!-- Sidebar -->
 
-    <div id="side-bar"></div>
+    <div id="side-bar-admin"></div>
 
+
+    <!-- Content -->
+    
     @yield('content')
 
+
 </body>
-</html>
+</html> 

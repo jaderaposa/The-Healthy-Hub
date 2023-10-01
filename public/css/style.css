@@ -11,6 +11,7 @@ body {
 nav {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
+  z-index: 1;
 }
 
 .box {
@@ -243,7 +244,7 @@ div#udd {
   margin: 1.5% 0 2% 2%;
   }
   .box4 {
-    height: 108px;
+    height: max-content;
     position: relative;
     width: 100%;
     display: flex;
@@ -253,19 +254,22 @@ div#udd {
   }
 
   .box4 .group {
-      height: 108px;
-      left: 0;
-      top: 0;
-      position: relative;
-      width: 128px;
+    left: 0;
+    top: 0;
+    position: relative;
+    width: 128px;
+    display: grid;
+    gap: 2rem;
   }
 
   .box4 .div {
-      height: 32px;
-      left: 0;
-      position: absolute;
-      top: 76px;
-      width: 130px;
+    height: 34px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 230px;
+    display: flex;
+    align-items: center;
   }
 
   .box4 .fire-flame-curved {
@@ -279,22 +283,19 @@ div#udd {
 
   .box4 .text-wrapper {
       color: #ffffff;
-    
       font-size: 25px;
       font-weight: 400;
       left: 49px;
       letter-spacing: 0;
-      line-height: normal;
       position: absolute;
-      top: 0;
   }
 
   .box4 .group-2 {
       height: 34px;
       left: 0;
-      position: absolute;
+      position: relative;
       top: 0;
-      width: 116px;
+      width: max-content;
   }
 
   .box4 .house-chimney {
@@ -308,14 +309,12 @@ div#udd {
 
   .box4 .text-wrapper-2 {
       color: #ffffff;
-    
       font-size: 25px;
       font-weight: 400;
       left: 51px;
       letter-spacing: 0;
       line-height: normal;
       position: absolute;
-      top: 2px;
   }
 
 .line4 {
@@ -1604,14 +1603,14 @@ input {
 {
   position: absolute;
   top: 375px;
-  left: 463px;
+  left: 424px;
 }
 .post-create {
 }
 
 .post-create .group {
   height: 39px;
-  width: 882px;
+  width: 919px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1770,3 +1769,22 @@ input {
   top: 0;
   left: 845px;
 }
+
+.line-md-switch-off {
+  width: 58px;
+  height: 60px;
+  float: right;
+}
+
+.line-md-switch-off .mask-group {
+
+}
+
+#side-bar-admin {
+  height: 835px;
+  width: 339px;
+  position: fixed;
+  text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+  margin: 1.5% 0 2% 2%;
+}
+

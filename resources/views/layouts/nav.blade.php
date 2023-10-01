@@ -26,25 +26,7 @@
 
     <!-- Sidebar -->
 
-    <div id="side-bar"></div>
-    
-    <div id="pic-nav"></div>
-
-    <div id="pop-box"></div>
-
-    <div id="post-create"></div>
-
-    <div class="post-display">
-        <div class="group">
-            <img class="image" src="img/image-8.png" />
-            <div class="div">
-                <a href=""><img class="ellipse" src="img/funny-food.png" /></a>
-                <p class="text-wrapper">tth/FunnyFoods • 8 hrs ago</p>
-                <a href=""><img class="ellipsis" src="img/ellipsis.png" /></a>
-                <a href=""><img class="close" src="img/close.png" /></a>
-            </div>
-        </div>
-    </div>
+    @yield('content')
 
 </body>
 </html>
