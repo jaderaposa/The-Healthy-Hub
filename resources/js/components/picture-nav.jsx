@@ -13,7 +13,7 @@ export const PictureNav = () => {
                 </div>
             </div>
             <div className="group">
-                <div className="overlap-group">
+                <div className="overlap-group1">
                     <p className="text-wrapper">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac neque a nulla suscipit tincidunt. Sed non
                         arcu nec augue iaculis luctus. Pellentesque ac tortor in libero consectetur tincidunt.
@@ -21,15 +21,15 @@ export const PictureNav = () => {
                 </div>
             </div>
             <div className="group">
-                <div className="overlap-group">
+                <div className="overlap-group2">
                     <p className="text-wrapper">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac neque a nulla suscipit tincidunt. Sed non
                         arcu nec augue iaculis luctus. Pellentesque ac tortor in libero consectetur tincidunt.
                     </p>
                 </div>
             </div>
-            <div className="group">
-                <div className="overlap-group">
+            <div className="group">  
+                <div className="overlap-group3">
                     <p className="text-wrapper">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac neque a nulla suscipit tincidunt. Sed non
                         arcu nec augue iaculis luctus. Pellentesque ac tortor in libero consectetur tincidunt.

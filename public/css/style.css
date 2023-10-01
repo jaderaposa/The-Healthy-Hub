@@ -291,11 +291,13 @@ div#udd {
   }
 
   .box4 .group-2 {
-      height: 34px;
-      left: 0;
-      position: relative;
-      top: 0;
-      width: max-content;
+    height: 34px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 230px;
+    display: flex;
+    align-items: center;
   }
 
   .box4 .house-chimney {
@@ -1503,7 +1505,39 @@ input {
   height: 246px;
   position: relative;
   width: 246px;
-}
+  }
+  .pic-nav .overlap-group1 {
+    background-color: #008080;
+    background-image: url(/img/image-5.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 10px;
+    height: 246px;
+    position: relative;
+    width: 246px;
+  }
+  .pic-nav .overlap-group2 {
+    background-color: #008080;
+    background-image: url(/img/image-6.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 10px;
+    height: 246px;
+    position: relative;
+    width: 246px;
+  }
+  .pic-nav .overlap-group3 {
+    background-color: #008080;
+    background-image: url(/img/image-7.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 10px;
+    height: 246px;
+    position: relative;
+    width: 246px;
+  }
+  
+
 
 .pic-nav .text-wrapper {
   -webkit-box-orient: vertical;
