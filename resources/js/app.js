@@ -29,6 +29,10 @@ import PopularBox from './components/popular-box';
 import PostCreate from './components/Post-Create';
 import PostDisplay from './components/Post-Display';
 import SideBarAdmin from './components/sidebar-admin';
+import PageNav from './components/page-nav';
+import CreateInput from './components/create-input';
+import HotNewTop from './components/hot-new-top';
+import ProfileBox from './components/profile-box';
 
 // resources/js/app.js
 import 'font-awesome/css/font-awesome.css';

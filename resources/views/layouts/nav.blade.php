@@ -24,8 +24,6 @@
         </div>
     </nav>
 
-    <!-- Sidebar -->
-
     @yield('content')
 
 </body>

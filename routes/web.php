@@ -27,6 +27,10 @@ Route::get('/home-admin', function () {
     return view('admin-home');
 });
 
+Route::get('/community-page', function () {
+    return view('comm-page');
+});
+
 // Authentication routes (Auth::routes() already includes these)
 // Auth::routes();
 
