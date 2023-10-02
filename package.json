@@ -3,7 +3,8 @@
     "scripts": {
         "dev": "vite",
         "watch": "mix watch",
-        "build": "vite build"
+        "build": "vite build",
+        "production": "mix production"
     },
     "devDependencies": {
         "@babel/plugin-syntax-jsx": "^7.22.5",
