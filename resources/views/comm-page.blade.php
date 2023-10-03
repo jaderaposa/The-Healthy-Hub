@@ -1,10 +1,10 @@
-@extends('layouts.nav')
+@extends('layouts.navuser')
 @section('content')
 
 <div id="page-nav"></div>
 <div id="create-input"></div>
 <div id="hot-new-top"></div>
-#id
+<div id="profile-box"></div>
 
     <div class="post1">
         <div class="group">
