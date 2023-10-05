@@ -8,6 +8,7 @@ export const PageNav = () => {
                 <div className="overlap">
                     <div className="text-wrapper">Posts</div>
                 </div>
+                <img className="line-3" alt="Line" src="img/line-15.svg" ></img>
                 <div className="navbar">
                     <div className="rectangle" />
                     <div className="div">Helpful Links</div>

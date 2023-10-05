@@ -11,7 +11,7 @@ export const CreateInput = () => {
                     </div>
                     <img className="account" alt="Account" src="img/account-1.png" />
                     <img className="link" alt="Link" src="img/link-1.png" />
-                    <img className="ellipse" alt="Ellipse" src="img/ellipse-2.png" />
+                    <div className="ellipse" alt="Ellipse" />
                 </div>
             </div>
         </div>

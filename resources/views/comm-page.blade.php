@@ -1,114 +1,74 @@
 @extends('layouts.navuser')
 @section('content')
 
-<div id="page-nav"></div>
-<div id="create-input"></div>
-<div id="hot-new-top"></div>
-<div id="profile-box"></div>
-
-    <div class="post1">
+    <div class="cover">
+        <img class="img" src="img/cover.png" />
+    </div>
+    <div class="circle-box">
+        <div class="ellipse"></div>
+    </div>
+    <div class="comm-title">
         <div class="group">
-            <div class="overlap">
-                <div class="text-wrapper">Pinned by Moderators</div>
-                <img class="pin" src="img/pin-1.png" />
-                <p class="lorem-ipsum-dolor">
-                    &#34;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    <br />labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco<br />
-                    laboris nisi ut aliquip ex ea commodo consequat. &#34;
-                </p>
-                <div class="thumbs-up-and-down">
-                    <div class="div">143</div>
-                    <img class="thumbs-up" src="img/thumbs-up.png" />
-                    <img class="thumbs-down" src="img/thumbs-down.png" />
-                </div>
-                <div class="group-2">
-                    <div class="overlap-group">
-                        <div class="group-3">
-                            <div class="text-wrapper-2">Comments</div>
-                            <img class="img" src="img/chat-bubble.png" />
-                        </div>
-                        <div class="overlap-group-wrapper">
-                            <div class="overlap-group-2">
-                                <div class="text-wrapper-3">Award</div>
-                                <img class="warranty" src="img/warranty.png" />
-                            </div>
-                        </div>
-                        <div class="overlap-wrapper">
-                            <div class="overlap-2">
-                                <div class="text-wrapper-4">Save</div>
-                                <img class="img" src="img/bookmark.png" />
-                            </div>
-                        </div>
-                        <div class="div-wrapper">
-                            <div class="overlap-3">
-                                <div class="text-wrapper-5">Share</div>
-                                <img class="img" src="img/share.png" />
-                            </div>
-                        </div>
-                    </div>
-                    <img class="ellipsis" src="img/ellipsiss.png" />
-                </div>
-            </div>
+            <p class="doctor-s-recommended">Doctor&#39;s Recommended Meal Of The Day!</p>
+            <div class="text-wrapper">thh/DRMOTD</div>
         </div>
     </div>
-
-    <div class="post2">
+    <div class="status-bell">
         <div class="group">
-            <div class="overlap">
+            <div class="overlap-group-wrapper">
                 <div class="overlap-group">
-                    <div class="text-wrapper">https://spankbang.com</div>
-                    <img class="link" src="img/link.png" />
+                    <div class="text-wrapper">Joined</div>
                 </div>
+            </div>
+        <img class="bell" src="img/bell-1.png" />
+        </div>
+    </div>
+
+    <div class="attachment">
+        <div class="group">
+            <img class="link" src="img/link-1.png" />
+            <div class="text-wrapper">routine.docs</div>
+        </div>
+    </div>
+    <div class="abt-comm">
+        <div class="rectangle">
+            <div class="title">
+                <div class="group">
+                    <div class="text-wrapper">About Community</div>
+                    <img class="ellipsis" src="img/ellipsis.png" />
+                </div>
+            </div>
+            <div class="line">
+                <img class="line" src="img/line-111.svg" />
+            </div>
+            <div class="label">
                 <p class="lorem-ipsum-dolor">
-                    &#34;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                    ea commodo consequat.&#34; &#34;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. &#34;
-                </p>
-                <div class="thumbs-up-and-down">
-                    <div class="div">143</div>
-                    <img class="thumbs-up" src="img/thumbs-up.png" />
-                    <img class="thumbs-down" src="img/thumbs-down.png" />
-                </div>
-                <div class="group-2">
-                    <div class="overlap-2">
-                        <div class="group-3">
-                            <div class="text-wrapper-2">Comments</div>
-                            <img class="img" src="img/chat-bubble.png" />
-                        </div>
-                        <div class="overlap-group-wrapper">
-                            <div class="overlap-group-2">
-                                <div class="text-wrapper-3">Award</div>
-                                <img class="warranty" src="img/warranty.png" />
-                            </div>
-                        </div>
-                        <div class="overlap-wrapper">
-                            <div class="overlap-3">
-                                <div class="text-wrapper-4">Save</div>
-                                <img class="img" src="img/bookmark.png" />
-                            </div>
-                        </div>
-                        <div class="div-wrapper">
-                            <div class="overlap-4">
-                                <div class="text-wrapper-5">Share</div>
-                                <img class="img" src="img/share.png" />
-                            </div>
-                        </div>
-                    </div>
-                    <img class="ellipsis" src="img/ellipsiss.png" />
-                </div>
-                <div class="group-4">
-                    <div class="overlap-5">
-                        <div class="rectangle"></div>
-                        <div class="text-wrapper-6">routine.docs</div>
-                        <img class="google-docs" src="img/google-docs.png" />
-                    </div>
-                </div>
+                    &#34;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>Ut enim ad quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>Eius cum exercitationem odio, quo tempora, odit cumque itaque molestias magni tempore rerum dolorem minus ipsa molestiae incidunt, fugiat blanditiis id laboriosam.<br>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br>Eius cum exercitationem odio, quo tempora, odit cumque itaque molestias magni tempore rerum dolorem minus ipsa molestiae incidunt, fugiat blanditiis id laboriosam.”
+                </p> 
             </div>
         </div>
     </div>
 
+    <div id="page-nav"></div>
+    <div id="create-input"></div>
+    <div id="post1"></div>
+
+<style>
+    .page-nav {
+        margin-top: 0;
+        top: 33rem;
+        left: 20.8rem;
+    }
+    .create-input {
+        top: 37rem;
+        left: 19rem;
+    }
+    .post1 {
+        top: 42.7rem;
+        left: 19rem;
+    }
+
+</style>
 
 
 @stop

@@ -27,6 +27,10 @@ Route::get('/home-admin', function () {
     return view('admin-home');
 });
 
+Route::get('/profile-page', function () {
+    return view('prof-page');
+});
+
 Route::get('/community-page', function () {
     return view('comm-page');
 });

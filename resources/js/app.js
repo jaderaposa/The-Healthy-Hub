@@ -33,6 +33,7 @@ import PageNav from './components/page-nav';
 import CreateInput from './components/create-input';
 import HotNewTop from './components/hot-new-top';
 import ProfileBox from './components/profile-box';
+import Post1 from './components/post1';
 
 // resources/js/app.js
 import 'font-awesome/css/font-awesome.css';

@@ -2003,6 +2003,8 @@ input {
   height: 68px;
   position: relative;
   width: 1082px;
+  display: flex;
+  align-items: center;
 }
 
 .create-input .overlap {
@@ -2014,7 +2016,7 @@ input {
   left: 97px;
   position: absolute;
   top: 16px;
-  width: 817px;
+  width: 887px;
 }
 
 .create-input .text-wrapper {
@@ -2030,31 +2032,34 @@ input {
 }
 
 .create-input .account {
-  height: 47px;
-  left: 938px;
+  height: 30px;
+  left: 995px;
+  -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
-  top: 9px;
-  width: 47px;
+  width: 30px;
 }
 
 .create-input .link {
-  height: 47px;
-  left: 1006px;
+  height: 30px;
+  left: 1038px;
+  -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
-  top: 9px;
-  width: 47px;
+  width: 30px;
 }
 
 .create-input .ellipse {
   height: 50px;
   left: 25px;
-  object-fit: cover;
   position: absolute;
   top: 8px;
   width: 50px;
+  border-radius: 140px/140.5px;
   background-image: none;
+  border: 0.5px solid;
+  border-color: #000000;
+  background-image: url(/img/doctor.jfif);
 }
 
 .hot-new-top {
@@ -2082,7 +2087,6 @@ input {
 }
 
 .hot-new-top .text-wrapper {
-  -webkit-text-stroke: 1px #000000;
   color: #ffffff;
   font-family: "Inter-Regular", Helvetica;
   font-size: 32px;
@@ -2104,7 +2108,6 @@ input {
 }
 
 .hot-new-top .div {
-  -webkit-text-stroke: 1px #000000;
   color: #ffffff;
   font-family: "Inter-Regular", Helvetica;
   font-size: 32px;
@@ -2126,7 +2129,6 @@ input {
 }
 
 .hot-new-top .text-wrapper-2 {
-  -webkit-text-stroke: 1px #000000;
   color: #ffffff;
   font-family: "Inter-Regular", Helvetica;
   font-size: 32px;
@@ -2264,7 +2266,6 @@ input {
   position: absolute;
   width: 150px;
   height: 25px;
-  top: 0;
   left: 0;
 }
 
@@ -2286,7 +2287,6 @@ input {
   position: absolute;
   width: 42px;
   height: 25px;
-  top: 0;
   left: 0;
 }
 
@@ -2294,7 +2294,6 @@ input {
   position: absolute;
   width: 104px;
   height: 27px;
-  top: 0;
   left: 123px;
 }
 
@@ -2302,12 +2301,13 @@ input {
   position: relative;
   width: 101px;
   height: 27px;
+  display: flex;
+  align-items: center;
 }
 
 .post1 .text-wrapper-3 {
   position: absolute;
   width: 61px;
-  top: 7px;
   left: 40px;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
@@ -2322,7 +2322,6 @@ input {
   position: absolute;
   width: 46px;
   height: 27px;
-  top: 0;
   left: 0;
 }
 
@@ -2330,7 +2329,6 @@ input {
   position: absolute;
   width: 85px;
   height: 25px;
-  top: 3px;
   left: 301px;
 }
 
@@ -2338,12 +2336,13 @@ input {
   position: relative;
   width: 82px;
   height: 25px;
+  align-items: center;
+  display: flex;
 }
 
 .post1 .text-wrapper-4 {
   position: absolute;
   width: 48px;
-  top: 7px;
   left: 34px;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
@@ -2358,7 +2357,6 @@ input {
   position: absolute;
   width: 95px;
   height: 25px;
-  top: 2px;
   left: 214px;
 }
 
@@ -2366,12 +2364,13 @@ input {
   position: relative;
   width: 92px;
   height: 25px;
+  display: flex;
+  align-items: center;
 }
 
 .post1 .text-wrapper-5 {
   position: absolute;
   width: 56px;
-  top: 5px;
   left: 36px;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
@@ -3321,3 +3320,229 @@ input {
   top: 12px;
   width: 191px;
 }
+
+.cover {
+  width: 1920px;
+  height: 291px;
+  position: absolute;
+  }
+  .cover .img {
+    width: 1920px;
+    height: 291px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border: 2px solid black;
+    border-left: none;
+    border-right: none;
+  }
+
+.circle-box {
+  width: 280px;
+  height: 281px;
+  position: absolute;
+  top: 14.125rem;
+  left: 13.25rem;
+  }
+  .circle-box .ellipse {
+    width: 280px;
+    height: 281px;
+    border-radius: 140px/140.5px;
+    border: 2px solid;
+    border-color: #000000;
+    box-shadow: 8px 4px 4px #00000099;
+    background-image: url(/img/doctor.jfif);
+  }
+
+.comm-title {
+  position: absolute;
+  width: 689px;
+  height: 106px;
+  top: 382px;
+  left: 32rem;
+  text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+}
+
+.comm-title .group {
+    width: 693px;
+    height: 106px;
+}
+
+.comm-title .doctor-s-recommended {
+  position: relative;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.comm-title .text-wrapper {
+  position: relative;
+  font-weight: 400;
+  color: #9b9b9b;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.status-bell {
+  position: absolute;
+  width: 206px;
+  height: 52px;
+  top: 388px;
+  left: 77rem;
+}
+
+.status-bell .group {
+  width: 206px;
+  height: 52px;
+}
+
+.status-bell .overlap-group-wrapper {
+  width: 133px;
+  height: 52px;
+}
+
+.status-bell .overlap-group {
+  position: relative;
+  width: 131px;
+  height: 52px;
+  background-color: #034469;
+  border-radius: 14px;
+  border: 1px solid;
+  border-color: #000000;
+  box-shadow: 8px 8px 8px #00000042;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-bell .text-wrapper {
+  position: relative;
+  font-family: "IM FELL Double Pica-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 0;
+}
+
+.status-bell .bell {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  top: 5px;
+  left: 159px;
+  object-fit: cover;
+}
+
+.attachment {
+  position: absolute;
+  width: 82px;
+  height: 62px;
+  top: 48rem;
+  left: 78rem;
+  z-index: 1;
+  text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+}
+
+.attachment .group {
+  height: 62px;
+  justify-content: center;
+  display: flex;
+}
+
+.attachment .link {
+  width: 32px;
+  height: 32px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.attachment .text-wrapper {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.abt-comm {
+  width: 402px;
+  height: 445px;
+  position: absolute;
+  top: 30rem;
+  left: 89rem;
+  z-index: 1;
+  margin-bottom: 1rem;
+}
+
+.abt-comm .rectangle {
+  width: 402px;
+  height: 445px;
+  background-color: #03456a;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #000000;
+  box-shadow: 8px 8px 4px #00000080;
+  padding: 0.5rem 1rem 0;
+}
+
+.abt-comm .title {
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+
+.abt-comm .title .group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.abt-comm .title .ellipsis {
+  width: 40px;
+  height: 40px;
+
+}
+
+.abt-comm .title .text-wrapper {
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 24px;
+  text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+}
+
+.abt-comm .line {
+  width: 365px;
+  height: 1px;
+  object-fit: cover;
+}
+
+.abt-comm .label {
+  width: 100%;
+  height: 337px;
+  position: relative;
+  margin-top: 2rem;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.abt-comm .label .lorem-ipsum-dolor {
+  height: inherit;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  text-align: justify;
+  line-height: normal;
+  text-shadow: -1px 0 black, 1px 0 black, 0 -1px black, 0 1px black;
+}
+
+
+
