@@ -21,7 +21,7 @@
 
         <div style="position: relative;width: max-content;left: 204px;">
             <div class="line-md-switch-off">
-                <a href=""><img class="mask-group" src="img/line-md_switch-off-filled.svg" /></a>
+                <a href=""><img class="mask-group" src="" /></a>
             </div>
         </div>
 

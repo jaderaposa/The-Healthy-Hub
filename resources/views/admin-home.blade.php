@@ -9,4 +9,12 @@
 
     <div id="post-display"></div>
 
+<style>
+
+    .line-md-switch-off {
+        background-image: url(/img/line-md_switch-off-filled.svg);
+    }
+
+</style>
+
 @stop

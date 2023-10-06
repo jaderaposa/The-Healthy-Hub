@@ -19,11 +19,11 @@ Route::get('/sign-up', function () {
     return view('signup');
 });
 
-Route::get('/log-in-admin', function () {
+Route::get('/admin-login', function () {
     return view('admin-login');
 });
 
-Route::get('/home-admin', function () {
+Route::get('/admin-home', function () {
     return view('admin-home');
 });
 
@@ -33,6 +33,10 @@ Route::get('/profile-page', function () {
 
 Route::get('/community-page', function () {
     return view('comm-page');
+});
+
+Route::get('/admin-dashboard', function () {
+    return view('admin-dashboard');
 });
 
 // Authentication routes (Auth::routes() already includes these)
