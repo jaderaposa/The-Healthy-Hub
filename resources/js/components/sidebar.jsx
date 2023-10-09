@@ -5,14 +5,24 @@ export const SideBar = () => {
     return (
         <div>
             <div className="box4">
-                <div className="group">               
-                    <div className="group-2">
-                        <img className="house-chimney" alt="House chimney" src="img/house-chimney-1.png" />
-                        <div className="text-wrapper">Home</div>
+                <div className="group">
+                    <div>
+                        <div className="div">
+                            <img className="house-chimney" alt="House chimney" src="img/house-chimney-1.png" />
+                            <div className="text-wrapper">Home</div>
+                        </div>
                     </div>
-                    <div className="div">
-                        <img className="fire-flame-curved" alt="Fire flame curved" src="img/fire-flame-curved-1-1.png" />
-                        <div className="text-wrapper">Popular</div>
+                    <div>
+                        <div className="div">
+                            <img className="fire-flame-curved" alt="Fire flame curved" src="img/fire-flame-curved-1-1.png" />
+                            <div className="text-wrapper">Popular</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="div">
+                            <img className="fire-flame-curved" alt="Fire flame curved" src="img/control-panel.png" />
+                            <div className="text-wrapper">Dashboard</div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,8 @@
 @extends('layouts.navadmin')
 @section('content')
 
+    <div id="side-bar-admin"></div>
+
     <div id="pic-nav"></div>
 
     <div id="pop-box"></div>

@@ -1,6 +1,7 @@
 @extends('layouts.navadmin')
 @section('content')
 
+<div id="side-bar-admin"></div>
 
 
 
@@ -10,7 +11,7 @@
         background-image: url(/img/toggle-on.png);
     }
     .box4 .group div:nth-child(3) {
-        border: 0.5px solid white;
+        /* border: 0.5px solid white; */
         background: #ffffff42;
     }
 

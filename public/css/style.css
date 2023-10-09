@@ -258,6 +258,7 @@ div#udd {
     position: relative;
     display: grid;
     gap: 2rem;
+    margin-left: 1rem;
   }
 
   .box4 .div {
@@ -3527,8 +3528,8 @@ input {
   height: 337px;
   position: relative;
   margin-top: 2rem;
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
+  /* overflow-x: hidden; */
 }
 
 .abt-comm .label .lorem-ipsum-dolor {

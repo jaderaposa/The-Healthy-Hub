@@ -30,9 +30,6 @@
         </div>
     </nav>
 
-    <!-- Sidebar -->
-
-    <div id="side-bar-admin"></div>
 
 
     <!-- Content -->
