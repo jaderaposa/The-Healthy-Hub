@@ -18,12 +18,12 @@ export const SideBar = () => {
                             <div className="text-wrapper">Popular</div>
                         </div>
                     </div>
-                    <div>
+                    {/* <div>
                         <div className="div">
                             <img className="fire-flame-curved" alt="Fire flame curved" src="img/control-panel.png" />
                             <div className="text-wrapper">Dashboard</div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="line4">
