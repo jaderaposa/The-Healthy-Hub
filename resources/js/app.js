@@ -50,3 +50,50 @@ import 'font-awesome/css/font-awesome.css';
 
 // window.$ = window.jQuery = require('jquery');
 
+
+// Bar Chart
+// Sample data for reports and approval requests received
+var data = {
+    labels: ['Reports', 'Approval Requests'],
+    datasets: [{
+        label: 'Number of Requests',
+        data: [25, 15], // Replace with your actual data
+        backgroundColor: [
+            'rgba(75, 192, 192, 0.7)', // Color for Reports
+            'rgba(255, 99, 132, 0.7)'  // Color for Approval Requests
+        ],
+        borderWidth: 1
+    }]
+};
+
+var options = {
+    scales: {
+        y: {
+            beginAtZero: true,
+            ticks: {
+                stepSize: 5, // Customize the step size on the y-axis
+                color: 'black' // Set the text color to black
+            }
+        },
+        x: {
+            ticks: {
+                color: 'black' // Set the text color on the x-axis to black
+            }
+        }
+    },
+    plugins: {
+        legend: {
+            labels: {
+                color: 'black' // Set the label color to black
+            }
+        }
+    }
+};
+
+// Create a bar chart
+var ctx = document.getElementById('barChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: data,
+    options: options
+});

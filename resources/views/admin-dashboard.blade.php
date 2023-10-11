@@ -89,8 +89,13 @@
             </ul>
         </div>
 </div>
-
-
+<div class="container3">
+    <div class="container">
+        <div style="width: 100%; height: 400px;">
+            <canvas id="barChart"></canvas>
+        </div>
+    </div>
+</div>
 
 
 <style>
@@ -109,6 +114,14 @@
         top: 6.5rem;
         left: 79rem;
     }
+    .container3 {
+        position: absolute;
+        width: 50rem;
+        max-height: 29rem;
+        left: 26rem;
+        top: 30rem;
+    }
+
     .line-md-switch-off {
         background-image: url(/img/toggle-on.png);
     }
@@ -118,7 +131,19 @@
     }
 
     .container {
-        background-color: #ffffff66;        
+        background-color: #ffffff66;    
+        height: 21.285rem;    
+        max-height: 21.285;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .container3 .container {
+        background-color: #ffffff66;      
+        height: 27.8rem;     
+        max-height: 27.8rem;   
         max-width: 800px;
         margin: 20px auto;
         padding: 20px;
