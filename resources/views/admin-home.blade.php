@@ -13,6 +13,10 @@
 
 <style>
 
+    .box4 .group div:nth-child(3) {
+        opacity: 0.5;
+    }
+
     .line-md-switch-off {
         background-image: url(/img/line-md_switch-off-filled.svg);
     }

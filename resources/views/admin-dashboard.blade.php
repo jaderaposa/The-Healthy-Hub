@@ -112,7 +112,7 @@
         width: 40rem;
         max-height: 52rem;
         top: 6.5rem;
-        left: 79rem;
+        left: 78rem;
     }
     .container3 {
         position: absolute;
