@@ -65,7 +65,7 @@
 </div>
 <div class="container2">
     <div class="contain">
-            <h2>Report Notifications</h2>
+            <h2>Reports</h2>
             <ul class="notification-list">
                 <li class="notification">
                     <div class="notification-content">
@@ -89,9 +89,10 @@
             </ul>
         </div>
 </div>
-<div class="container3">
+<div class="container3" style="margin-bottom: 2rem;">
     <div class="container">
-        <div style="width: 100%; height: 400px;">
+        <h2>Reports and Approval Requests Tracker</h2>
+        <div style="width: 100%; height: 367px;">
             <canvas id="barChart"></canvas>
         </div>
     </div>
@@ -104,22 +105,22 @@
         position: absolute;
         width: 56rem;
         max-height: 52rem;
-        top: 6.5rem;
+        top: 5rem;        
         left: 23rem;
     }
     .container2{
         position: absolute;
         width: 40rem;
         max-height: 52rem;
-        top: 6.5rem;
-        left: 79rem;
+        top: 5rem;        
+        left: 77.5rem;
     }
     .container3 {
         position: absolute;
         width: 50rem;
         max-height: 29rem;
         left: 26rem;
-        top: 30rem;
+        top: 27.5rem;
     }
 
     .line-md-switch-off {
@@ -141,9 +142,9 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
     .container3 .container {
-        background-color: #ffffff66;      
-        height: 27.8rem;     
-        max-height: 27.8rem;   
+        background-color: #ffffff66;
+        height: 28.8rem;
+        max-height: 28.8rem;
         max-width: 800px;
         margin: 20px auto;
         padding: 20px;
