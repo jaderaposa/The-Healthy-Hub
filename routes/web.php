@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
+
 
 Route::get('/', function () {
     return view('guest');
@@ -49,4 +52,3 @@ Route::resource('posts', PostController::class);
 
 //Resourceful route for users
 Route::resource('users', UserController::class);
-
