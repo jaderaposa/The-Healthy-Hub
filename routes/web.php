@@ -45,5 +45,8 @@ Route::get('/admin-dashboard', function () {
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Resourceful route for posts
-Route::resource('/posts', PostController::class);
+Route::resource('posts', PostController::class);
+
+//Resourceful route for users
+Route::resource('users', UserController::class);
 
