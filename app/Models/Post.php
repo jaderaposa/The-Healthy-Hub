@@ -10,7 +10,7 @@ class Post extends Model
 {
 
     use HasFactory;
-  
+
     protected $fillable = [
         'name', 'detail'
     ];
@@ -25,11 +25,11 @@ class Post extends Model
     public function index()
     {
         $posts = Post::latest()->paginate(5);
-      
-        return view('posts.index',compact('posts'))
+
+        return view('posts.index', compact('posts'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
-  
+
     /**
      * Show the form for creating a new resource.
      *
@@ -41,7 +41,7 @@ class Post extends Model
     {
         return view('posts.create');
     }
-  
+
     /**
      * Store a newly created resource in storage.
      *
@@ -56,13 +56,13 @@ class Post extends Model
             'name' => 'required',
             'detail' => 'required',
         ]);
-      
+
         Post::create($request->all());
-       
+
         return redirect()->route('posts.index')
-                        ->with('success','Post created successfully.');
+            ->with('success', 'Post created successfully.');
     }
-  
+
     /**
      * Display the specified resource.
      *
@@ -73,9 +73,9 @@ class Post extends Model
 
     public function showPost(Post $post)
     {
-        return view('posts.show',compact('post'));
+        return view('posts.show', compact('post'));
     }
-  
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -86,9 +86,9 @@ class Post extends Model
 
     public function editPost(Post $post)
     {
-        return view('posts.edit',compact('post'));
+        return view('posts.edit', compact('post'));
     }
-  
+
     /**
      * Update the specified resource in storage.
      *
@@ -124,5 +124,10 @@ class Post extends Model
         $post->delete();
 
         return redirect()->route('posts.index')->with('success', 'Post deleted successfully');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
     }
 }
