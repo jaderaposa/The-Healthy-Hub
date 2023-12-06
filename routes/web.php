@@ -11,6 +11,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\VoteController;
+use App\Http\Controllers\StudentController;
 
 
 
@@ -81,5 +82,10 @@ Route::resource('search', SearchController::class);
 
 //resource route for vote
 Route::resource('vote', VoteController::class);
+
+//eloquent relationships tutorial
+Route::get('/students', [StudentController::class,'index'])->name('students');
+Route::get('/students/store', [StudentController::class,'store'])->name('store');
+Route::get('/students/store/profile', [StudentController::class,'store_profile'])->name('storeProfile');
 
 
