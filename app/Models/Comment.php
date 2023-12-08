@@ -9,8 +9,14 @@ class Comment extends Model
 {
     use HasFactory;
 
-    public function user()
+    protected $fillable = [
+        'student_id',
+        'comment',
+    ];
+
+    public function student()
     {
-        return $this->belongsTo('App\Models\User');
+        // return $this->belongsTo('Model', 'foreign_key', 'owner_key'); 
+        return $this->belongsTo('App\Models\Student','student_id','id');
     }
 }

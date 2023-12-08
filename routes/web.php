@@ -88,4 +88,8 @@ Route::get('/students', [StudentController::class,'index'])->name('students');
 Route::get('/students/store', [StudentController::class,'store'])->name('store');
 Route::get('/students/store/profile', [StudentController::class,'store_profile'])->name('storeProfile');
 
+//eloquent relationships tutorial/comment
+Route::get('/students/store/comment', [StudentController::class,'store_comment'])->name('storeComment');
+
+
 

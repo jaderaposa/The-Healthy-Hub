@@ -19,5 +19,9 @@ class Student extends Model
         return $this->hasOne('App\Models\Profile');
     }
 
+    public function comment()
+    {
+        return $this->hasMany('App\Models\Comment','student_id')->orderBy('id','desc');
+    }
 
 }
