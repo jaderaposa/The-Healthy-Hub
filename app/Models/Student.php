@@ -24,4 +24,9 @@ class Student extends Model
         return $this->hasMany('App\Models\Comment','student_id')->orderBy('id','desc');
     }
 
+    public function subject()
+    {
+        return $this->belongstoMany('App\Models\Subject');
+    }
+
 }

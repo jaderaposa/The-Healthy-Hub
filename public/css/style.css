@@ -1,5 +1,5 @@
 body {
-  font-family: 'IM Fell Double Pica SC', serif !important;  
+  font-family: 'IM Fell Double Pica SC', serif !important;
   background: linear-gradient(199deg, rgb(7.62, 108.67, 130.69) 28%, rgb(3, 12, 90) 83%);
   /* background-color: rgba(255, 255, 255, 1); */
   height: 100vh;
@@ -89,7 +89,7 @@ nav {
   padding-left: 7px;
   }
   .left-pan i{
-  
+
   padding-left: 10px;
   }
 
@@ -181,7 +181,7 @@ nav {
     top: 0;
     width: 159px;
   }
-  
+
 i.fa{
   color: #00317c;
   }
@@ -370,7 +370,7 @@ div#udd {
 
 .box4-1 .text-wrapper {
     color: #9f9f9f;
-  
+
     font-size: 15px;
     font-weight: 400;
     left: 58px;
@@ -399,7 +399,7 @@ div#udd {
 
 .box4-1 .text-wrapper-2 {
     color: #9f9f9f;
-  
+
     font-size: 16px;
     font-weight: 400;
     left: 0;
@@ -831,7 +831,7 @@ div#udd {
     top: 344px;
     left: 0;
     text-shadow: 8px 4px 4px #00000080;
-  
+
     font-weight: 400;
     color: #ffffff;
     font-size: 96px;
@@ -1301,12 +1301,14 @@ div#udd {
 }
 
 .signup-card .text-wrapper-3 {
-  color: #ffffff;
-  font-family: "Inter-Regular", Helvetica;
-  font-size: 34px;
-  font-weight: 400;
-  line-height: normal;
-  text-align: center;
+    color: #ffffff;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    background: none;
+    border: none;
 }
 
 ::placeholder {
@@ -1536,7 +1538,7 @@ input {
     position: relative;
     width: 246px;
   }
-  
+
 
 
 .pic-nav .text-wrapper {

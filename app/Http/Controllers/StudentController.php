@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Student;
 use App\Models\Profile;
 use App\Models\Comment;
+use App\Models\Subject;
 
 
 class StudentController extends Controller
@@ -14,11 +15,8 @@ class StudentController extends Controller
     //
     public function index()
     {
-
-        $student = Student::withCount(['comment' => function ($query) {
-            $query->where('comment', 'like', '%king%');
-        }])->get();
-        dd($student);
+        $student = Student::find(1);
+        dd($student->subject);
     }
 
     public function store()
@@ -65,5 +63,34 @@ class StudentController extends Controller
         $comment->save();
 
         dd($comment);
+    }
+
+    public function store_subject()
+    {
+        $subject = new Subject;
+        $subject->name = 'History';
+        $subject->save();
+        dd($subject);
+    }
+
+    public function store_student_subject()
+    {
+        $student = Student::find(1);
+        $student->subject()->attach([2, 3]);
+        dd($student);
+    }
+
+    public function detach_student_subject()
+    {
+        $student = Student::find(1);
+        $student->subject()->detach(1);
+        dd($student);
+    }
+
+    public function toggle_student_subject()
+    {
+        $student = Student::find(1);
+        $student->subject()->toggle([1, 2, 3, 4]);
+        dd($student);
     }
 }

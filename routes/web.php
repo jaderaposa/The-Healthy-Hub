@@ -83,13 +83,24 @@ Route::resource('search', SearchController::class);
 //resource route for vote
 Route::resource('vote', VoteController::class);
 
-//eloquent relationships tutorial
+//eloquent relationships tutorial/students
 Route::get('/students', [StudentController::class,'index'])->name('students');
 Route::get('/students/store', [StudentController::class,'store'])->name('store');
 Route::get('/students/store/profile', [StudentController::class,'store_profile'])->name('storeProfile');
 
 //eloquent relationships tutorial/comment
 Route::get('/students/store/comment', [StudentController::class,'store_comment'])->name('storeComment');
+
+//eloquent relationships tutorial/subject
+Route::get('/subjects/store', [StudentController::class,'store_subject'])->name('storeSubject');
+Route::get('/students/store/subject', [StudentController::class,'store_student_subject'])->name('storeStudentSubject');
+Route::get('/students/detach/subject', [StudentController::class,'detach_student_subject'])->name('detachStudentSubject');
+Route::get('/students/sync/subject', [StudentController::class,'sync_student_subject'])->name('syncStudentSubject');
+Route::get('/students/toggle/subject', [StudentController::class,'toggle_student_subject'])->name('toggleStudentSubject');
+
+
+
+
 
 
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -25,6 +27,24 @@ class UserController extends Controller
     public function create()
     {
         //
+    }
+
+    public function register(Request $request)
+    {
+        $validatedData = $request->validate([
+            'username' => 'required|unique:users',
+            'email' => 'required|email|unique:users',
+            'password' => 'required',
+            'confirmPassword' => 'required|same:password',
+        ]);
+
+        $user = new User;
+        $user->username = $validatedData['username'];
+        $user->email = $validatedData['email'];
+        $user->password = Hash::make($validatedData['password']);
+        $user->save();
+
+        return response()->json(['message' => 'User registered successfully']);
     }
 
     /**
