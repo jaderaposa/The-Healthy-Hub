@@ -15,7 +15,10 @@ export const LogInCard = () => {
 		});
 
 		const data = await response.data;
-		console.log(data);
+
+		if (data.redirect) {
+			window.location.href = data.redirect;
+		}
 	};
 
 	return (

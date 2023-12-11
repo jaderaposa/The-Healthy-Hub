@@ -121,7 +121,7 @@ class UserController extends Controller
         Auth::login($user);
 
         // Redirect to /home
-        return redirect('/home-page');
+        return response()->json(['redirect' => '/home-page']);
     }
 
 }
