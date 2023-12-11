@@ -1,2 +1,62 @@
-node_modules/
-node_modules
+# Ignore vendor directory as it contains the Composer dependencies
+/vendor
+
+# Ignore node_modules directory as it contains Node.js dependencies
+/node_modules
+
+# Ignore the .env file which contains sensitive configuration information
+.env
+
+# Ignore the storage directory as it contains cached and temporary files
+/storage
+
+# Ignore user-specific files
+Homestead.yaml
+Homestead.json
+
+# Ignore logs and other generated files
+/public/storage
+/public/hot
+/storage/*.key
+/storage/*.zip
+/storage/*.log
+
+# Ignore PHPUnit test results
+/phpunit.xml
+/vendor/phpunit
+
+# Ignore IDE and code editor files
+.idea
+*.iml
+*.komodoproject
+.vscode
+*.code-workspace
+
+# Ignore Laravel Mix temporary files
+npm-debug.log
+yarn-error.log
+
+# Ignore local environment files
+.env.*.local
+
+# Ignore Composer's lock file
+composer.lock
+
+# Ignore SQLite database files
+*.sqlite
+*.sqlite3
+
+# Ignore user-specific files
+Homestead.yaml
+Homestead.json
+
+# Ignore Homestead/Homestead.yaml file used for Vagrant
+Homestead.yaml
+Homestead.json
+/Vagrantfile
+
+# Ignore Mac-specific files
+.DS_Store
+
+# Ignore backup files
+*.bak
