@@ -120,6 +120,8 @@ class UserController extends Controller
         // Start a session
         Auth::login($user);
 
-        return response()->json(['message' => 'Logged in successfully']);
+        // Redirect to /home
+        return redirect('/home-page');
     }
+
 }

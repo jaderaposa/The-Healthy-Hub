@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('guest');
 });
 
-Route::get('/home', function () {
+Route::get('/home-page', function () {
     return view('user-home');
 });
 
@@ -83,7 +83,7 @@ Route::resource('search', SearchController::class);
 //resource route for vote
 Route::resource('vote', VoteController::class);
 
-//eloquent relationships tutorial/students
+        //eloquent relationships tutorial/students
 Route::get('/students', [StudentController::class,'index'])->name('students');
 Route::get('/students/store', [StudentController::class,'store'])->name('store');
 Route::get('/students/store/profile', [StudentController::class,'store_profile'])->name('storeProfile');
