@@ -28,7 +28,7 @@
                         <img class="sort-down dropdown" alt="Sort down" src="img/sort-down.png" />
                         <div>
                             <p class="jaded" alt="Username">{{ Auth::check() ? Auth::user()->email : 'Guest' }}</p>
-                            <p class="jaded">Log Out</p>
+                            <p class="jaded" style="white-space: nowrap;top: 2rem;">Log Out</p>
                         </div>
                     </div>
                 </div>
