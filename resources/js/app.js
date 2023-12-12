@@ -36,175 +36,175 @@ import ProfileBox from './components/profile-box';
 import Post1 from './components/post1';
 
 // rendering imports
-if (document.getElementById("login-card")) {
-	const Index = ReactDOM.createRoot(document.getElementById("login-card"));
+// if (document.getElementById("login-card")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("login-card"));
 
-	Index.render(
-		<React.StrictMode>
-			<LogInCard />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<LogInCard />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("signup-card")) {
-	const Index = ReactDOM.createRoot(document.getElementById("signup-card"));
+// if (document.getElementById("signup-card")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("signup-card"));
 
-	Index.render(
-		<React.StrictMode>
-			<SignUpCard />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<SignUpCard />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("lisu")) {
-	const Index = ReactDOM.createRoot(document.getElementById("lisu"));
+// if (document.getElementById("lisu")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("lisu"));
 
-	Index.render(
-		<React.StrictMode>
-			<LogInSignUp />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<LogInSignUp />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("udd")) {
-	const Index = ReactDOM.createRoot(document.getElementById("udd"));
+// if (document.getElementById("udd")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("udd"));
 
-	Index.render(
-		<React.StrictMode>
-			<UserDropdown />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<UserDropdown />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("search-bar")) {
-	const Index = ReactDOM.createRoot(document.getElementById("search-bar"));
+// if (document.getElementById("search-bar")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("search-bar"));
 
-	Index.render(
-		<React.StrictMode>
-			<SearchBar />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<SearchBar />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("side-bar")) {
-	const Index = ReactDOM.createRoot(document.getElementById("side-bar"));
+// if (document.getElementById("side-bar")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("side-bar"));
 
-	Index.render(
-		<React.StrictMode>
-			<SideBar />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<SideBar />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("side-bar-admin")) {
-	const Index = ReactDOM.createRoot(document.getElementById("side-bar-admin"));
+// if (document.getElementById("side-bar-admin")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("side-bar-admin"));
 
-	Index.render(
-		<React.StrictMode>
-			<SideBarAdmin />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<SideBarAdmin />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("thh")) {
-	const Index = ReactDOM.createRoot(document.getElementById("thh"));
+// if (document.getElementById("thh")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("thh"));
 
-	Index.render(
-		<React.StrictMode>
-			<Thehealthyhub />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<Thehealthyhub />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("pic-nav")) {
-	const Index = ReactDOM.createRoot(document.getElementById("pic-nav"));
+// if (document.getElementById("pic-nav")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("pic-nav"));
 
-	Index.render(
-		<React.StrictMode>
-			<PictureNav />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<PictureNav />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("pop-box")) {
-	const Index = ReactDOM.createRoot(document.getElementById("pop-box"));
+// if (document.getElementById("pop-box")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("pop-box"));
 
-	Index.render(
-		<React.StrictMode>
-			<PopularBox />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<PopularBox />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("post-create")) {
-	const Index = ReactDOM.createRoot(document.getElementById("post-create"));
+// if (document.getElementById("post-create")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("post-create"));
 
-	Index.render(
-		<React.StrictMode>
-			<PostCreate />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<PostCreate />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("post-display")) {
-	const Index = ReactDOM.createRoot(document.getElementById("post-display"));
+// if (document.getElementById("post-display")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("post-display"));
 
-	Index.render(
-		<React.StrictMode>
-			<PostDisplay />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<PostDisplay />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("page-nav")) {
-	const Index = ReactDOM.createRoot(document.getElementById("page-nav"));
+// if (document.getElementById("page-nav")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("page-nav"));
 
-	Index.render(
-		<React.StrictMode>
-			<PageNav />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<PageNav />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("create-input")) {
-	const Index = ReactDOM.createRoot(document.getElementById("create-input"));
+// if (document.getElementById("create-input")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("create-input"));
 
-	Index.render(
-		<React.StrictMode>
-			<CreateInput />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<CreateInput />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("hot-new-top")) {
-	const Index = ReactDOM.createRoot(document.getElementById("hot-new-top"));
+// if (document.getElementById("hot-new-top")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("hot-new-top"));
 
-	Index.render(
-		<React.StrictMode>
-			<HotNewTop />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<HotNewTop />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("profile-box")) {
-	const Index = ReactDOM.createRoot(document.getElementById("profile-box"));
+// if (document.getElementById("profile-box")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("profile-box"));
 
-	Index.render(
-		<React.StrictMode>
-			<ProfileBox />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<ProfileBox />
+// 		</React.StrictMode>
+// 	);
+// }
 
-if (document.getElementById("post1")) {
-	const Index = ReactDOM.createRoot(document.getElementById("post1"));
+// if (document.getElementById("post1")) {
+// 	const Index = ReactDOM.createRoot(document.getElementById("post1"));
 
-	Index.render(
-		<React.StrictMode>
-			<Post1 />
-		</React.StrictMode>
-	);
-}
+// 	Index.render(
+// 		<React.StrictMode>
+// 			<Post1 />
+// 		</React.StrictMode>
+// 	);
+// }
 
 
 // resources/js/app.js

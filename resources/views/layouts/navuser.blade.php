@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
 
     <title>Document</title>
 </head>
+
 <body>
     <nav class="navbar bg-body-tertiary box" style="border-top: 1px solid #000;border-bottom: 1px solid #000;background: #00327C !important;">
         <div class="container-fluid rectangle">
@@ -17,9 +19,20 @@
             <a id="thh" href=""></a>
             <!-- <a style="color: #FFF;font-family: IM FELL Double Pica;font-size: 40px;font-style: normal;font-weight: 400;line-height: normal;">The Healthy Hub</a> -->
 
-        <div id="search-bar" class=""></div>
+            <div id="search-bar" class=""></div>
 
-        <div id="udd"></div>
+            <div id="udd">
+                <div class="box3">
+                    <div class="group">
+                        <div class="ellipse" />
+                        <img class="sort-down dropdown" alt="Sort down" src="img/sort-down.png" />
+                        <div>
+                            <p class="jaded" alt="Username">{{ Auth::check() ? Auth::user()->email : 'Guest' }}</p>
+                            <p class="jaded">Log Out</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </nav>
@@ -28,4 +41,5 @@
     @yield('content')
 
 </body>
+
 </html>

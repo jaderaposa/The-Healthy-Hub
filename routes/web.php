@@ -12,11 +12,13 @@ use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\VoteController;
 use App\Http\Controllers\StudentController;
+use Illuminate\Support\Facades\Auth;
+
 
 
 
 Route::get('/', function () {
-    return view('guest');
+    return redirect('/log-in');
 });
 
 Route::get('/home-page', function () {
@@ -51,10 +53,16 @@ Route::get('/admin-dashboard', function () {
     return view('admin-dashboard');
 });
 
-// Authentication routes (Auth::routes() already includes these)
-// Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Routes for POST
+Route::post('/login', [UserController::class, 'login'])->name('login');
+Route::post('/register', [UserController::class, 'register'])->name('register');
+Route::post('/logout', function () {
+    Auth::logout();
+
+    return redirect('/log-in');
+})->name('logout');
+
 
 // Resourceful route for posts
 Route::resource('posts', PostController::class);

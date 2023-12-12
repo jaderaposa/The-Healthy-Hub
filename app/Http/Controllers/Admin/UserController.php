@@ -33,14 +33,12 @@ class UserController extends Controller
     public function register(Request $request)
     {
         $validatedData = $request->validate([
-            'username' => 'required|unique:users',
             'email' => 'required|email|unique:users',
             'password' => 'required',
             'confirmPassword' => 'required|same:password',
         ]);
 
         $user = new User;
-        $user->username = $validatedData['username'];
         $user->email = $validatedData['email'];
         $user->password = Hash::make($validatedData['password']);
         $user->save();
@@ -106,22 +104,20 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
-        $request->validate([
-            'username' => 'required',
+        $validatedData = $request->validate([
+            'email' => 'required|email',
             'password' => 'required',
         ]);
 
-        $user = User::where('username', $request->username)->first();
+        $user = User::where('email', $validatedData['email'])->first();
 
-        if (!$user || !Hash::check($request->password, $user->password)) {
-            return response()->json(['error' => 'The provided credentials are incorrect.'], 401);
+        if ($user && Hash::check($validatedData['password'], $user->password)) {
+            Auth::login($user);
+
+            return redirect('/home-page');
         }
 
-        // Start a session
-        Auth::login($user);
-
-        // Redirect to /home
-        return response()->json(['redirect' => '/home-page']);
+        return back()->withErrors(['email' => 'Invalid email or password']);
     }
 
 }
