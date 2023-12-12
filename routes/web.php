@@ -23,15 +23,15 @@ Route::get('/', function () {
 
 Route::get('/home-page', function () {
     return view('user-home');
-});
+})->middleware('auth');
 
 Route::get('/log-in', function () {
     return view('login');
-});
+})->middleware('guest');
 
 Route::get('/sign-up', function () {
     return view('signup');
-});
+})->middleware('guest');
 
 Route::get('/admin-login', function () {
     return view('admin-login');
@@ -54,7 +54,7 @@ Route::get('/admin-dashboard', function () {
 });
 
 
-//Routes for POST
+//Routes for POST method
 Route::post('/login', [UserController::class, 'login'])->name('login');
 Route::post('/register', [UserController::class, 'register'])->name('register');
 Route::post('/logout', function () {
@@ -65,46 +65,46 @@ Route::post('/logout', function () {
 
 
 // Resourceful route for posts
-Route::resource('posts', PostController::class);
+// Route::resource('posts', PostController::class);
 
-//Resourceful route for users
-Route::resource('users', UserController::class);
+// //Resourceful route for users
+// Route::resource('users', UserController::class);
 
-//resource route for home
-Route::resource('home', HomeController::class);
+// //resource route for home
+// Route::resource('home', HomeController::class);
 
-//resource route for department
-Route::resource('department', DepartmentController::class);
+// //resource route for department
+// Route::resource('department', DepartmentController::class);
 
-// resource routes for comment
-Route::resource('comment', CommentController::class);
+// // resource routes for comment
+// Route::resource('comment', CommentController::class);
 
-//resource route for category
-Route::resource('category', CategoryController::class);
+// //resource route for category
+// Route::resource('category', CategoryController::class);
 
-//resource route for notification
-Route::resource('notification', NotificationController::class);
+// //resource route for notification
+// Route::resource('notification', NotificationController::class);
 
-//resource route for search
-Route::resource('search', SearchController::class);
+// //resource route for search
+// Route::resource('search', SearchController::class);
 
-//resource route for vote
-Route::resource('vote', VoteController::class);
+// //resource route for vote
+// Route::resource('vote', VoteController::class);
 
         //eloquent relationships tutorial/students
-Route::get('/students', [StudentController::class,'index'])->name('students');
-Route::get('/students/store', [StudentController::class,'store'])->name('store');
-Route::get('/students/store/profile', [StudentController::class,'store_profile'])->name('storeProfile');
+// Route::get('/students', [StudentController::class,'index'])->name('students');
+// Route::get('/students/store', [StudentController::class,'store'])->name('store');
+// Route::get('/students/store/profile', [StudentController::class,'store_profile'])->name('storeProfile');
 
-//eloquent relationships tutorial/comment
-Route::get('/students/store/comment', [StudentController::class,'store_comment'])->name('storeComment');
+// //eloquent relationships tutorial/comment
+// Route::get('/students/store/comment', [StudentController::class,'store_comment'])->name('storeComment');
 
-//eloquent relationships tutorial/subject
-Route::get('/subjects/store', [StudentController::class,'store_subject'])->name('storeSubject');
-Route::get('/students/store/subject', [StudentController::class,'store_student_subject'])->name('storeStudentSubject');
-Route::get('/students/detach/subject', [StudentController::class,'detach_student_subject'])->name('detachStudentSubject');
-Route::get('/students/sync/subject', [StudentController::class,'sync_student_subject'])->name('syncStudentSubject');
-Route::get('/students/toggle/subject', [StudentController::class,'toggle_student_subject'])->name('toggleStudentSubject');
+// //eloquent relationships tutorial/subject
+// Route::get('/subjects/store', [StudentController::class,'store_subject'])->name('storeSubject');
+// Route::get('/students/store/subject', [StudentController::class,'store_student_subject'])->name('storeStudentSubject');
+// Route::get('/students/detach/subject', [StudentController::class,'detach_student_subject'])->name('detachStudentSubject');
+// Route::get('/students/sync/subject', [StudentController::class,'sync_student_subject'])->name('syncStudentSubject');
+// Route::get('/students/toggle/subject', [StudentController::class,'toggle_student_subject'])->name('toggleStudentSubject');
 
 
 

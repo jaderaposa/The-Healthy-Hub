@@ -26,9 +26,12 @@
                     <div class="group">
                         <div class="ellipse" />
                         <img class="sort-down dropdown" alt="Sort down" src="img/sort-down.png" />
-                        <div>
-                            <p class="jaded" alt="Username">{{ Auth::check() ? Auth::user()->email : 'Guest' }}</p>
-                            <p class="jaded" style="white-space: nowrap;top: 2rem;">Log Out</p>
+                        <div class="jaded">
+                            <p class="" alt="Username">{{ Auth::check() ? Auth::user()->email : 'Guest' }}</p>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit" class="" style="white-space: nowrap;border: none;background: none;display: contents;">Log Out</button>
+                            </form>
                         </div>
                     </div>
                 </div>

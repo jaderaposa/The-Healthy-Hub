@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class UserController extends Controller
 {
@@ -111,11 +112,17 @@ class UserController extends Controller
 
         $user = User::where('email', $validatedData['email'])->first();
 
+        if (!$user) {
+            Log::info('User not found: ' . $validatedData['email']);
+        }
+
         if ($user && Hash::check($validatedData['password'], $user->password)) {
             Auth::login($user);
 
             return redirect('/home-page');
         }
+
+        Log::info('Invalid password for user: ' . $validatedData['email']);
 
         return back()->withErrors(['email' => 'Invalid email or password']);
     }
