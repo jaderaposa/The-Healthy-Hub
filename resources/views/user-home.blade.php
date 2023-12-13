@@ -186,15 +186,33 @@
 
 <div id="post-display">
     <div class="post-display">
-        <!-- <div class="group">
-            <img class="image" src="img/image-8.png" />
+        <div style="border: 2px solid black;width:100%;height:fit-content;color:white;padding:0.5rem 1rem;background-color:#005280;border-radius:15px;">
+            <div class="row-tabi-ini d-flex" style="justify-content: space-between;">
+                <div class="d-flex gap-2" style="align-items: center;">
+                    <img src="img/funny-food.png" alt="funny food" style="width: 45px;height:45px" />
+                    <p class="textshadowgodz" style="margin: 0;">Funny Foods </p>
+                </div>
+                <div class="d-flex gap-4" style="align-items: center;">
+                    <a href=""><img src="img/ellipsis.png" /></a>
+                    <a href=""><img src="img/close.png" /></a>
+                </div>
+            </div>
+            <div class="row-tabi-ini d-flex" style="justify-content: center;padding:0.5rem 0;">
+                <img class="" src="img/image-8.png" style="border:2px solid black;" />
+            </div>
+
+        </div>
+
+
+
+        <!--
             <div class="div">
                 <a href=""><img class="ellipse" src="img/funny-food.png" /></a>
-                <p class="text-wrapper">tth/FunnyFoods • 8 hrs ago</p>
-                <a href=""><img class="ellipsis" src="img/ellipsis.png" /></a>
-                <a href=""><img class="close" src="img/close.png" /></a>
-            </div>
-        </div> -->
+                <p class="text-wrapper">tth/FunnyFoods • 8 hrs ago</p> -->
+
+        <!-- <img class="image" src="img/image-8.png" />
+            <div class="div"> -->
+
     </div>
 </div>
 
