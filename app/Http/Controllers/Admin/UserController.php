@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 
+
 class UserController extends Controller
 {
     /**
@@ -44,7 +45,11 @@ class UserController extends Controller
         $user->password = Hash::make($validatedData['password']);
         $user->save();
 
-        return response()->json(['message' => 'User registered successfully']);
+        // Flash a success message to the session
+        session()->flash('success', 'User registered successfully');
+
+        // Redirect to the login page
+        return redirect('/sign-up');
     }
 
     /**

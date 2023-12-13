@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
     <!-- Bootstrap CSS and JS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <title>Document</title>
 </head>
+
 <body>
     <div class="desc">
         <p class="text-wrapper">A community for people who want to improve their health through nutrition</p>
@@ -24,7 +27,7 @@
     <div class="social-media">
         <div class="group">
             <div>
-            <p class="text-wrapper">Follow us through our social media</p>
+                <p class="text-wrapper">Follow us through our social media</p>
             </div>
             <div class="icons">
                 <div>
@@ -60,8 +63,10 @@
         @yield('login/signup')
     </div>
 </body>
+
 </html>
 
-    
+
 </body>
+
 </html>
