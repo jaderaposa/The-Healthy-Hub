@@ -63,6 +63,9 @@ Route::post('/logout', function () {
     return redirect('/log-in');
 })->name('logout');
 
+//route for post in create post
+Route::post('/createpost', [PostController::class, 'postCreatePost'])->name('post.create');
+
 
 // Resourceful route for posts
 // Route::resource('posts', PostController::class);

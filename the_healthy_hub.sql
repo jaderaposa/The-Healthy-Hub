@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2023 at 06:04 PM
+-- Generation Time: Dec 13, 2023 at 01:35 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -68,18 +68,18 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(5, '2023_09_21_114058_create_posts_table', 1),
-(6, '2023_11_25_124900_create_notifications_table', 1),
-(7, '2023_11_25_145813_create_search_table', 1),
-(8, '2023_12_06_155913_create_students_table', 1),
-(9, '2023_12_06_160003_create_profiles_table', 1),
-(10, '2023_12_07_153652_create_comments_table', 1),
-(11, '2023_12_08_162155_create_subjects_table', 1),
-(12, '2023_12_08_162214_create_student_subject_table', 1);
+(1, '2014_10_12_100000_create_password_resets_table', 1),
+(2, '2019_08_19_000000_create_failed_jobs_table', 1),
+(3, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(4, '2023_11_25_124900_create_notifications_table', 1),
+(5, '2023_11_25_145813_create_search_table', 1),
+(6, '2023_12_06_155913_create_students_table', 1),
+(7, '2023_12_06_160003_create_profiles_table', 1),
+(8, '2023_12_07_153652_create_comments_table', 1),
+(9, '2023_12_08_162155_create_subjects_table', 1),
+(10, '2023_12_08_162214_create_student_subject_table', 1),
+(11, '2023_12_12_085922_create_users_table', 1),
+(12, '2023_12_12_090837_create_posts_table', 1);
 
 -- --------------------------------------------------------
 
@@ -132,11 +132,8 @@ CREATE TABLE `personal_access_tokens` (
 
 CREATE TABLE `posts` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `detail` text NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `user_id` bigint(20) UNSIGNED NOT NULL
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -216,7 +213,6 @@ CREATE TABLE `subjects` (
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) NOT NULL,
@@ -224,6 +220,15 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'jade@yahoo.com', NULL, '$2y$10$or2I1C0Js2OROCGACCs6fuUCwA4W1UDm16kJUp.swIEbvH7HNXn/2', NULL, '2023-12-12 01:15:05', '2023-12-12 01:15:05'),
+(2, 'jaded@yahoo.com', NULL, '$2y$10$iYRwn/giOOXGHxuw82tJoudU4SCNL2sxIAukFhb5Y9OScVKPKps.e', NULL, '2023-12-12 01:35:03', '2023-12-12 01:35:03'),
+(3, 'jade@jade.com', NULL, '$2y$10$E4QOb2b5QodkS2flZYzEFuLaTIi80DrrOA2kETG8Snzcs6X/dDzXC', NULL, '2023-12-12 08:18:05', '2023-12-12 08:18:05');
 
 --
 -- Indexes for dumped tables
@@ -272,8 +277,7 @@ ALTER TABLE `personal_access_tokens`
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `posts_user_id_foreign` (`user_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `profiles`
@@ -386,17 +390,7 @@ ALTER TABLE `subjects`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `posts`
---
-ALTER TABLE `posts`
-  ADD CONSTRAINT `posts_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

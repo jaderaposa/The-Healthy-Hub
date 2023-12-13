@@ -163,10 +163,12 @@
 <div id="post-create">
     <div class="post-create">
         <div class="group">
-            <div>
-                <img class="add" alt="Add" src="img/add-1-1.png" />
-                <div class="text-wrapper">Create a post</div>
-            </div>
+            <a href="#" data-toggle="modal" data-target="#createPostModal" style="text-decoration: none;">
+                <div>
+                    <img class="add" alt="Add" src="img/add-1-1.png" />
+                    <div class="text-wrapper">Create a post</div>
+                </div>
+            </a>
             <div class="divider">
                 <div>
                     <div class="text-wrapper-2">Home</div>
@@ -184,13 +186,41 @@
 
 <div id="post-display">
     <div class="post-display">
-        <div class="group">
+        <!-- <div class="group">
             <img class="image" src="img/image-8.png" />
             <div class="div">
                 <a href=""><img class="ellipse" src="img/funny-food.png" /></a>
                 <p class="text-wrapper">tth/FunnyFoods • 8 hrs ago</p>
                 <a href=""><img class="ellipsis" src="img/ellipsis.png" /></a>
                 <a href=""><img class="close" src="img/close.png" /></a>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+<div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="createPostModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 0;max-width:40%;">
+        <div class="modal-content" style="height: 50%;transform: translate(0, 50%);">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createPostModalLabel">Create Post</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center">
+                <!-- form for creating a post -->
+                <form style="width: 100%;" id="postForm" action="{{ route('post.create') }}" method="POST" enctype="multipart/form-data"> @csrf
+                    <div class="form-group">
+                        <input type="file" name="photo" accept=".jpg,.jpeg,.png" />
+                    </div>
+                    <div class="form-group">
+                        <textarea style="width: 100%;" name="body" id="body" cols="30" rows="10" placeholder="Post something!"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="document.getElementById('postForm').submit();">Post</button>
             </div>
         </div>
     </div>
