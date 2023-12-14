@@ -1,8 +1,6 @@
 @extends('layouts.main')
 @section('login/signup')
 
-
-
 <!-- rest of your form here -->
 <div id="login-card">
     <div class="login-card">
@@ -22,8 +20,8 @@
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
                                 <!-- ... -->
-                                <input class="div-wrapper" placeholder="Email" name="email" required></input>
-                                @error('email')
+                                <input class="div-wrapper" placeholder="Username" name="username" required></input>
+                                @error('username')
                                 <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                                 <input type="password" class="overlap-2" placeholder="Password" name="password" required></input>

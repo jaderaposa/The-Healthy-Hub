@@ -64,9 +64,16 @@ Route::post('/logout', function () {
 //route for post in create post
 Route::post('/createpost', [PostController::class, 'postCreatePost'])->name('post.create');
 
+//route for delete post
+Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
+
+
+
+
+
 
 // Resourceful route for posts
-// Route::resource('posts', PostController::class);
+Route::resource('posts', PostController::class);
 
 // //Resourceful route for users
 // Route::resource('users', UserController::class);

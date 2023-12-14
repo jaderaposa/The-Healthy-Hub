@@ -32,11 +32,13 @@
                         <div class="ellipse" />
                         <img class="sort-down dropdown" alt="Sort down" src="img/sort-down.png" />
                         <div class="jaded">
-                            <p class="" alt="Username">{{ Auth::check() ? Auth::user()->email : 'Guest' }}</p>
+                            @if(Auth::check())
+                            <p class="" alt="Username">{{ Auth::user()->username }}</p>
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
-                                <button type="submit" class="" style="white-space: nowrap;border: none;background: none;display: contents;">Log Out</button>
+                                <button type="submit" class="logout-button" style="white-space: nowrap; border: none; background: none; display: contents;">Log Out</button>
                             </form>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -49,5 +51,11 @@
     @yield('content')
 
 </body>
+
+<style>
+    .logout-button:hover {
+        color: red;
+    }
+</style>
 
 </html>

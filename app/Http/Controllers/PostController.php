@@ -11,7 +11,7 @@ class PostController extends Controller
 
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('created_at', 'desc')->get();
         return view('user-home', ['posts' => $posts]);
     }
 
@@ -19,7 +19,7 @@ class PostController extends Controller
     {
         $this->validate($request, [
             'body' => 'required|max:1000',
-            'photo' => 'required|image|mimes:jpg,jpeg,png',
+            'photo' => 'image|mimes:jpg,jpeg,png',
         ]);
 
         $post = new Post();
@@ -35,5 +35,14 @@ class PostController extends Controller
         $request->user()->posts()->save($post);
 
         return redirect('/home-page')->with('message', 'Post successfully created!');
+    }
+
+    public function destroy($id)
+    {
+        $post = Post::find($id);
+
+        $post->delete();
+
+        return redirect()->route('posts.index')->with('success', 'Post deleted successfully');
     }
 }

@@ -204,32 +204,55 @@
             <div class="row-tabi-ini d-flex" style="justify-content: space-between;">
                 <div class="d-flex gap-2" style="align-items: center;">
                     <img src="img/funny-food.png" alt="funny food" style="width: 45px;height:45px" />
-                    <p class="textshadowgodz" style="margin: 0;">{{ $post->user_id }}</p>
+                    <p class="textshadowgodz" style="margin: 0;">{{ $post->user->username }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ $post->created_at->diffForHumans() }}</p>
                 </div>
                 <div class="d-flex gap-4" style="align-items: center;">
-                    <a href=""><img src="img/ellipsis.png" /></a>
-                    <a href=""><img src="img/close.png" /></a>
+                    <div class="dropdown">
+                        <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img/ellipsis.png" />
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                        </ul>
+                    </div>
+                    <form method="POST" action="{{ route('posts.destroy', $post->id) }}">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" style="border: none;background: none;">
+                            <img src="img/close.png" />
+                        </button>
+                    </form>
                 </div>
             </div>
-            <hr style="border: 1px solid black;">
-            <div class="row-tabi-ini d-flex" style="justify-content: center;">
+            @if ($post->photo)
+            <div class="row-tabi-ini d-flex mt-3 mb-3" style="justify-content: center;">
                 <div style="width: 100%;height: 379px;overflow: hidden;position: relative;">
-                    <img src="{{ asset('uploads/' . $post->photo) }}" style="border:2px solid black; max-width: 100%; max-height: 100%; object-fit: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" />
+                    <img src="{{ asset('uploads/' . $post->photo) }}" style="border:2px solid black; width: 100%; height: 100%; object-fit: contain; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);background: black;" />
                 </div>
             </div>
-            <hr style="border: 1px solid black;">
-            <div class="row-tabi-ini textshadowgodz">
+            @endif
+            <div class="row-tabi-ini textshadowgodz mt-3">
                 <p>{{ $post->body }}</p>
+            </div>
+            <hr style="border: 1px solid black;">
+            <div class="row-tabi-ini gap-">
+                <button type="button" class="btn btn-primary">Like</button>
+                <button type="button" class="btn btn-info">Comment</button>
+                <button type="button" class="btn btn-secondary">Share</button>
             </div>
         </div>
         @endforeach
     </div>
 </div>
 
+
+<!-- Create Modal -->
+
 <div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="createPostModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document" style="margin-top: 0;max-width:40%;">
-        <div class="modal-content" style="height: 50%;transform: translate(0, 50%);">
-            <div class="modal-header">
+        <div class="modal-content textshadowgodz" style="height: 50%;transform: translate(0, 50%);border: 2px solid black;border-radius: 15px;background-color: #005280;color: white;">
+            <div class="modal-header border-0" style="padding: 0.5rem 1rem;">
                 <h5 class="modal-title" id="createPostModalLabel">Create Post</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -240,13 +263,15 @@
                 <form style="width: 100%;" id="postForm" action="{{ route('post.create') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <input type="file" name="photo" accept=".jpg,.jpeg,.png" />
+                        <input type="file" id="file" name="photo" accept=".jpg,.jpeg,.png" style="display: none;" />
+                        <button type="button" id="custom-button">Choose File</button>
+                        <span id="file-name">No file chosen</span>
                     </div>
-                    <div class="form-group">
-                        <textarea style="width: 100%;" name="body" id="body" cols="30" rows="10" placeholder="Post something!"></textarea>
+                    <div class="form-group m-0">
+                        <textarea style="width: 100%;border:2px solid black;padding: 0;margin: 0;" name="body" id="body" cols="30" rows="10" placeholder="Post something!"></textarea>
                     </div>
 
-                    <div class="modal-footer">
+                    <div class="modal-footer border-0 p-2">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Post</button>
                     </div>
@@ -256,12 +281,27 @@
     </div>
 </div>
 
+
+
 <style>
     #success-alert {
         position: fixed;
         top: 20px;
         right: 20px;
         z-index: 9999;
+    }
+
+    #custom-button {
+        padding: 10px;
+        color: white;
+        background-color: black;
+        border: 1px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #custom-button:hover {
+        color: red;
     }
 </style>
 
@@ -271,6 +311,24 @@
             $('#success-alert').fadeOut('slow');
         }, 3000); // 3 seconds
     }
+
+    document.getElementById('custom-button').addEventListener('click', function() {
+        document.getElementById('file').click();
+    });
+
+    document.getElementById('file').addEventListener('change', function() {
+        var fileName = document.getElementById('file').value.split('\\').pop();
+        document.getElementById('file-name').textContent = fileName ? fileName : "No file chosen";
+    });
+
+    $(document).ready(function() {
+        $('.dropdown-item').click(function() {
+            var postId = $(this).data('id');
+            var postBody = $(this).data('body');
+            $('#editPostForm').attr('action', '/post/update/' + postId);
+            $('#edit-body').val(postBody);
+        });
+    });
 </script>
 
 @stop

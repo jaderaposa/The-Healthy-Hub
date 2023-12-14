@@ -35,13 +35,13 @@ class UserController extends Controller
     public function register(Request $request)
     {
         $validatedData = $request->validate([
-            'email' => 'required|email|unique:users',
+            'username' => 'required|string|max:255|unique:users',
             'password' => 'required|min:8',
             'confirmPassword' => 'required|same:password',
         ]);
 
         $user = new User;
-        $user->email = $validatedData['email'];
+        $user->username = $validatedData['username'];
         $user->password = Hash::make($validatedData['password']);
         $user->save();
 
@@ -111,14 +111,14 @@ class UserController extends Controller
     public function login(Request $request)
     {
         $validatedData = $request->validate([
-            'email' => 'required|email',
+            'username' => 'required|string|max:255',
             'password' => 'required',
         ]);
 
-        $user = User::where('email', $validatedData['email'])->first();
+        $user = User::where('username', $validatedData['username'])->first();
 
         if (!$user) {
-            Log::info('User not found: ' . $validatedData['email']);
+            Log::info('User not found: ' . $validatedData['username']);
         }
 
         if ($user && Hash::check($validatedData['password'], $user->password)) {
@@ -127,9 +127,9 @@ class UserController extends Controller
             return redirect('/home-page');
         }
 
-        Log::info('Invalid password for user: ' . $validatedData['email']);
+        Log::info('Invalid password for user: ' . $validatedData['username']);
 
-        return back()->withErrors(['email' => 'Invalid email or password']);
+        return back()->withErrors(['username' => 'Invalid username or password']);
     }
 
 }

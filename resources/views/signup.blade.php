@@ -2,9 +2,6 @@
 @section('login/signup')
 
 <div id="signup-card">
-
-
-
     <form method="POST" action="{{ route('register') }}">
         @csrf
         <div class="signup-card">
@@ -17,8 +14,8 @@
                     @endif
                     <img class="user" alt="User" src="img/user-112-512-1.png" />
                     <div class="div">Sign Up</div>
-                    <input name="email" class="div-wrapper" placeholder="Email"></input>
-                    @error('email')
+                    <input name="username" class="div-wrapper" placeholder="Username"></input>
+                    @error('username')
                     <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                     <input name="password" type="password" class="overlap-2" placeholder="Password"></input>
@@ -42,7 +39,6 @@
         </div>
     </form>
 </div>
-
 
 <style>
     div.alert {
