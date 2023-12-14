@@ -6,6 +6,8 @@ body {
     overflow-x: hidden;
     width: 1920px;
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
 }
 
 nav {
@@ -3596,4 +3598,8 @@ input {
         0 -1px black,
         0 1px black;
     ;
+}
+
+p {
+    margin: 0 !important;
 }

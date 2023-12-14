@@ -21,9 +21,7 @@ Route::get('/', function () {
     return redirect('/log-in');
 });
 
-Route::get('/home-page', function () {
-    return view('user-home');
-})->middleware('auth');
+Route::get('/home-page', [PostController::class, 'index'])->middleware('auth');
 
 Route::get('/log-in', function () {
     return view('login');
