@@ -19,7 +19,7 @@ class PostController extends Controller
     {
         $this->validate($request, [
             'body' => 'required|max:1000',
-            'photo' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+            'photo' => 'required|image|mimes:jpg,jpeg,png',
         ]);
 
         $post = new Post();
@@ -34,6 +34,6 @@ class PostController extends Controller
 
         $request->user()->posts()->save($post);
 
-        return response()->json(['message' => 'Post successfully created!'], 200);
+        return redirect('/home-page')->with('message', 'Post successfully created!');
     }
 }

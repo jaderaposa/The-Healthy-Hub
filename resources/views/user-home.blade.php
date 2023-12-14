@@ -1,6 +1,12 @@
 @extends('layouts.navuser')
 @section('content')
 
+@if (session('message'))
+<div id="success-alert" class="alert alert-success" style="position: absolute;">
+    {{ session('message') }}
+</div>
+@endif
+
 <div id="side-bar">
     <div>
         <div class="box4">
@@ -185,26 +191,35 @@
 </div>
 
 <div id="post-display">
-    <div id="post-display">
+    <div class="post-display">
         @foreach ($posts as $post)
-        <div class="post-display">
-            <div style="border: 2px solid black;width:100%;height:fit-content;color:white;padding:0.5rem 1rem;background-color:#005280;border-radius:15px;">
-                <div class="row-tabi-ini d-flex" style="justify-content: space-between;">
-                    <div class="d-flex gap-2" style="align-items: center;">
-                        <img src="img/funny-food.png" alt="funny food" style="width: 45px;height:45px" />
-                        <p class="textshadowgodz" style="margin: 0;">{{ $post->user_id }}</p>
-                    </div>
-                    <div class="d-flex gap-4" style="align-items: center;">
-                        <a href=""><img src="img/ellipsis.png" /></a>
-                        <a href=""><img src="img/close.png" /></a>
-                    </div>
+        <div style="border: 2px solid black;
+            width: 100%;
+            height: fit-content;
+            color: white;
+            padding: 1rem 1rem;
+            background-color: #005280;
+            border-radius: 15px;
+            margin-bottom: 2rem;">
+            <div class="row-tabi-ini d-flex" style="justify-content: space-between;">
+                <div class="d-flex gap-2" style="align-items: center;">
+                    <img src="img/funny-food.png" alt="funny food" style="width: 45px;height:45px" />
+                    <p class="textshadowgodz" style="margin: 0;">{{ $post->user_id }}</p>
                 </div>
-                <div class="row-tabi-ini d-flex" style="justify-content: center;padding:0.5rem 0;">
-                    <img class="" src="{{ asset('uploads/' . $post->photo) }}" style="border:2px solid black;width:100%;height:min-content" />
+                <div class="d-flex gap-4" style="align-items: center;">
+                    <a href=""><img src="img/ellipsis.png" /></a>
+                    <a href=""><img src="img/close.png" /></a>
                 </div>
-                <div class="row-tabi-ini textshadowgodz">
-                    <p>{{ $post->body }}</p>
+            </div>
+            <hr style="border: 1px solid black;">
+            <div class="row-tabi-ini d-flex" style="justify-content: center;">
+                <div style="width: 100%;height: 379px;overflow: hidden;position: relative;">
+                    <img src="{{ asset('uploads/' . $post->photo) }}" style="border:2px solid black; max-width: 100%; max-height: 100%; object-fit: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" />
                 </div>
+            </div>
+            <hr style="border: 1px solid black;">
+            <div class="row-tabi-ini textshadowgodz">
+                <p>{{ $post->body }}</p>
             </div>
         </div>
         @endforeach
@@ -222,21 +237,40 @@
             </div>
             <div class="modal-body d-flex align-items-center justify-content-center">
                 <!-- form for creating a post -->
-                <form style="width: 100%;" id="postForm" action="{{ route('post.create') }}" method="POST" enctype="multipart/form-data"> @csrf
+                <form style="width: 100%;" id="postForm" action="{{ route('post.create') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <div class="form-group">
                         <input type="file" name="photo" accept=".jpg,.jpeg,.png" />
                     </div>
                     <div class="form-group">
                         <textarea style="width: 100%;" name="body" id="body" cols="30" rows="10" placeholder="Post something!"></textarea>
                     </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Post</button>
+                    </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="document.getElementById('postForm').submit();">Post</button>
             </div>
         </div>
     </div>
 </div>
+
+<style>
+    #success-alert {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+    }
+</style>
+
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            $('#success-alert').fadeOut('slow');
+        }, 3000); // 3 seconds
+    }
+</script>
 
 @stop
