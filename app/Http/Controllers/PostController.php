@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -41,8 +42,41 @@ class PostController extends Controller
     {
         $post = Post::find($id);
 
+        // Check if the authenticated user is the owner of the post
+        if (Auth::id() !== $post->user_id) {
+            return redirect()->route('posts.index')->with('error', "You don't have the permission!");
+        }
+
         $post->delete();
 
         return redirect()->route('posts.index')->with('success', 'Post deleted successfully');
+    }
+
+    public function update(Request $request)
+    {
+        $this->validate($request, [
+            'body' => 'required|max:1000',
+            'photo' => 'image|mimes:jpg,jpeg,png',
+        ]);
+
+        $post = Post::find($request['id']);
+
+        // Check if the authenticated user is the owner of the post
+        if (Auth::id() !== $post->user_id) {
+            return redirect('/home-page')->with('error', "You don't have the permission!");
+        }
+
+        $post->body = $request['body'];
+
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('uploads'), $filename);
+            $post->photo = $filename;
+        }
+
+        $post->save();
+
+        return redirect('/home-page')->with('message', 'Post successfully updated!');
     }
 }

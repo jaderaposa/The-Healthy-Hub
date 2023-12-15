@@ -67,7 +67,10 @@ Route::post('/createpost', [PostController::class, 'postCreatePost'])->name('pos
 //route for delete post
 Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 
-
+//route for delete post
+Route::put('/updatepost',
+    [PostController::class, 'update']
+)->name('post.update');
 
 
 

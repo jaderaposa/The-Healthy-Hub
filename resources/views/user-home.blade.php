@@ -2,8 +2,14 @@
 @section('content')
 
 @if (session('message'))
-<div id="success-alert" class="alert alert-success" style="position: absolute;">
+<div id="success-alert" class="alert alert-success" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; z-index:999;">
     {{ session('message') }}
+</div>
+@endif
+
+@if (session('error'))
+<div class="alert alert-danger" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; z-index:999;">
+    {{ session('error') }}
 </div>
 @endif
 
@@ -213,7 +219,7 @@
                         </a>
 
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item edit-button" data-id="{{ $post->id }}" data-body="{{ $post->body }}" href="#">Edit</a></li>
                         </ul>
                     </div>
                     <form method="POST" action="{{ route('posts.destroy', $post->id) }}">
@@ -236,7 +242,7 @@
                 <p>{{ $post->body }}</p>
             </div>
             <hr style="border: 1px solid black;">
-            <div class="row-tabi-ini gap-">
+            <div class="row-tabi-ini gap-3 d-flex">
                 <button type="button" class="btn btn-primary">Like</button>
                 <button type="button" class="btn btn-info">Comment</button>
                 <button type="button" class="btn btn-secondary">Share</button>
@@ -272,7 +278,7 @@
                     </div>
 
                     <div class="modal-footer border-0 p-2">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
                         <button type="submit" class="btn btn-primary">Post</button>
                     </div>
                 </form>
@@ -281,6 +287,41 @@
     </div>
 </div>
 
+<!-- Edit Modal -->
+
+<div class="modal fade" id="editPostModal" tabindex="-1" role="dialog" aria-labelledby="editPostModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 0;max-width:40%;">
+        <div class="modal-content textshadowgodz" style="height: 50%;transform: translate(0, 50%);border: 2px solid black;border-radius: 15px;background-color: #005280;color: white;">
+            <div class="modal-header border-0" style="padding: 0.5rem 1rem;">
+                <h5 class="modal-title" id="editPostModalLabel">Edit Post</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="editPostModalCloseButton">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center">
+                <!-- form for editing a post -->
+                <form style="width: 100%;" id="editPostForm" action="{{ route('post.update') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                    <input type="hidden" name="id" id="edit-id" />
+                    <div class="form-group">
+                        <input type="file" id="edit-file" name="photo" accept=".jpg,.jpeg,.png" style="display: none;" />
+                        <button type="button" id="edit-custom-button">Choose File</button>
+                        <span id="edit-file-name">No file chosen</span>
+                    </div>
+                    <div class="form-group m-0">
+                        <textarea style="width: 100%;border:2px solid black;padding: 0;margin: 0;" name="body" id="edit-body" cols="30" rows="10" placeholder="Post something!"></textarea>
+                    </div>
+
+                    <div class="modal-footer border-0 p-2">
+                        <!-- <button type="button" class="btn btn-secondary" id="editPostModalCloseButton">Close</button> -->
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <style>
@@ -306,12 +347,17 @@
 </style>
 
 <script>
+    //success alert and error alert
     window.onload = function() {
         setTimeout(function() {
             $('#success-alert').fadeOut('slow');
+            $('.alert-danger').fadeOut('slow');
         }, 3000); // 3 seconds
     }
 
+    //creating post
+
+    //click event in choose file
     document.getElementById('custom-button').addEventListener('click', function() {
         document.getElementById('file').click();
     });
@@ -321,12 +367,31 @@
         document.getElementById('file-name').textContent = fileName ? fileName : "No file chosen";
     });
 
+    //updating post
+
+
+    //click event in choose file
+    document.getElementById('edit-custom-button').addEventListener('click', function() {
+        document.getElementById('edit-file').click();
+    });
+
+    document.getElementById('edit-file').addEventListener('change', function() {
+        var fileName = document.getElementById('edit-file').value.split('\\').pop();
+        document.getElementById('edit-file-name').textContent = fileName ? fileName : "No file chosen";
+    });
+
+    //value on input when edited
     $(document).ready(function() {
-        $('.dropdown-item').click(function() {
+        $('.edit-button').click(function() {
             var postId = $(this).data('id');
             var postBody = $(this).data('body');
-            $('#editPostForm').attr('action', '/post/update/' + postId);
+            $('#edit-id').val(postId);
             $('#edit-body').val(postBody);
+            $('#editPostModal').modal('show');
+        });
+
+        $('#editPostModalCloseButton').click(function() {
+            $('#editPostModal').modal('hide');
         });
     });
 </script>
