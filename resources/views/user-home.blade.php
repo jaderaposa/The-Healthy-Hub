@@ -215,8 +215,8 @@
             margin-bottom: 2rem;">
             <div class="row-tabi-ini d-flex" style="justify-content: space-between;">
                 <div class="d-flex gap-2" style="align-items: center;">
-                    <img src="img/funny-food.png" alt="funny food" style="width: 45px;height:45px" />
-                    <p class="textshadowgodz" style="margin: 0;">{{ $post->user->username }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ $post->created_at->diffForHumans() }}</p>
+                    <img src="{{ asset('images/' . $post->user->picture) }}" alt="User Picture" style="width: 45px;height: 45px;border-radius: 2rem;border: 2px solid black;" />
+                    <p class=" textshadowgodz" style="margin: 0;">{{ $post->user->username }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ $post->created_at->diffForHumans() }}</p>
                 </div>
                 <div class="d-flex gap-4" style="align-items: center;">
                     <div class="dropdown">
@@ -245,24 +245,41 @@
             </div>
             @endif
             <div class="row-tabi-ini textshadowgodz mt-3">
-                <p>{{ $post->body }}</p>
+                <p style="font-size: 2rem;">{{ $post->body }}</p>
             </div>
-            <hr style="border: 1px solid black;">
-            <div class="row-tabi-ini gap-3 d-flex">
-                <button type="button" class="btn btn-primary">Like</button>
+            <hr style="border: 1px solid black;margin: 0.5rem 0;">
+            <div class="row-tabi-ini gap-3 d-flex align-items-center">
+                <p>{{ $post->likeposts->count() }} likes</p>
+                @if($post->likeposts->where('user_id', auth()->id())->count())
+                <form method="POST" action="/posts/{{ $post->id }}/likepost">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-primary">Unlike</button>
+                </form>
+                @else
+                <form method="POST" action="/posts/{{ $post->id }}/likepost">
+                    @csrf
+                    <button type="submit" class="btn btn-primary">Like</button>
+                </form>
+                @endif
                 <button type="button" class="btn btn-info">Comment</button>
                 <button type="button" class="btn btn-secondary">Share</button>
             </div>
-            <hr style="border: 1px solid black;">
+            <hr style="border: 1px solid black;margin: 0.5rem 0;">
             <div>
-                <h6>Comments :</h6>
+                <h6 style="font-size: larger;" class="textshadowgodz">Comments :</h6>
                 @if ($post->comments)
                 @foreach ($post->comments->whereNull('parent_id') as $comment)
                 <div class="d-flex justify-content-between align-items-center textshadowgodz">
-                    <div>
-                        <strong>{{ $comment->user->username }}</strong>
-                        <p>{{ $comment->body }}</p>
-                        <small>{{ $comment->likes->count() }} likes</small>
+                    <div class="d-flex gap-2">
+                        <div>
+                            <img class="border border-2 border-dark" src="{{ asset('images/' . $comment->user->picture) }}" alt="User Picture" style="width: 30px; height: 30px; border-radius: 2rem;" />
+                        </div>
+                        <div>
+                            <strong>{{ $comment->user->username }}</strong>
+                            <p>{{ $comment->body }}</p>
+                            <small>{{ $comment->likes->count() }} likes</small>
+                        </div>
                     </div>
                     <div class="d-flex gap-2">
                         @if ($comment->likes->where('user_id', Auth::id())->count() > 0)
@@ -290,11 +307,16 @@
                 </div>
                 @foreach ($comment->replies as $reply)
                 <div style="margin-left: 40px;">
-                    <div class="d-flex justify-content-between align-items-center textshadowgodz">
-                        <div>
-                            <strong>{{ $reply->user->username }}</strong>
-                            <p>{{ $reply->body }}</p>
-                            <small>{{ $reply->likes->count() }} likes</small>
+                    <div style="margin: 0.5rem 0;" class="d-flex justify-content-between align-items-center textshadowgodz">
+                        <div class="d-flex gap-2">
+                            <div>
+                                <img class="border border-2 border-dark" src="{{ asset('images/' . $reply->user->picture) }}" alt="User Picture" style="width: 30px; height: 30px; border-radius: 2rem;" />
+                            </div>
+                            <div>
+                                <strong>{{ $reply->user->username }}</strong>
+                                <p>{{ $reply->body }}</p>
+                                <small>{{ $reply->likes->count() }} likes</small>
+                            </div>
                         </div>
                         <div class="d-flex gap-2">
                             @if ($reply->likes->where('user_id', Auth::id())->count() > 0)
@@ -327,14 +349,14 @@
                     @csrf
                     <input type="hidden" name="parent_id" value="{{ $comment->id }}">
                     <textarea name="body" cols="" rows="1"></textarea>
-                    <button type="submit">Reply</button>
+                    <button class="butones" type="submit">Reply</button>
                 </form>
                 @endforeach
                 @endif
                 <form method="POST" class="d-flex gap-2" action="{{ route('comments.store', ['post' => $post->id]) }}">
                     @csrf
                     <textarea name="body" cols="" rows="1"></textarea>
-                    <button type="submit">Add Comment</button>
+                    <button class="butones" type="submit">Add Comment</button>
                 </form>
             </div>
         </div>

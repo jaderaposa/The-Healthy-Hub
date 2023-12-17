@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS and JS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset('css/style.css') }}"> -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -30,7 +30,7 @@
             <div id="udd">
                 <div class="box3">
                     <div class="group">
-                        <div class="ellipse" />
+                        <img class="ellipse" alt="User Picture" src="{{ asset('images/' . Auth::user()->picture) }}" />
                         <img class="sort-down dropdown" alt="Sort down" src="img/sort-down.png" />
                         <div class="jaded">
                             @if(Auth::check())

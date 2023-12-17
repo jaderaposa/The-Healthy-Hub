@@ -13,6 +13,7 @@ use App\Http\Controllers\SearchController;
 use App\Http\Controllers\VoteController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\LikePostController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -64,6 +65,10 @@ Route::post('/logout', function () {
 
 //route for post in create post
 Route::post('/createpost', [PostController::class, 'postCreatePost'])->name('post.create');
+
+//route for likepost
+Route::post('/posts/{post}/likepost', [LikePostController::class, 'store']);
+Route::delete('/posts/{post}/likepost', [LikePostController::class, 'destroy']);
 
 //route for delete post
 Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');

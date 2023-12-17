@@ -38,11 +38,19 @@ class UserController extends Controller
             'username' => 'required|string|max:255|unique:users',
             'password' => 'required|min:8',
             'confirmPassword' => 'required|same:password',
+            'picture' => 'image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
         $user = new User;
         $user->username = $validatedData['username'];
         $user->password = Hash::make($validatedData['password']);
+
+        if ($request->hasFile('picture')) {
+            $filename = time() . '.' . $request->picture->extension();
+            $request->picture->move(public_path('images'), $filename);
+            $user->picture = $filename;
+        }
+
         $user->save();
 
         // Flash a success message to the session

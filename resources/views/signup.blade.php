@@ -2,7 +2,7 @@
 @section('login/signup')
 
 <div id="signup-card">
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
         <div class="signup-card">
             <div class="group">
@@ -24,6 +24,10 @@
                     @enderror
                     <input name="confirmPassword" type="password" class="overlap-group" placeholder="Confirm Password"></input>
                     @error('confirmPassword')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                    <input type="file" class="picture-group" name="picture" accept="image/png, image/jpeg, image/gif, image/jpg, image/svg">
+                    @error('picture')
                     <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                     <div class="overlap-group-wrapper">

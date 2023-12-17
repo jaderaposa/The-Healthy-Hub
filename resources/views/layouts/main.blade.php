@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS and JS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset('css/style.css') }}"> -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
