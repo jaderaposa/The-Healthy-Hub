@@ -13,6 +13,12 @@
 </div>
 @endif
 
+@if (session('status'))
+<div id="status-alert" class="alert alert-success" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; z-index:999;">
+    {{ session('status') }}
+</div>
+@endif
+
 <div id="side-bar">
     <div>
         <div class="box4">
@@ -264,7 +270,7 @@
                         <form method="POST" action="{{ route('likes.destroy', ['comment' => $comment->id, 'like' => $like->id]) }}">
                             @csrf
                             @method('DELETE')
-                            <button type="submit">Unlike</button>
+                            <button class="butones" type="submit">Unlike</button>
                         </form>
                         @endforeach
                         @else
@@ -274,11 +280,10 @@
                         </form>
                         @endif
                         @if ($comment->user_id == Auth::id())
-                        <a href="{{ route('comments.edit', ['comment' => $comment->id]) }}">Edit</a>
                         <form method="POST" action="{{ route('comments.destroy', ['comment' => $comment->id]) }}">
                             @csrf
                             @method('DELETE')
-                            <button type="submit">Delete</button>
+                            <button class="butones" type="submit">Delete</button>
                         </form>
                         @endif
                     </div>
@@ -297,21 +302,20 @@
                             <form method="POST" action="{{ route('likes.destroy', ['comment' => $reply->id, 'like' => $like->id]) }}">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit">Unlike</button>
+                                <button class="butones" type="submit">Unlike</button>
                             </form>
                             @endforeach
                             @else
                             <form method="POST" action="{{ route('likes.store', ['comment' => $reply->id]) }}">
                                 @csrf
-                                <button type="submit">Like</button>
+                                <button class="butones" type="submit">Like</button>
                             </form>
                             @endif
                             @if ($reply->user_id == Auth::id())
-                            <a href="{{ route('comments.edit', ['comment' => $reply->id]) }}">Edit</a>
                             <form method="POST" action="{{ route('comments.destroy', ['comment' => $reply->id]) }}">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit">Delete</button>
+                                <button class="butones" type="submit">Delete</button>
                             </form>
                             @endif
                         </div>
@@ -319,7 +323,7 @@
                 </div>
                 @endforeach
                 <!-- Add a form here for replying to the comment -->
-                <form method="POST" class="d-flex gap-2" action="{{ route('comments.store', ['post' => $post->id]) }}">
+                <form method="POST" class="d-flex gap-2 m-3" action="{{ route('comments.store', ['post' => $post->id]) }}">
                     @csrf
                     <input type="hidden" name="parent_id" value="{{ $comment->id }}">
                     <textarea name="body" cols="" rows="1"></textarea>
@@ -327,7 +331,7 @@
                 </form>
                 @endforeach
                 @endif
-                <form method="POST" class="d-flex gap-3" action="{{ route('comments.store', ['post' => $post->id]) }}">
+                <form method="POST" class="d-flex gap-2" action="{{ route('comments.store', ['post' => $post->id]) }}">
                     @csrf
                     <textarea name="body" cols="" rows="1"></textarea>
                     <button type="submit">Add Comment</button>
@@ -438,6 +442,8 @@
         setTimeout(function() {
             $('#success-alert').fadeOut('slow');
             $('.alert-danger').fadeOut('slow');
+            $('#status-alert').fadeOut('slow');
+
         }, 3000); // 3 seconds
     }
 
