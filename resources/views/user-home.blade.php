@@ -283,13 +283,11 @@
                     </div>
                     <div class="d-flex gap-2">
                         @if ($comment->likes->where('user_id', Auth::id())->count() > 0)
-                        @foreach ($comment->likes as $like)
-                        <form method="POST" action="{{ route('likes.destroy', ['comment' => $comment->id, 'like' => $like->id]) }}">
+                        <form method="POST" action="{{ route('likes.destroy', ['comment' => $comment->id, 'like' => $comment->likes->where('user_id', Auth::id())->first()->id]) }}">
                             @csrf
                             @method('DELETE')
                             <button class="butones" type="submit">Unlike</button>
                         </form>
-                        @endforeach
                         @else
                         <form method="POST" action="{{ route('likes.store', ['comment' => $comment->id]) }}">
                             @csrf
@@ -320,13 +318,11 @@
                         </div>
                         <div class="d-flex gap-2">
                             @if ($reply->likes->where('user_id', Auth::id())->count() > 0)
-                            @foreach ($reply->likes as $like)
-                            <form method="POST" action="{{ route('likes.destroy', ['comment' => $reply->id, 'like' => $like->id]) }}">
+                            <form method="POST" action="{{ route('likes.destroy', ['comment' => $reply->id, 'like' => $reply->likes->where('user_id', Auth::id())->first()->id]) }}">
                                 @csrf
                                 @method('DELETE')
                                 <button class="butones" type="submit">Unlike</button>
                             </form>
-                            @endforeach
                             @else
                             <form method="POST" action="{{ route('likes.store', ['comment' => $reply->id]) }}">
                                 @csrf
