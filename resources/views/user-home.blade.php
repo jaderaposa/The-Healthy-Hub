@@ -247,6 +247,92 @@
                 <button type="button" class="btn btn-info">Comment</button>
                 <button type="button" class="btn btn-secondary">Share</button>
             </div>
+            <hr style="border: 1px solid black;">
+            <div>
+                <h6>Comments :</h6>
+                @if ($post->comments)
+                @foreach ($post->comments->whereNull('parent_id') as $comment)
+                <div class="d-flex justify-content-between align-items-center textshadowgodz">
+                    <div>
+                        <strong>{{ $comment->user->username }}</strong>
+                        <p>{{ $comment->body }}</p>
+                        <small>{{ $comment->likes->count() }} likes</small>
+                    </div>
+                    <div class="d-flex gap-2">
+                        @if ($comment->likes->where('user_id', Auth::id())->count() > 0)
+                        @foreach ($comment->likes as $like)
+                        <form method="POST" action="{{ route('likes.destroy', ['comment' => $comment->id, 'like' => $like->id]) }}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Unlike</button>
+                        </form>
+                        @endforeach
+                        @else
+                        <form method="POST" action="{{ route('likes.store', ['comment' => $comment->id]) }}">
+                            @csrf
+                            <button class="butones" type="submit">Like</button>
+                        </form>
+                        @endif
+                        @if ($comment->user_id == Auth::id())
+                        <a href="{{ route('comments.edit', ['comment' => $comment->id]) }}">Edit</a>
+                        <form method="POST" action="{{ route('comments.destroy', ['comment' => $comment->id]) }}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Delete</button>
+                        </form>
+                        @endif
+                    </div>
+                </div>
+                @foreach ($comment->replies as $reply)
+                <div style="margin-left: 40px;">
+                    <div class="d-flex justify-content-between align-items-center textshadowgodz">
+                        <div>
+                            <strong>{{ $reply->user->username }}</strong>
+                            <p>{{ $reply->body }}</p>
+                            <small>{{ $reply->likes->count() }} likes</small>
+                        </div>
+                        <div class="d-flex gap-2">
+                            @if ($reply->likes->where('user_id', Auth::id())->count() > 0)
+                            @foreach ($reply->likes as $like)
+                            <form method="POST" action="{{ route('likes.destroy', ['comment' => $reply->id, 'like' => $like->id]) }}">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">Unlike</button>
+                            </form>
+                            @endforeach
+                            @else
+                            <form method="POST" action="{{ route('likes.store', ['comment' => $reply->id]) }}">
+                                @csrf
+                                <button type="submit">Like</button>
+                            </form>
+                            @endif
+                            @if ($reply->user_id == Auth::id())
+                            <a href="{{ route('comments.edit', ['comment' => $reply->id]) }}">Edit</a>
+                            <form method="POST" action="{{ route('comments.destroy', ['comment' => $reply->id]) }}">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">Delete</button>
+                            </form>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+                <!-- Add a form here for replying to the comment -->
+                <form method="POST" class="d-flex gap-2" action="{{ route('comments.store', ['post' => $post->id]) }}">
+                    @csrf
+                    <input type="hidden" name="parent_id" value="{{ $comment->id }}">
+                    <textarea name="body" cols="" rows="1"></textarea>
+                    <button type="submit">Reply</button>
+                </form>
+                @endforeach
+                @endif
+                <form method="POST" class="d-flex gap-3" action="{{ route('comments.store', ['post' => $post->id]) }}">
+                    @csrf
+                    <textarea name="body" cols="" rows="1"></textarea>
+                    <button type="submit">Add Comment</button>
+                </form>
+            </div>
         </div>
         @endforeach
     </div>

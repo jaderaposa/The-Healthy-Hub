@@ -79,4 +79,11 @@ class PostController extends Controller
 
         return redirect('/home-page')->with('message', 'Post successfully updated!');
     }
+
+    public function show(Post $post)
+    {
+        $post->load('comments.user');
+
+        return view('posts.show', compact('post'));
+    }
 }

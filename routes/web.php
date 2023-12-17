@@ -12,6 +12,7 @@ use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\VoteController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\LikeController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -71,6 +72,19 @@ Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.de
 Route::put('/updatepost',
     [PostController::class, 'update']
 )->name('post.update');
+
+//route for comments
+Route::post('posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
+
+    //route for likes
+    Route::post('comments/{comment}/likes', [LikeController::class, 'store'])->name('likes.store');
+    Route::delete('comments/{comment}/likes/{like}', [LikeController::class, 'destroy'])->name('likes.destroy');
+
+    //route for edit
+    Route::get('/comments/{comment}/edit', [CommentController::class, 'edit'])->name('comments.edit');
+
+    //route for delete
+    Route::delete('/comments/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');
 
 
 

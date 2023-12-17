@@ -9,14 +9,25 @@ class Comment extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'student_id',
-        'comment',
-    ];
+    protected $fillable = ['body', 'user_id', 'post_id', 'parent_id'];
 
-    public function student()
+    public function user()
     {
-        // return $this->belongsTo('Model', 'foreign_key', 'owner_key'); 
-        return $this->belongsTo('App\Models\Student','student_id','id');
+        return $this->belongsTo(User::class);
+    }
+
+    public function post()
+    {
+        return $this->belongsTo(Post::class);
+    }
+
+    public function replies()
+    {
+        return $this->hasMany(Comment::class, 'parent_id');
+    }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
     }
 }

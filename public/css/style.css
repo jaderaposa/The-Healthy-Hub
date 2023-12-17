@@ -3604,3 +3604,13 @@ p {
     margin: 0 !important;
 }
 
+.butones {
+    color: white;
+    border: none;
+    background-color: transparent;
+    text-shadow: -1px 0 black,
+            1px 0 black,
+            0 -1px black,
+            0 1px black;
+        ;
+}

@@ -7,18 +7,25 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    use HasFactory;
 
     protected $fillable = [
         'body',
-        'photo', // add this line
+        'photo',
     ];
 
     public function user()
     {
-        return $this->belongsTo('App\Models\User');
+        return $this->belongsTo(User::class);
     }
+
     public function likes()
     {
-        // return $this->hasMany('App\Like');
+        return $this->hasMany(Like::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 }
