@@ -262,12 +262,12 @@
                     <button type="submit" class="btn btn-primary">Like</button>
                 </form>
                 @endif
-                <button type="button" class="btn btn-info">Comment</button>
-                <button type="button" class="btn btn-secondary">Share</button>
+                <button id="comment-button" type="button" class="btn btn-info">Comment</button>
+                <!-- <button type="button" class="btn btn-secondary">Share</button> -->
             </div>
             <hr style="border: 1px solid black;margin: 0.5rem 0;">
-            <div>
-                <h6 style="font-size: larger;" class="textshadowgodz">Comments :</h6>
+            <div id="comment-section">
+                <h5 style="font-size: 1.5rem;" class="textshadowgodz mb-3">Comments</h5>
                 @if ($post->comments)
                 @foreach ($post->comments->whereNull('parent_id') as $comment)
                 <div class="d-flex justify-content-between align-items-center textshadowgodz">
@@ -504,6 +504,17 @@
             $('#editPostModal').modal('hide');
         });
     });
+
+    //hide comment section
+    document.getElementById('comment-button').addEventListener('click', function() {
+    var commentSection = document.getElementById('comment-section');
+    if (commentSection.style.display === "none") {
+        commentSection.style.display = "block";
+    } else {
+        commentSection.style.display = "none";
+    }
+});
+
 </script>
 
 @stop
