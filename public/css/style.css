@@ -3610,6 +3610,10 @@ input {
     ;
 }
 
+.commentgodz {
+    text-shadow: -2px 0 black, 2px 0 black, 0 -1px black, 0 1px black;
+}
+
 p {
     margin: 0 !important;
 }

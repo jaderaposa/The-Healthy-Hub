@@ -267,7 +267,7 @@
             </div>
             <hr style="border: 1px solid black;margin: 0.5rem 0;">
             <div id="comment-section">
-                <h5 style="font-size: 1.5rem;" class="textshadowgodz mb-3">Comments</h5>
+                <h5 style="letter-spacing: 0.09rem;font-size: 1.5rem;color: #3d3d5a;" class="textshadowgodz commentgodz mb-3">Comments</h5>
                 @if ($post->comments)
                 @foreach ($post->comments->whereNull('parent_id') as $comment)
                 <div class="d-flex justify-content-between align-items-center textshadowgodz">
