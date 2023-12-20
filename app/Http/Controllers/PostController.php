@@ -35,21 +35,29 @@ class PostController extends Controller
 
         $request->user()->posts()->save($post);
 
-        return redirect('/home-page')->with('message', 'Post successfully created!');
+        if ($request->user()->is_admin) {
+            return redirect('/admin-home')->with('message', 'Post successfully created!');
+        } else {
+            return redirect('/home-page')->with('message', 'Post successfully created!');
+        }
     }
 
     public function destroy($id)
     {
         $post = Post::find($id);
 
-        // Check if the authenticated user is the owner of the post
-        if (Auth::id() !== $post->user_id) {
-            return redirect()->route('posts.index')->with('error', "You don't have the permission!");
+        // Check if the authenticated user is the owner of the post or an admin
+        if (Auth::id() !== $post->user_id && !Auth::user()->is_admin) {
+            return redirect('/home-page')->with('error', "You don't have the permission!");
         }
 
         $post->delete();
 
-        return redirect()->route('posts.index')->with('success', 'Post deleted successfully');
+        if (Auth::user()->is_admin) {
+            return redirect('/admin-home')->with('success', 'Post deleted successfully');
+        } else {
+            return redirect()->route('posts.index')->with('success', 'Post deleted successfully');
+        }
     }
 
     public function update(Request $request)
@@ -63,7 +71,11 @@ class PostController extends Controller
 
         // Check if the authenticated user is the owner of the post
         if (Auth::id() !== $post->user_id) {
-            return redirect('/home-page')->with('error', "You don't have the permission!");
+            if (Auth::user()->is_admin) {
+                return redirect('/admin-home')->with('error', "You don't have the permission!");
+            } else {
+                return redirect('/home-page')->with('error', "You don't have the permission!");
+            }
         }
 
         $post->body = $request['body'];
@@ -77,7 +89,11 @@ class PostController extends Controller
 
         $post->save();
 
-        return redirect('/home-page')->with('message', 'Post successfully updated!');
+        if (Auth::user()->is_admin) {
+            return redirect('/admin-home')->with('message', 'Post successfully updated!');
+        } else {
+            return redirect('/home-page')->with('message', 'Post successfully updated!');
+        }
     }
 
     public function show(Post $post)

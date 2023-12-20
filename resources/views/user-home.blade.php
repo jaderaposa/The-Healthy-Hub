@@ -35,12 +35,14 @@
                         <div class="text-wrapper">Popular</div>
                     </div>
                 </div>
-                <div>
-                    <div class="div">
-                        <img class="fire-flame-curved" alt="Fire flame curved" src="img/control-panel.png" />
-                        <div class="text-wrapper">Dashboard</div>
-                    </div>
-                </div>
+                <!-- <div>
+                    <a href="">
+                        <div class="div">
+                            <img class="fire-flame-curved" alt="Fire flame curved" src="img/control-panel.png" />
+                            <div class="text-wrapper">Dashboard</div>
+                        </div>
+                    </a>
+                </div> -->
             </div>
         </div>
         <div class="line4">
@@ -507,14 +509,13 @@
 
     //hide comment section
     document.getElementById('comment-button').addEventListener('click', function() {
-    var commentSection = document.getElementById('comment-section');
-    if (commentSection.style.display === "none") {
-        commentSection.style.display = "block";
-    } else {
-        commentSection.style.display = "none";
-    }
-});
-
+        var commentSection = document.getElementById('comment-section');
+        if (commentSection.style.display === "none") {
+            commentSection.style.display = "block";
+        } else {
+            commentSection.style.display = "none";
+        }
+    });
 </script>
 
 @stop

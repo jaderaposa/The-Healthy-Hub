@@ -20,7 +20,7 @@
     </div>
     <div class="login">
         <div>
-            <img class="healthy-eating-app" src="img/healthy-eating-app.png" />
+            <a href="{{ url('/admin-login') }}"><img class="healthy-eating-app" src="img/healthy-eating-app.png" /></a>
         </div>
         <div class="text-wrapper">The Healthy Hub</div>
         <p class="div">“Eat for your future, not just your taste buds”</p>

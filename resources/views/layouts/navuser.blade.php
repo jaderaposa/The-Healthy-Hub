@@ -30,8 +30,7 @@
             <div id="udd">
                 <div class="box3">
                     <div class="group">
-                        <img class="ellipse" alt="User Picture" src="{{ asset('images/' . Auth::user()->picture) }}" />
-                        <img class="sort-down dropdown" alt="Sort down" src="img/sort-down.png" />
+                        <img class="ellipse" alt="User Picture" src="{{ Auth::user()->picture ? asset('images/' . Auth::user()->picture) : asset('img/default.png') }}" /> <img class="sort-down dropdown" alt="Sort down" src="img/sort-down.png" />
                         <div class="jaded">
                             @if(Auth::check())
                             <p class="" alt="Username">{{ Auth::user()->username }}</p>

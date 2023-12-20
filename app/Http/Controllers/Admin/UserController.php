@@ -49,6 +49,8 @@ class UserController extends Controller
             $filename = time() . '.' . $request->picture->extension();
             $request->picture->move(public_path('images'), $filename);
             $user->picture = $filename;
+        } else {
+            $user->picture = 'default.png'; // Set the default image
         }
 
         $user->save();
@@ -86,11 +88,12 @@ class UserController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('user-edit', compact('user'));
     }
 
     /**
@@ -109,11 +112,13 @@ class UserController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->route('admin-home')->with('success', 'User deleted successfully');
     }
 
     public function login(Request $request)
@@ -127,9 +132,18 @@ class UserController extends Controller
 
         if (!$user) {
             Log::info('User not found: ' . $validatedData['username']);
+            return back()->withErrors(['username' => 'Invalid username or password']);
         }
 
-        if ($user && Hash::check($validatedData['password'], $user->password)) {
+        if ($user->is_admin) {
+            // Log the user out.
+            Auth::logout();
+
+            // Return an error message.
+            return back()->withErrors(['username' => 'You are an admin. Please use the admin login page.']);
+        }
+
+        if (Hash::check($validatedData['password'], $user->password)) {
             Auth::login($user);
 
             return redirect('/home-page');
@@ -140,4 +154,26 @@ class UserController extends Controller
         return back()->withErrors(['username' => 'Invalid username or password']);
     }
 
+    public function adminLogin(Request $request)
+    {
+        $validatedData = $request->validate([
+            'username' => 'required|string|max:255',
+            'password' => 'required',
+        ]);
+
+        $user = User::where('username', $validatedData['username'])->first();
+
+        if (!$user || !Hash::check($validatedData['password'], $user->password)) {
+            Log::info('Invalid credentials: ' . $validatedData['username']);
+            return back()->withErrors(['username' => 'Invalid username or password']);
+        }
+
+        if (!$user->is_admin) {
+            Log::info('Regular user tried to log in as admin: ' . $validatedData['username']);
+            return back()->withErrors(['username' => 'You are not an admin. Please use the regular login page.']);
+        }
+
+        Auth::login($user);
+        return redirect('/admin-home');
+    }
 }

@@ -15,6 +15,9 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\LikePostController;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Post;
+use App\Models\User;
+
 
 
 
@@ -23,7 +26,17 @@ Route::get('/', function () {
     return redirect('/log-in');
 });
 
-Route::get('/home-page', [PostController::class, 'index'])->middleware('auth');
+Route::get('/home-page', function () {
+    // Check if the authenticated user is an admin
+    if (Auth::user()->is_admin) {
+        // If they are, redirect them to the admin home page
+        return redirect('/admin-home');
+    }
+
+    // If they're not an admin, continue to the home page
+    $postController = app()->make(App\Http\Controllers\PostController::class);
+    return $postController->index();
+})->middleware('auth');
 
 Route::get('/log-in', function () {
     return view('login');
@@ -38,8 +51,16 @@ Route::get('/admin-login', function () {
 });
 
 Route::get('/admin-home', function () {
-    return view('admin-home');
-});
+    // Check if the authenticated user is an admin
+    if (!Auth::user()->is_admin) {
+        // If they're not, redirect them to the user home page
+        return redirect('/user-home');
+    }
+
+    $posts = Post::all(); // Fetch all posts
+    $users = User::all(); // Fetch all users
+    return view('admin-home', compact('posts', 'users')); // Pass posts and users to the view
+})->middleware('auth')->name('admin-home');
 
 Route::get('/profile-page', function () {
     return view('prof-page');
@@ -56,6 +77,10 @@ Route::get('/admin-dashboard', function () {
 
 //Routes for POST method
 Route::post('/login', [UserController::class, 'login'])->name('login');
+
+//admin login route
+Route::post('/admin-login', [UserController::class, 'adminLogin'])->name('admin.login');
+
 Route::post('/register', [UserController::class, 'register'])->name('register');
 Route::post('/logout', function () {
     Auth::logout();
@@ -91,7 +116,9 @@ Route::post('posts/{post}/comments', [CommentController::class, 'store'])->name(
     //route for delete
     Route::delete('/comments/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');
 
-
+//admin rights
+Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
+Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy');
 
 
 // Resourceful route for posts
